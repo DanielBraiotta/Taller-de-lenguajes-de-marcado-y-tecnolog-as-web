@@ -1,0 +1,58 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<?catalogo version "1.0" fechaDeGen = "01/04/2026"></catalogo?>
+
+<catalogo>
+    <destino id = "01">
+        <pais>
+            Japon
+        </pais>
+        <nombre>
+            Tokyo
+        </nombre>
+        <precioEnUSD>
+            4000
+        </precioEnUSD>
+        <duracion>
+            15
+        </duracion>
+        <descripcion>
+            Paseo por el centro
+        </descripcion>
+    </destino>
+
+    <destino id = "02">
+        <pais>
+            Alemania
+        </pais>
+        <nombre>
+            Berlin
+        </nombre>
+        <precioEnUSD>
+            3500
+        </precioEnUSD>
+        <duracion>
+            10
+        </duracion>
+        <descripcion>
+            Paseo por el centro
+        </descripcion>
+    </destino>
+
+    <destino id = "03">
+        <pais>
+            Brasil
+        </pais>
+        <nombre>
+            Brasilia
+        </nombre>
+        <precioEnUSD>
+            1500
+        </precioEnUSD>
+        <duracion>
+            15
+        </duracion>
+        <descripcion>
+            Paseo por el centro
+        </descripcion>
+    </destino>
+</catalogo>

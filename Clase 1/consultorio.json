@@ -1,0 +1,43 @@
+{
+    "consultorio": "DR. Ramirez_ClinicaESP",
+    "fecha": "01/04/2026",
+    "turno":[
+        {
+            "numero": "01",
+            "hora": "14:00",
+            "paciente":{
+                "dni": "loco",
+                "nombre": "Juan_Perez"
+            },
+            "medico":{
+                "especialidad": "cardiologia",
+                "nombre": "Julian"
+            },
+            "observacion": null,
+            "estado": [
+                "pendiente",
+                "confirmado",
+                "cancelado"
+            ]
+        },
+        {
+            "numero": "02",
+            "hora": "15:00",
+            "paciente":{
+                "dni": "algo",
+                "nombre": "Ramon_Mendoza"
+            },
+            "medico":{
+                "especialidad": "Traumatologia",
+                "nombre": "Laura"
+            },
+            "observacion": null,
+            "estado": [
+                "pendiente",
+                "confirmado",
+                "cancelado"
+            ]
+        }
+    ]
+
+}
