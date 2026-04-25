@@ -1,0 +1,100 @@
+/* Estilos generales */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+
+/* Encabezado */
+header {
+  background-color: #0b3d91;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+}
+
+header img {
+  border-radius: 8px;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+
+  
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Contenido principal */
+main {
+  padding: 20px;
+  background-color: #fff;
+  max-width: 1000px;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Índice lateral */
+aside {
+  background-color: #e8e8e8;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+aside h2 {
+  color: #0b3d91;
+}
+
+/* Secciones */
+h1, h2, h3 {
+  color: #0b3d91;
+}
+
+/* Footer */
+footer {
+  background-color: #0b3d91;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}
+
+footer a {
+  color: #ffd700;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+/* Datos institucionales */
+dl {
+  display: grid;                /* Usamos grid */
+  grid-template-columns: 200px auto; /* Columna fija para dt y flexible para dd */
+  gap: 10px;                    /* Espacio entre columnas */
+  background: #f4f4f4;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+dt {
+  font-weight: bold;
+  color: #2e7d32; /* Verde institucional */
+}
+
+dd {
+  margin: 0; /* Quitamos margen por defecto */
+  color: #37474f; /* Gris tecnológico */
+}
