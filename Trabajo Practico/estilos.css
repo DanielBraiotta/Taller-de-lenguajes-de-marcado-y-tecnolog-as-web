@@ -1,3 +1,7 @@
+.root{
+  color-FondoDePagina :
+}
+
 /* Estilos generales */
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
@@ -59,7 +63,8 @@ aside h2 {
 /* Secciones */
 h1, h2, h3 {
   color: #0b3d91;
-}
+  
+ 
 
 /* Footer */
 footer {
