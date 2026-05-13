@@ -1,0 +1,88 @@
+html{
+    font-size: 16px;
+}
+
+/*--Variables--*/
+    /*Colores*/
+    :root{
+        --color-primario: #0077ff;
+        --color-secundario: #008d18;
+        --color-fondo: #cacaca;
+        --color-acento: #E8611A;
+        --color-texto: #1A1A1A;
+        --fuente: "Share Tech Mono", monospace;
+    }
+
+/*--Reset--*/
+* { box-sizing: border-box;
+    margin: 0; padding: 0; 
+}
+
+/*--Tipografia--*/
+    /*H1*/
+    h1{
+        font-size: 4rem;
+        color: var(--color-fondo);
+    }
+    /*H2*/
+    h2{
+        font-size: 3rem;
+        color: var(--color-primario);
+    }
+    /*H3*/
+    h3{
+        font-size: 2rem;
+        color: var(--color-secundario);
+    }
+
+/*--Navegacion--*/
+    /*Nav*/
+        /*ul*/
+            /*il*/
+                /*a*/
+
+/*--Body--*/
+    body{
+        font-family:var(--fuente);  /*aplicacion de tipografica*/
+        font-size: 1rem;
+        line-height: 1.5;
+
+        background-color: var(--color-fondo);
+        color: var(--color-texto);
+        
+        max-width: 1300px; /*centra el contenido de la pagina*/
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
+
+    /*-Header-*/
+    header{
+        background: var(--color-primario);
+    }
+
+    /*-Main-*/
+        /*Section*/
+            /*Article*/
+            
+    /*-Footer-*/
+    footer{
+        background: var(--color-secundario);
+    }
+
+/*--Figure e Imagenes--*/
+    /*-Img-*/
+
+/*Tablas*/
+    table, th, td {
+        border: 1px solid black;
+    }
+    th, td {
+        padding: 10px;
+    }
+    thead {
+        background-color: var(--color-acento);
+        color: white;
+    }
+    tbody tr:nth-child(odd) {/*intercala colores de forma impar (odd)*/
+        background-color: #f8f9fa;
+    }
