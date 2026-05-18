@@ -1,11 +1,21 @@
 /* Estilos generales */
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
-  background-color: #f4f4f4;
+  background-color: #0c34d5;
   color: #222;
   margin: 10;
   padding: 0;
   border: #0b3d91 solid 1px;
+}
+
+body {
+  background: 
+    url('img/img14.png') left top repeat-y,
+    url('img/img14.png') right top repeat-y;
+  background-color: #fff; /* centro blanco para el contenido */
+  background-size: 300px auto; /* ancho del lateral */
+  margin: 0;
+  padding: 1;
 }
 
 /* Encabezado */
