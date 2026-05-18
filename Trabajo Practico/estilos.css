@@ -46,7 +46,7 @@ header nav a:hover {
 /* Contenido principal */
 main {
   padding: 20px;
-  background-color: #7984e8;
+  background-color: #0b3d91;
   max-width: 1000px;
   margin: 20px auto;
   border-radius: 10px;
@@ -57,6 +57,13 @@ aside nav  {
   display: flex;
   flex-direction: row;
   
+}
+
+ p {
+  text-align: justify;
+  margin-left: 30px;
+  margin-right: 20px;;
+  line-height: 1.6;
 }
 
 @keyframes aparecer {
@@ -75,9 +82,16 @@ h1 {
 h2.detalle {
   color: red !important;
   animation: aparecer 2s ease-in-out forwards;
-
+text-align: center;
 }
 
+section {
+  border: 2px solid #0b3d91;   /* borde azul institucional */
+  background-color: #f9f9f9;   /* fondo gris claro */
+  border-radius: 8px;          /* esquinas redondeadas */
+  padding: 20px;               /* espacio interno */
+  margin-bottom: 25px;         /* separación entre secciones */
+}
 
 /* Índice lateral */
 aside { 
