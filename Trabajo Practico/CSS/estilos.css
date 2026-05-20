@@ -13,7 +13,12 @@ html{
         --color-fondo: #cacaca;
         --color-acento: #E8611A;
         --color-texto: #1A1A1A;
+        --color-fondo:blue;
+        --color-texto1: white;
+        --color-texto2: blue;
         --fuente: "Share Tech Mono", monospace;
+        
+
     }
 
 /*--Reset--*/
