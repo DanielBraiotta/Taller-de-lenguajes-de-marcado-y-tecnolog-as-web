@@ -1,5 +1,8 @@
 html{
     font-size: 16px;
+    border: 5px solid;
+    border-radius: 1rem;
+
 }
 
 /*--Variables--*/
@@ -40,6 +43,10 @@ html{
         /*ul*/
             /*il*/
                 /*a*/
+                nav a{
+                    text-decoration: none;
+                    color: var(--color-texto)
+}
 
 /*--Body--*/
     body{
@@ -58,6 +65,19 @@ html{
     /*-Header-*/
     header{
         background: var(--color-primario);
+        border-radius: 1rem;
+        padding: 1%;
+    
+    }
+
+    header href{
+        text-decoration: none ;
+        text-align: center;
+    }
+
+    header hover a{
+        padding: 15px;
+        background-color: darkblue;
     }
 
     /*-Main-*/
