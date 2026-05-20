@@ -7,6 +7,10 @@ html{
     :root{
         --color-primario: #0077ff;
         --color-secundario: #008d18;
+
+        --color-fondo-primario: #ffffff;/*----------------------------------nuevos colores*/
+        --color-fondo-secundario: #cacaca;/*---------------------------------nuevos colores*/
+
         --color-fondo: #cacaca;
         --color-acento: #E8611A;
         --color-texto: #1A1A1A;
@@ -23,6 +27,7 @@ html{
     h1{
         font-size: 4rem;
         color: var(--color-fondo);
+        text-shadow: #000000 4px 4px 0.5px;/*-----------------------------------sombra al titulo*/
     }
     /*H2*/
     h2{
@@ -35,11 +40,6 @@ html{
         color: var(--color-secundario);
     }
 
-/*--Navegacion--*/
-    /*Nav*/
-        /*ul*/
-            /*il*/
-                /*a*/
 
 /*--Body--*/
     body{
@@ -47,7 +47,7 @@ html{
         font-size: 1rem;
         line-height: 1.5;
 
-        background-color: var(--color-fondo);
+        background-color: var(--color-fondo-secundario);/*---------------------------------------------------------*/
         color: var(--color-texto);
         
         max-width: 1300px; /*centra el contenido de la pagina*/
@@ -57,22 +57,57 @@ html{
 
     /*-Header-*/
     header{
-        background: var(--color-primario);
+        background: -webkit-linear-gradient(top, var(--color-primario), #12e3ff, #ffffff); /*----------------------------bradiente en header*/
     }
 
     /*-Main-*/
-        /*Section*/
-            /*Article*/
-            
+        main{
+            background-color: var(--color-fondo-primario);/*---------------------------------------------*/
+            padding: 20px;/*----------------------------------------------------------------------------*/
+            border-radius: 10px;/*---------------------------------------------------------------------*/
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);/*-------------------------------------------------*/
+        }    
+
+    
+    
+/*--Navegacion-----------------------------------------------------------------------------------------*/
+    /*Nav*/
+    #contenido {
+        padding: 10px 20px 20px 10px;
+        border-radius: 10px;
+        border-color: #1A1A1A;
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+
+        /*ul*/
+            /*li*/
+            ul{
+                padding: 1px 50px;
+            }
+
+                /*a*/
+    section{
+        padding: 10px 20px 20px 10px;
+        border-radius: 10px;
+        border-color: #1A1A1A;
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }  
+
+    article{
+        padding: 10px 20px 20px 10px;
+        border-radius: 10px;
+        border-color: #1A1A1A;
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);        
+    }  
+
     /*-Footer-*/
     footer{
         background: var(--color-secundario);
     }
 
-/*--Figure e Imagenes--*/
-    /*-Img-*/
 
-/*Tablas*/
+
+/*---------------------------------------------------------------------------------------Tablas*/
     table, th, td {
         border: 1px solid black;
     }
@@ -86,3 +121,158 @@ html{
     tbody tr:nth-child(odd) {/*intercala colores de forma impar (odd)*/
         background-color: #f8f9fa;
     }
+
+/*-------------------------------------------------------------------------transformacion de imagenes*/
+    img{
+        transition-property: transform;
+        transition-duration: 0.5s;
+        transition-delay: 0s;
+        transition-timing-function: ease; 
+    }
+
+    img:hover { 
+        transform: scale(1.05); 
+    }
+
+/*-----------------------------------------------------------------------------transiciones H1*/
+    .titulo{
+        position: relative;
+        display: inline-block;
+
+        transition-property: color, transform;
+        transition-duration: 0.5s;
+        transition-timing-function: ease;
+
+        transform-origin: center;
+    }
+
+    /* barra */
+    .titulo::before{
+        content: "";
+
+        position: absolute;
+
+        left: 0;
+        bottom: 0;
+
+        width: 0%;
+        height: 100%;
+
+        background: linear-gradient(to right, cyan, rgb(255, 255, 255));
+
+        z-index: -1;
+
+        transition: width 0.5s ease;
+    }
+
+    /* hover */
+    .titulo:hover{
+        color: red;
+        transform: scale(1.05);
+    }
+
+    /* animación barra */
+    .titulo:hover::before{
+        width: 100%;
+    }
+/*-------------------------------------------------transiciones H2*/
+    h2{
+        position: relative;
+        display: inline-block;
+
+        transition-property: color, transform;
+        transition-duration: 0.5s;
+        transition-timing-function: ease;
+
+        transform-origin: center;
+    }
+
+    /* barra */
+    h2:before{
+        content: "";
+
+        position: absolute;
+
+        left: 0;
+        bottom: 0;
+
+        width: 0%;
+        height: 100%;
+
+        background: linear-gradient(to right, rgb(200, 255, 0), rgb(255, 255, 255));
+
+        z-index: -1;
+
+        transition: width 0.5s ease;
+    }
+
+    /* hover */
+    h2:hover{
+        color: red;
+        transform: scale(1.05);
+    }
+
+    /* animación barra */
+    h2:hover::before{
+        width: 100%;
+    }
+
+/*-------------------------------------------------transiciones H3*/
+    h3{
+        position: relative;
+        display: inline-block;
+
+        transition-property: color, transform;
+        transition-duration: 0.5s;
+        transition-timing-function: ease;
+
+        transform-origin: center;
+    }
+
+    /* barra */
+    h3:before{
+        content: "";
+
+        position: absolute;
+
+        left: 0;
+        bottom: 0;
+
+        width: 0%;
+        height: 100%;
+
+        background: linear-gradient(to right, rgb(0, 255, 76), rgb(255, 255, 255));
+
+        z-index: -1;
+
+        transition: width 0.5s ease;
+    }
+
+    /* hover */
+    h3:hover{
+        color: red;
+        transform: scale(1.05);
+    }
+
+    /* animación barra */
+    h3:hover::before{
+        width: 100%;
+    } 
+
+    /*---------------------------------------------------------------------------animacion de articulos*/
+    article{
+        animation: fadeInScale linear;/*indica que animacion usar*/
+        animation-timeline: view(); /*la animación depende del scroll*/
+        animation-range: entry 0% cover 40%;/*entry 0%:La animación empieza cuando el elemento empieza a entrar. cover 40%: La animación termina cuando el elemento cubre el 40% del viewport.*/
+    }
+    @keyframes fadeInScale{/*animacion*/
+        from{
+            opacity: 0;/*opacidad*/
+            scale: 0.5;/*escala*/
+        }
+        to{
+            opacity: 1;
+            scale: 1;
+        }
+    }
+    
