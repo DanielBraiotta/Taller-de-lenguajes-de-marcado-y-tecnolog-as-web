@@ -1,6 +1,5 @@
 html{
     font-size: 16px;
-    
 
 }
 
@@ -28,8 +27,8 @@ html{
 
 /*--Tipografia--*/
     /*H1*/
-    h1{
-        font-size: 4rem;
+    header h1{
+        font-size: clamp(1.5rem, 5vw, 4rem);
         color: var(--color-fondo);
         text-shadow: #000000 4px 4px 0.5px;/*-----------------------------------sombra al titulo*/
     }
@@ -67,6 +66,12 @@ html{
         
     }
 
+    header img{
+        border-radius: 50%;
+        border: 5px solid var(--color-fondo);
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);/*-------------------------------------------------sombra a la imagen*/
+
+    }
 
     header.titulo{      /*retecno argentina y nav*/
         display: flex;
@@ -80,10 +85,18 @@ html{
         display: flex;
         justify-content: center;
         gap: 20px;
-        align-items:end;
+        align-items: flex-end;
     }
 
-    a:hover{
+    header a{
+        text-decoration: none;
+        font-weight: bold;
+        padding: 5px 10px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    header a:hover{
         background-color: var(--color-primario);
         border-radius: 5px;
         padding: 5px;
@@ -96,19 +109,33 @@ html{
             border-radius: 10px;/*---------------------------------------------------------------------*/
             box-shadow: 0 0 10px rgba(0,0,0,0.1);/*-------------------------------------------------*/
             border: 5px solid var(--color-texto);/*------------------------------------------------------------------*/
-        
+            
         }    
 
-    
-    
 /*--Navegacion-----------------------------------------------------------------------------------------*/
     /*Nav*/
-    #contenido {
+    nav.contenido a {
+        
         padding: 10px 20px 20px 10px;
         border-radius: 10px;
         border-color: #1A1A1A;
         box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        text-decoration: none;
+        color: var(--color-texto);
+
     }
+
+    nav.contenido a:hover{
+        
+        background-color: var(--color-primario);
+        color: var(--color-fondo);
+        border-radius: 5px;
+    }
+
+    .contenido .h2{
+        text-size-adjust: 1%;
+    }
+
 
         /*ul*/
             /*li*/
