@@ -80,7 +80,7 @@
         box-shadow: 0 0 10px rgba(0,0,0,0.5);/*--sombra a la imagen*/
     }
 
-    nav.navegador {/*esto hace que el navegador este del lado derecho*/
+    nav.navegador {/*hace que el navegador este del lado derecho*/
         display: flex;
         justify-content: flex-end;
         gap: 20px;

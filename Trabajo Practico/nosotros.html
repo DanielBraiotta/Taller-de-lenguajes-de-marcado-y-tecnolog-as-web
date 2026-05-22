@@ -26,7 +26,7 @@
 <body>
 
     <header>
-         <!-- Imagen superior -->
+        <!-- Imagen superior -->
         <img src="img/ong3.jpg" alt="Logo de ReTecno Argentina" width="80">
 
         <h1>ReTecno Argentina</h1>
@@ -40,14 +40,16 @@
     <main>
 
         <aside>
-            <nav class="contenido">
+            <nav id="contenido">
 
-                <h2 class="h2">Indice de contenidos</h2>
+                <h2 class="titulo">Indice de contenidos</h2>
 
-                <a href="#SOBRE-NOSOTROS">SOBRE NOSOTROS- HISTORIA</a>
-                <a href="#NUESTROS-VALORES">NUESTROS VALORES</a>
-                <a href="#NUESTRO-EQUIPO">NUESTRO EQUIPO</a>
-                <a href="#DATOS-INSTITUCIONALES">DATOS INSTITUCIONALES</a>
+                <ul>
+                    <li><a href="#SOBRE-NOSOTROS">SOBRE NOSOTROS- HISTORIA</a></li>
+                    <li><a href="#NUESTROS-VALORES">NUESTROS VALORES</a></li>
+                    <li><a href="#NUESTRO-EQUIPO">NUESTRO EQUIPO</a></li>
+                    <li><a href="#DATOS-INSTITUCIONALES">DATOS INSTITUCIONALES</a></li>
+                </ul>
             </nav>
         </aside>
 
@@ -55,7 +57,7 @@
             <h2>Historia</h2>
             <!-- VIDEO  -->
             <div class="video-container">
-                <iframe width="1200" height="315" src="https://www.youtube.com/embed/g0dfbrzm2tM?si=LDWLd9hT02cVqg2q"
+                <iframe width="1200" height="310" src="https://www.youtube.com/embed/g0dfbrzm2tM?si=LDWLd9hT02cVqg2q"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
@@ -203,7 +205,8 @@
 
 
             <section id="DATOS-INSTITUCIONALES">
-                <h2><u>Datos Institucionales</u></h2>
+
+                <h2 class="titulo">Datos Institucionales</h2>
 
                 <p class="intro">
                     Como organización sin fines de lucro, <strong>ReTecno Argentina</strong> nació con el propósito de
@@ -211,25 +214,33 @@
                     la gestión responsable de los residuos electrónicos y promover una cultura tecnológica sostenible.
                     Desde nuestra fundación en 2026, trabajamos en proyectos que integran innovación, educación y
                     compromiso
-                    social.
-                </p>
+                    social.</p>
 
-                <dl class="ficha">
-                    <dt>Nombre legal:</dt>
-                    <dd>ReTecno Argentina</dd>
+                <table>
+                    <tbody>                    <tr>
+                        <th>Nombre legal</th>
+                        <td>ReTecno Argentina</td>
+                    </tr>
+                    <tr>
+                        <th>Año de fundación</th>
+                        <td>2026</td>
+                    </tr>
+                    <tr>
+                        <th>Tipo de organización</th>
+                        <td>ONG (sin fines de lucro)</td>
+                    </tr>
+                    <tr>
+                        <th>Área de acción</th>
+                        <td>Reciclaje electrónico y tecnología sostenible</td>
+                    </tr>
+                    <tr>
+                        <th>Sede principal</th>
+                        <td>Buenos Aires, Argentina</td>
+                    </tr>
+                    </tbody>
+                </table>
 
-                    <dt>Año de fundación:</dt>
-                    <dd>2026</dd>
 
-                    <dt>Tipo de organización:</dt>
-                    <dd>ONG (sin fines de lucro)</dd>
-
-                    <dt>Área de acción:</dt>
-                    <dd>Reciclaje electrónico y tecnología sostenible</dd>
-
-                    <dt>Sede principal:</dt>
-                    <dd>Buenos Aires, Argentina</dd>
-                </dl>
             </section>
 
     </main>
@@ -242,40 +253,6 @@
 
         <a href="https://web.whatsapp.com" target="_blank" rel="noopener noreferrer">
             <img src="icono/whatsapp.png" alt="WhatsApp" width="100" height="100"> </a>
-
-        <details style="display:inline-block; margin-left:10px;">
-            <summary>Términos y Condiciones</summary>
-
-            <section>
-                <h3>1. Aceptación de los términos</h3>
-                <p>Al acceder y utilizar este sitio web, usted acepta cumplir con los presentes términos y condiciones.
-                </p>
-            </section>
-
-            <section>
-                <h3>2. Uso del contenido</h3>
-                <p>El contenido publicado en este sitio tiene fines informativos y educativos. No podrá ser reproducido
-                    con fines comerciales sin autorización expresa.</p>
-            </section>
-
-            <section>
-                <h3>3. Responsabilidad</h3>
-                <p>ReTecno Argentina no se responsabiliza por el uso indebido de la información publicada ni por daños
-                    derivados del acceso a enlaces externos.</p>
-            </section>
-
-            <section>
-                <h3>4. Privacidad</h3>
-                <p>Los datos personales proporcionados serán tratados de manera confidencial y utilizados únicamente
-                    para fines relacionados con las actividades de la ONG.</p>
-            </section>
-
-            <section>
-                <h3>5. Modificaciones</h3>
-                <p>ReTecno Argentina se reserva el derecho de modificar estos términos en cualquier momento. Las
-                    modificaciones entrarán en vigencia desde su publicación en el sitio.</p>
-            </section>
-        </details>
     </footer>
 
 </body>
