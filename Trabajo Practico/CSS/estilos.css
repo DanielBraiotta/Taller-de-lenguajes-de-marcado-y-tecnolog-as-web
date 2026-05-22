@@ -216,6 +216,7 @@
 /*---------------------------------------------------------------------------------------Tablas*/
     table, th, td {
         border: 1px solid black;
+        
     }
     th, td {
         padding: 10px;
@@ -226,5 +227,11 @@
     }
     tbody tr:nth-child(odd) {/*intercala colores de forma impar (odd)*/
         background-color: #f8f9fa;
+    }
+    th a{ 
+        text-decoration: none;
+    }
+    th a:hover{
+        color: var(--color-primario);
     }
 
