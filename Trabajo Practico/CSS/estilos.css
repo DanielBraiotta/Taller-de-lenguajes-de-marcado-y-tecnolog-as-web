@@ -1,16 +1,12 @@
-html{
-    font-size: 16px;
 
-}
-
-/*--Variables--*/
+/*--------------------------------------------------------------------------------------Variables--*/
     /*Colores*/
     :root{
         --color-primario: #0077ff;
-        --color-secundario: #008d18;
+        --color-secundario: #55c513c7;
 
-        --color-fondo-primario: #ffffff;/*----------------------------------nuevos colores*/
-        --color-fondo-secundario: #cacaca;/*---------------------------------nuevos colores*/
+        --color-fondo-primario: #ffffff;/*-nuevos colores*/
+        --color-fondo-secundario: #f1f1f1;/*-nuevos colores*/
 
         --color-fondo: #cacaca;
         --color-acento: #E8611A;
@@ -20,17 +16,20 @@ html{
 
     }
 
-/*--Reset--*/
+/*---------------------------------------------------------------------------------------Reset--*/
 * { box-sizing: border-box;
-    margin: 0; padding: 0; 
+    margin: 0; 
+    padding: 0; 
 }
 
-/*--Tipografia--*/
+/*--------------------------------------------------------------------------------------Tipografia--*/
     /*H1*/
     header h1{
-        font-size: clamp(1.5rem, 5vw, 4rem);
-        color: var(--color-fondo);
-        text-shadow: #000000 4px 4px 0.5px;/*-----------------------------------sombra al titulo*/
+        font-size: clamp(1.2rem, 4vw, 3rem);/*tamaño adaptativo*/
+        color: var(--color-fondo-secundario);
+        text-shadow: #1100ff 4px 4px 5px;/*sombra al titulo*/
+        flex: 1;
+        text-align: center;
     }
     /*H2*/
     h2{
@@ -44,51 +43,50 @@ html{
     }
 
 
-/*--Body--*/
+/*---------------------------------------------------------------------------------------Body--*/
     body{
         font-family:var(--fuente);  /*aplicacion de tipografica*/
         font-size: 1rem;
         line-height: 1.5;
 
-        background-color: var(--color-fondo-secundario);/*---------------------------------------------------------*/
+        background-color: var(--color-fondo-secundario);
         color: var(--color-texto);
         
-        max-width: 1300px; /*centra el contenido de la pagina*/
         margin: 0 auto;
-        padding: 0 1rem;
-         border-radius: 10px;
-        
+        padding: 0;
     }
 
-    /*-Header-*/
+    /*-----------------------------------------------------------------------------------Header-*/
     header{
-        background: -webkit-linear-gradient(top, var(--color-primario), #12e3ff, #ffffff); /*--------------bradiente en header*/
+        background: -webkit-linear-gradient(top, var(--color-primario), #ffffff, var(--color-secundario)); /*--------------bradiente en header*/
+        position: fixed;/*Fija el header en la pantalla aunque hagas scroll.*/
+        top: 0;/*Lo pega arriba de todo.*/
+        left: 0;/*Lo alinea al borde izquierdo.*/
+        width: 100%;/*Hace que ocupe todo el ancho de la ventana.*/
         
+        padding: 0.2rem 3rem;/*Agrega espacio interno: arriba y abajo → 1rem / izquierda y derecha → 2rem / crea espacio alrededor del contenido*/ 
+        z-index: 100;/*Hace que el header quede por encima de otros elementos.*/
+        
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+
+        align-items: center;/*Centra verticalmente los elementos dentro del header sin importar el tamaño.*/    
+        border-bottom: 3px solid black;    
     }
 
-    header img{
+    header img{/*sombras en imagen logo*/
         border-radius: 50%;
-        border: 5px solid var(--color-fondo);
-        box-shadow: 0 0 10px rgba(0,0,0,0.5);/*-------------------------------------------------sombra a la imagen*/
-
+        border: 3px solid var(--color-fondo);
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);/*--sombra a la imagen*/
     }
 
-    header.titulo{      /*retecno argentina y nav*/
+    nav.navegador {/*esto hace que el navegador este del lado derecho*/
         display: flex;
-        justify-content: center;
-        padding: 20px 0;
-        border-radius: 10px;
-        border:5px solid black
-    }
-
-    nav.menu {
-        display: flex;
-        justify-content: center;
+        justify-content: flex-end;
         gap: 20px;
-        align-items: flex-end;
     }
 
-    header a{
+    .navegador a{
         text-decoration: none;
         font-weight: bold;
         padding: 5px 10px;
@@ -96,23 +94,25 @@ html{
         transition: background-color 0.3s ease;
     }
 
-    header a:hover{
+    .navegador a:hover{
+        color: #ffffff;
         background-color: var(--color-primario);
-        border-radius: 5px;
-        padding: 5px;
     }
 
-    /*-Main-*/
+    /*-------------------------------------------------------------------------------------Main-*/
         main{
             background-color: var(--color-fondo-primario);/*---------------------------------------------*/
             padding: 20px;/*----------------------------------------------------------------------------*/
             border-radius: 10px;/*---------------------------------------------------------------------*/
             box-shadow: 0 0 10px rgba(0,0,0,0.1);/*-------------------------------------------------*/
-            border: 5px solid var(--color-texto);/*------------------------------------------------------------------*/
+            border: 1px solid var(--color-texto);/*------------------------------------------------------------------*/
+            max-width: 1300px; /*centra el contenido de la pagina*/
+            margin: 0 auto;
+            margin-top: 90px;
             
         }    
 
-/*--Navegacion-----------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------Navegacion--*/
     /*Nav*/
     nav.contenido a {
         
@@ -135,8 +135,6 @@ html{
     .contenido .h2{
         text-size-adjust: 1%;
     }
-
-
         /*ul*/
             /*li*/
             ul{
@@ -144,6 +142,24 @@ html{
             }
 
                 /*a*/
+    
+    /*----------------------------------------------------------------------------------------------contenido de index*/
+    #contenido ul{
+        list-style: none;/*Quita los puntos o viñetas de la lista.*/
+        display: flex;
+        gap: 4rem;/*agrega espacio ENTRE elementos hijos dentro de un contenedor flex o grid.*/
+    }
+
+    #contenido a{
+        color: var(--color-acento);
+        text-decoration: none;/*Quita el subrayado de los enlaces.*/
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+    #contenido a:hover{
+        color: var(--color-secundario);
+    }
+
     section{
         padding: 10px 20px 20px 10px;
         border-radius: 10px;
@@ -154,13 +170,28 @@ html{
     article{
         padding: 10px 20px 20px 10px;
         border-radius: 10px;
-        border-color: #1A1A1A;
-        box-shadow: 0 0 10px rgba(0,0,0,0.5);        
+        border-color: #3700ff;
+        box-shadow: 0 0 10px rgba(47, 0, 255, 0.5); 
+        scroll-margin-top: 80px;      
     }  
+
+    .articulo-contenido{
+        display: grid;
+        grid-template-columns: 1fr 2fr;/*1 columna de: 1 fraccion y 2 fracciones*/
+        gap: 2rem;
+        align-items: center;/*Centra verticalmente los elementos dentro del header sin importar el tamaño.*/
+        margin-bottom: 3rem;
+    }
 
     /*-Footer-*/
     footer{
         background: var(--color-secundario);
+        padding: 2rem;
+        text-align:  center;
+        border-top: 2px solid var(--color-acento);/*esta es la linea de color que se ve arriva del footer*/
+    }
+    footer p{
+        margin-bottom: 0.5rem;
     }
 
 
@@ -180,157 +211,3 @@ html{
         background-color: #f8f9fa;
     }
 
-/*-------------------------------------------------------------------------transformacion de imagenes*/
-    img{
-        transition-property: transform;
-        transition-duration: 0.5s;
-        transition-delay: 0s;
-        transition-timing-function: ease; 
-    }
-
-    img:hover { 
-        transform: scale(1.05); 
-    }
-
-/*-----------------------------------------------------------------------------transiciones H1*/
-    .titulo{
-        position: relative;
-        display: inline-block;
-
-        transition-property: color, transform;
-        transition-duration: 0.5s;
-        transition-timing-function: ease;
-
-        transform-origin: center;
-    }
-
-    /* barra */
-    .titulo::before{
-        content: "";
-
-        position: absolute;
-
-        left: 0;
-        bottom: 0;
-
-        width: 0%;
-        height: 100%;
-
-        background: linear-gradient(to right, cyan, rgb(255, 255, 255));
-
-        z-index: -1;
-
-        transition: width 0.5s ease;
-    }
-
-    /* hover */
-    .titulo:hover{
-        color: red;
-        transform: scale(1.05);
-    }
-
-    /* animación barra */
-    .titulo:hover::before{
-        width: 100%;
-    }
-/*-------------------------------------------------transiciones H2*/
-    h2{
-        position: relative;
-        display: inline-block;
-
-        transition-property: color, transform;
-        transition-duration: 0.5s;
-        transition-timing-function: ease;
-
-        transform-origin: center;
-    }
-
-    /* barra */
-    h2:before{
-        content: "";
-
-        position: absolute;
-
-        left: 0;
-        bottom: 0;
-
-        width: 0%;
-        height: 100%;
-
-        background: linear-gradient(to right, rgb(200, 255, 0), rgb(255, 255, 255));
-
-        z-index: -1;
-
-        transition: width 0.5s ease;
-    }
-
-    /* hover */
-    h2:hover{
-        color: red;
-        transform: scale(1.05);
-    }
-
-    /* animación barra */
-    h2:hover::before{
-        width: 100%;
-    }
-
-/*-------------------------------------------------transiciones H3*/
-    h3{
-        position: relative;
-        display: inline-block;
-
-        transition-property: color, transform;
-        transition-duration: 0.5s;
-        transition-timing-function: ease;
-
-        transform-origin: center;
-    }
-
-    /* barra */
-    h3:before{
-        content: "";
-
-        position: absolute;
-
-        left: 0;
-        bottom: 0;
-
-        width: 0%;
-        height: 100%;
-
-        background: linear-gradient(to right, rgb(0, 255, 76), rgb(255, 255, 255));
-
-        z-index: -1;
-
-        transition: width 0.5s ease;
-    }
-
-    /* hover */
-    h3:hover{
-        color: red;
-        transform: scale(1.05);
-    }
-
-    /* animación barra */
-    h3:hover::before{
-        width: 100%;
-    } 
-
-    /*---------------------------------------------------------------------------animacion de articulos*/
-    article{
-        animation: fadeInScale linear;/*indica que animacion usar*/
-        animation-timeline: view(); /*la animación depende del scroll*/
-        animation-range: entry 0% cover 40%;/*entry 0%:La animación empieza cuando el elemento empieza a entrar. cover 40%: La animación termina cuando el elemento cubre el 40% del viewport.*/
-    }
-    @keyframes fadeInScale{/*animacion*/
-        from{
-            opacity: 0;/*opacidad*/
-            scale: 0.5;/*escala*/
-        }
-        to{
-            opacity: 1;
-            scale: 1;
-        }
-    }
-    

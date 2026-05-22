@@ -3,25 +3,28 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio - ReTecno Argentina</title>
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="icono/favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
    
-        <!--<link rel="stylesheet" href="estilos.css">-->
-        <link rel="stylesheet" href="./CSS/estilos.css"> 
+    <!--<link rel="stylesheet" href="estilos.css">-->
+    <link rel="stylesheet" href="./CSS/estilos.css"> 
 </head>
 
 <body>
 
-    <header class="titulo">
+    <header>
          <!-- Imagen superior -->
-        <img src="img/ong3.jpg" alt="Logo de ReTecno Argentina" width="150">
+        <img src="img/ong3.jpg" alt="Logo de ReTecno Argentina" width="80">
 
         <h1>ReTecno Argentina</h1>
-        <nav class="menu">
+        <nav class="navegador">
             <a href="nosotros.html">Nosotros</a>
             <a href="programas.html">Programas</a>
             <a href="contacto.html">Contactos</a>
@@ -40,51 +43,49 @@
             </nav>
         </aside>
         <br>
-        <section>
+
+        <section id="contenido">
             <h2>Contenido principal</h2>
-            <article id="presentacion">
+            <article id="presentacion" class="articulo">
 
-                <h3>Presentación:</h3>
-                <p>ReTecno Argentina es una organización no gubernamental dedicada a la recolección, reutilización y
-                    reciclaje de residuos electrónicos. <br>
-                    Nuestro objetivo es <strong>reducir el impacto ambiental de la tecnología en desuso</strong> y
-                    promover una <em>economía circular</em> basada en la recuperación <br>
-                    de materiales y dispositivos.</p>
-                    <br>
-                <img src="img/img1.png" height="300" alt="Imagen1">
-
+                <h3 >Presentación:</h3>
+                <div class="articulo-contenido">
+                    <img src="img/img1.png" height="300" alt="Imagen1">
+                    <p>ReTecno Argentina es una organización no gubernamental dedicada a la recolección, reutilización y
+                        reciclaje de residuos electrónicos. <br>
+                        Nuestro objetivo es <strong>reducir el impacto ambiental de la tecnología en desuso</strong> y
+                        promover una <em>economía circular</em> basada en la recuperación <br>
+                        de materiales y dispositivos.</p>
+                </div>
             </article>
             <br>
-            <article id="mision">
 
-                <h3>Misión:</h3>
-                <p>Impulsar la <strong>correcta gestión de residuos electrónicos</strong>, fomentando la reutilización
+            <article id="mision" class="articulo">
+
+                <h3 >Misión:</h3>
+                <div class="articulo-contenido">
+                    <img src="img/img2.png" height="300" alt="imagen2">
+                    <p>Impulsar la <strong>correcta gestión de residuos electrónicos</strong>, fomentando la reutilización
                     de equipos, el reciclaje <br>responsable y la <em>educación
-                        tecnológica sustentable</em> en la comunidad.</p>
-                <br>        
-                <img src="img/img2.png" height="300" alt="imagen2">
-
+                    tecnológica sustentable</em> en la comunidad.</p>
+                </div>
             </article>
             <br>
-            <article id="programas">
 
-                <h3>Resumen de programas:</h3>
-                <ul>
-                    <li><strong>Recolección Responsable:</strong> Recepción de dispositivos electrónicos en desuso.
-                    </li>
-                    <li><strong>Reutilizar para Incluir:</strong> Reparación de equipos para donación. </li>
-                    <li><strong>Reciclaje Tecnológico:</strong> Separación y aprovechamiento de componentes
-                        electrónicos. </li>
-                </ul>
-                <br>
-                <img src="img/img3.png" height="300" alt="imagen3">
+            <article id="programas" class="articulo"">
+
+                <h3 >Resumen de programas:</h3>
+                <div class="articulo-contenido">
+                    <img src="img/img3.png" height="300" alt="imagen3">
+                    <ul>
+                        <li><strong>Recolección Responsable:</strong> Recepción de dispositivos electrónicos en desuso.</li>
+                        <li><strong>Reutilizar para Incluir:</strong> Reparación de equipos para donación. </li>
+                        <li><strong>Reciclaje Tecnológico:</strong> Separación y aprovechamiento de componentes electrónicos. </li>
+                    </ul>
+                </div>
             </article>
             <br>
         </section>
-
-        <p><a href="#titulo">Volver al titulo</a></p>
-
-        <a href="https://google.com" target="_blank" rel="noopener noreferrer">Ir a Google</a>
     </main>
 
     <footer>
