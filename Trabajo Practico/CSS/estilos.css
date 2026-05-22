@@ -185,13 +185,30 @@
 
     /*-Footer-*/
     footer{
+        display: flex;
+    
         background: var(--color-secundario);
         padding: 2rem;
         text-align:  center;
-        border-top: 2px solid var(--color-acento);/*esta es la linea de color que se ve arriva del footer*/
+        border-top: 2px solid var(--color-acento);
+        gap: 5px;/*esta es la linea de color que se ve arriva del footer*/
     }
     footer p{
         margin-bottom: 0.5rem;
+    }
+    footer a{
+        color: var(--color-texto);
+        text-decoration: none;
+        font-weight: bold;
+        margin:0 50px;
+        display: inline-block;
+        align-items: center;
+    }
+
+    footer a:hover{
+        background-color: var(--color-primario);
+        border-radius: 5px;
+        padding: 5px 10px;
     }
 
 
