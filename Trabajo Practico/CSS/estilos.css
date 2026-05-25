@@ -243,7 +243,7 @@
         background-color: var(--color-acento);
         color: white;
     }
-    tbody tr:nth-child(odd) {/*intercala colores de forma impar (odd)*/
+    tbody tr:nth-child(odd) {/*intercala colores de forma impar---- (odd)*/
         background-color: green;
     }
     th a{ 
