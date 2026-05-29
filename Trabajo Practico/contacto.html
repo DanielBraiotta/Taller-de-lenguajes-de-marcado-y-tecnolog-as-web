@@ -33,79 +33,84 @@
 
     <main>
         <!-- Información de contacto -->
-        <section class="seccion-contacto-info">
-            <h2>Contacto</h2>
-            <p class="bajada">Si deseas ponerte en contacto con nosotros, puedes hacerlo a través de los siguientes
-                medios:</p>
-            <ul class="lista-contacto">
-                <li>
-                    <strong>Correo electrónico:</strong>
-                    <a href="mailto:retecoarg@gmail.com">retecoarg@gmail.com</a>
-                </li>
-                <li>
-                    <strong>Teléfono:</strong>
-                    <a href="tel:+541112345678">+54 11 1234-5678</a>
-                </li>
-                <li>
-                    <strong>Dirección:</strong> Av. Sarmiento 123, Buenos Aires, Argentina
-                </li>
-                <li>
-                    <strong>Redes sociales:</strong>
-                    <a href="https://www.instagram.com/retecoarg/" target="_blank">Instagram</a>,
-                    <a href="https://www.facebook.com/retecoarg/" target="_blank">Facebook</a>
-                </li>
-            </ul>
+        <section class="seccion"><!-- class="seccion-contacto-info" -->
+            <div class="seccion-fondo">
+                <h2>Contacto</h2>
+                <p class="bajada">Si deseas ponerte en contacto con nosotros, puedes hacerlo a través de los siguientes
+                    medios:</p>
+                <ul class="lista-contacto">
+                    <li>
+                        <strong>Correo electrónico:</strong>
+                        <a href="mailto:retecoarg@gmail.com">retecoarg@gmail.com</a>
+                    </li>
+                    <li>
+                        <strong>Teléfono:</strong>
+                        <a href="tel:+541112345678">+54 11 1234-5678</a>
+                    </li>
+                    <li>
+                        <strong>Dirección:</strong> Av. Sarmiento 123, Buenos Aires, Argentina
+                    </li>
+                    <li>
+                        <strong>Redes sociales:</strong>
+                        <a href="https://www.instagram.com/retecoarg/" target="_blank">Instagram</a>,
+                        <a href="https://www.facebook.com/retecoarg/" target="_blank">Facebook</a>
+                    </li>
+                </ul>
+            </div>
         </section>
         <br>
+
         <!-- Formulario de contacto -->
-        <section class="seccion-formulario">
-            <h2>Envianos un mensaje</h2>
-            <p class="bajada">Completá el formulario y nos comunicaremos a la brevedad.</p>
+        <section class="seccion"><!-- class="seccion-formulario" -->
+            <div class="seccion-fondo">
+                <h2>Envianos un mensaje</h2>
+                <p class="bajada">Completá el formulario y nos comunicaremos a la brevedad.</p>
 
-            <form class="formulario" action="#" method="post">
-                <div class="form-grupo">
-                    <label for="nombre">Nombre completo <span class="requerido">*</span></label>
-                    <input type="text" id="nombre" name="nombre" placeholder="Ej: María González" required>
-                </div>
+                <form class="formulario" action="#" method="post">
+                    <div class="form-grupo">
+                        <label for="nombre">Nombre completo <span class="requerido">*</span></label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ej: María González" required>
+                    </div>
 
-                <div class="form-grupo">
-                    <label for="email">Correo electrónico <span class="requerido">*</span></label>
-                    <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
-                </div>
+                    <div class="form-grupo">
+                        <label for="email">Correo electrónico <span class="requerido">*</span></label>
+                        <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
+                    </div>
 
-                <div class="form-grupo">
-                    <label for="telefono">Teléfono (opcional)</label>
-                    <input type="tel" id="telefono" name="telefono" placeholder="+54 11 0000-0000">
-                </div>
+                    <div class="form-grupo">
+                        <label for="telefono">Teléfono (opcional)</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="+54 11 0000-0000">
+                    </div>
 
-                <div class="form-grupo">
-                    <label for="asunto">Asunto <span class="requerido">*</span></label>
-                    <select id="asunto" name="asunto" required>
-                        <option value="" disabled selected>Seleccioná un tema</option>
-                        <option value="donacion">Quiero donar un dispositivo</option>
-                        <option value="voluntariado">Voluntariado</option>
-                        <option value="programa">Información sobre programas</option>
-                        <option value="prensa">Prensa / Medios</option>
-                        <option value="otro">Otro</option>
-                    </select>
-                </div>
+                    <div class="form-grupo">
+                        <label for="asunto">Asunto <span class="requerido">*</span></label>
+                        <select id="asunto" name="asunto" required>
+                            <option value="" disabled selected>Seleccioná un tema</option>
+                            <option value="donacion">Quiero donar un dispositivo</option>
+                            <option value="voluntariado">Voluntariado</option>
+                            <option value="programa">Información sobre programas</option>
+                            <option value="prensa">Prensa / Medios</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
 
-                <div class="form-grupo">
-                    <label for="mensaje">Mensaje <span class="requerido">*</span></label>
-                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribí tu mensaje acá..."
-                        required></textarea>
-                </div>
+                    <div class="form-grupo">
+                        <label for="mensaje">Mensaje <span class="requerido">*</span></label>
+                        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribí tu mensaje acá..."
+                            required></textarea>
+                    </div>
 
-                <div class="form-grupo form-grupo--check">
-                    <input type="checkbox" id="terminos" name="terminos" required>
-                    <label for="terminos">Acepto que mis datos sean utilizados para responder mi consulta.</label>
-                </div>
+                    <div class="form-grupo form-grupo--check">
+                        <input type="checkbox" id="terminos" name="terminos" required>
+                        <label for="terminos">Acepto que mis datos sean utilizados para responder mi consulta.</label>
+                    </div>
 
-                <div class="form-acciones">
-                    <button type="reset" class="btn btn--secundario">Limpiar</button>
-                    <button type="submit" class="btn btn--primario">Enviar mensaje</button>
-                </div>
-            </form>
+                    <div class="form-acciones">
+                        <button type="reset" class="btn btn--secundario">Limpiar</button>
+                        <button type="submit" class="btn btn--primario">Enviar mensaje</button>
+                    </div>
+                </form>
+            </div>
         </section>
     </main>
 

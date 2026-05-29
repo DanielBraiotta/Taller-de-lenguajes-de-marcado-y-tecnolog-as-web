@@ -115,7 +115,7 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            border: 1px solid var(--color-texto);
+            /*border: 1px solid var(--color-texto);*/
             max-width: 1300px; /*centra el contenido de la pagina*/
             margin: 0 auto;
             margin-top: 90px;
@@ -168,14 +168,21 @@
         color: var(--color-secundario);
     }
 
-    section{
+    .seccion{
         display: flex;
         flex-direction: column;
-        padding: 10px 20px 20px 10px;
+        /*padding: 10px 20px 20px 10px;
         border-radius: 10px;
         border-color: #1A1A1A;
         box-shadow: 0 0 10px rgba(0,0,0,0.5);
-        gap: 20px;
+        gap: 20px;*/
+
+        position: relative;/*base que toma absolute para posicionarse*/
+        background: #1A1A1A;
+        padding: 2px;/*grosor de las luces*/
+        border-radius: 10px;
+        scroll-margin-top: 80px;
+        z-index: 1;
     }  
 
     .articulo-con-imgs{
@@ -288,24 +295,28 @@ h2:hover{
 
 .articulo{
     position: relative;/*base que toma absolute para posicionarse*/
-    background: #1A1A1A;
-    padding: 2px;/*grosor de las luces*/
-    border-radius: 10px;
+    background: #ffffff;
+
     scroll-margin-top: 80px;
     z-index: 1;
+
+    padding: 20px 20px;
+    border-radius: 10px;
+    border-color: #797979;
+    box-shadow: 0 0 10px rgba(102, 102, 102, 0.5);
 }
 
 /*----------------------------------------------------------------------------------------CONTENIDO SOBRE EL EFECTO*/
 
-.articulo > *{/*para todos los hijos de article*/
+.seccion > *{/*para todos los hijos de article*/
     position: relative;
     z-index: 2;
 }
 
 /*-------------------------------------------------------------------------------------------BORDE ANIMADO*/
 
-.articulo::before,
-.articulo::after{
+.seccion::before,
+.seccion::after{
     content: "";
     position: absolute; /*elemento flotante*/
     inset: 0;/*la mascara se pega en las 4 puntas para cubrir todo el article*/
@@ -328,7 +339,7 @@ h2:hover{
 
 /*---------------------------------------------------------------------------------------------GLOW*/
 
-.articulo::after{
+.seccion::after{
     filter: blur(5px);
 }
 
@@ -340,7 +351,7 @@ h2:hover{
     }
 }
 
-.articulo-fondo{
+.seccion-fondo{
     position: relative;
     background: #ffffff;
     border-radius: 8px;
