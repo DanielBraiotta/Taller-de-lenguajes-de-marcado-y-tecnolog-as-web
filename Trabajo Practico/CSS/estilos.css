@@ -52,8 +52,6 @@
         background-color: var(--color-fondo-secundario);
         color: var(--color-texto);
         
-        margin: 0 auto;
-        padding: 0;
     }
 
     /*-----------------------------------------------------------------------------------Header-*/
@@ -76,15 +74,15 @@
     }
 
     /* Cuando la pantalla sea chica (ej: menos de 768px) */
-@media (max-width: 768px) {
-  header {
-    display: flex;              /* Cambia de grid a flex */
-    flex-direction: column;     /* Todo en columna */
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-  }
-}
+    @media (max-width: 768px) {
+        header {
+            display: flex;              /* Cambia de grid a flex */
+            flex-direction: column;     /* Todo en columna */
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+        }
+    }
 
     header img{/*sombras en imagen logo*/
         border-radius: 50%;
@@ -113,11 +111,11 @@
 
     /*-------------------------------------------------------------------------------------Main-*/
         main{
-            background-color: var(--color-fondo-primario);/*---------------------------------------------*/
-            padding: 20px;/*----------------------------------------------------------------------------*/
-            border-radius: 10px;/*---------------------------------------------------------------------*/
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);/*-------------------------------------------------*/
-            border: 1px solid var(--color-texto);/*------------------------------------------------------------------*/
+            background-color: var(--color-fondo-primario);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            /*border: 1px solid var(--color-texto);*/
             max-width: 1300px; /*centra el contenido de la pagina*/
             margin: 0 auto;
             margin-top: 90px;
@@ -127,7 +125,6 @@
 /*----------------------------------------------------------------------------------------Navegacion--*/
     /*Nav*/
     nav.contenido a {
-        
         padding: 10px 20px 20px 10px;
         border-radius: 10px;
         border-color: #1A1A1A;
@@ -138,7 +135,6 @@
     }
 
     nav.contenido a:hover{
-        
         background-color: var(--color-primario);
         color: var(--color-fondo);
         border-radius: 5px;
@@ -172,28 +168,24 @@
         color: var(--color-secundario);
     }
 
-    section{
+    .seccion{
         display: flex;
         flex-direction: column;
-        padding: 10px 20px 20px 10px;
+        /*padding: 10px 20px 20px 10px;
         border-radius: 10px;
         border-color: #1A1A1A;
         box-shadow: 0 0 10px rgba(0,0,0,0.5);
-        gap: 20px;
-    }  
+        gap: 20px;*/
 
-    article{
-        display: flex;
-        flex-direction: column;
-        padding: 10px 20px 20px 10px;
+        position: relative;/*base que toma absolute para posicionarse*/
+        background: #1A1A1A;
+        padding: 2px;/*grosor de las luces*/
         border-radius: 10px;
-        border-color: #3700ff;
-        box-shadow: 0 0 10px rgba(47, 0, 255, 0.5); 
-        scroll-margin-top: 80px;      
-        gap: 20px;
+        scroll-margin-top: 80px;
+        z-index: 1;
     }  
 
-    .articulo-contenido{
+    .articulo-con-imgs{
         display: grid;
         grid-template-columns: 1fr 2fr;/*1 columna de: 1 fraccion y 2 fracciones*/
         gap: 2rem;
@@ -201,7 +193,7 @@
         margin-bottom: 3rem;
     }
 
-    /*-Footer-*/
+    /*------------------------------------------------------------------------------------Footer-*/
     footer{
         display: flex;
     
@@ -229,9 +221,7 @@
         padding: 5px 10px;
     }
 
-
-
-/*---------------------------------------------------------------------------------------Tablas*/
+/*-----------------------------------------------------------------------------------------------Tablas*/
     table, th, td {
         border: 1px solid black;
         
@@ -253,3 +243,118 @@
         color: var(--color-primario);
     }
 
+/*---------------------------------------------------------------------------------------------Transiciones*/
+/*----imagenes----*/
+    .articulo-contenido img{
+        border-radius: 10px;
+
+        transition:
+            transform 0.5s ease,
+            box-shadow 0.5s ease;
+
+    }
+
+    .articulo-contenido img:hover { 
+            transform: scale(1.02); 
+            box-shadow: 0 0 10px rgb(0, 119, 30);
+
+        }
+
+/*----contenido----*/
+    .articulo-contenido p,
+    .articulo-contenido li{
+        font-size: 1.2rem;
+        transition: text-shadow 0.5s ease;
+    }
+
+    .articulo-contenido p:hover,
+    .articulo-contenido li:hover{
+        text-shadow: #277c00 2px 2px 3px;
+    }
+
+
+/*----color----*/
+h2{
+    transition: color 0.5s ease;
+}
+
+h2:hover{
+    color: red;
+}
+
+
+/*-----------------------------------------------------------------------------------------VARIABLE ANIMABLE*/
+
+@property --deg{
+    syntax: '<angle>';
+    inherits: true;
+    initial-value: 0deg;
+}
+
+/*--------------------------------------------------------------------------------------------ARTICLE*/
+
+.articulo{
+    position: relative;/*base que toma absolute para posicionarse*/
+    background: #ffffff;
+
+    scroll-margin-top: 80px;
+    z-index: 1;
+
+    padding: 20px 20px;
+    border-radius: 10px;
+    border-color: #797979;
+    box-shadow: 0 0 10px rgba(102, 102, 102, 0.5);
+}
+
+/*----------------------------------------------------------------------------------------CONTENIDO SOBRE EL EFECTO*/
+
+.seccion > *{/*para todos los hijos de article*/
+    position: relative;
+    z-index: 2;
+}
+
+/*-------------------------------------------------------------------------------------------BORDE ANIMADO*/
+
+.seccion::before,
+.seccion::after{
+    content: "";
+    position: absolute; /*elemento flotante*/
+    inset: 0;/*la mascara se pega en las 4 puntas para cubrir todo el article*/
+    padding: 3px;
+    border-radius: inherit;
+    background: conic-gradient(
+        from var(--deg) at center,
+        #ff0000,
+        #ff5900,
+        #eeff00,
+        #00ee0c,
+        #005a05,
+        #3700ff,
+        #ff00f2,
+        #ff0000
+    );
+    z-index: -2;/*se posisiona atras de article*/
+    animation: autoRotate 2s linear infinite;
+}
+
+/*---------------------------------------------------------------------------------------------GLOW*/
+
+.seccion::after{
+    filter: blur(5px);
+}
+
+/*--------------------------------------------------------------------------------------------ANIMACION*/
+
+@keyframes autoRotate{
+    to{
+        --deg: 360deg;
+    }
+}
+
+.seccion-fondo{
+    position: relative;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    z-index: 1;/**/
+}
