@@ -15,7 +15,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
 
-    <!-- CSS -->
+
+    <!--boostrap-->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- CSS propio -->
 
     <link rel="stylesheet" href="./CSS/estilos.css">
 
@@ -26,81 +32,87 @@
 <body>
 
     <header>
-        <!-- Imagen superior- logo -->
-        <img src="img/ong3.jpg" alt="Logo 1 de ReTecno Argentina" width="80">
+        <!-- Navbar principal -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+                <!-- Marca -->
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/ong3.jpg" alt="Logo ReTecno" width="40" class="me-2">
+                    ReTecno Argentina
+                </a>
 
-        <h1>ReTecno Argentina</h1>
+                <!-- Botón hamburguesa -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-        <!-- navegacion--->
-        <nav class="navegador">
-
-            <a href="index.html">Inicio</a>
-            <a href="programas.html">Programas</a>
-            <a href="contacto.html">Contactos</a>
-
+                <!-- Menú -->
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="programas.html">Programas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contacto.html">Contactos</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
+
 
     </header>
 
-    <main>
-
-        <aside>
-
-            <!-- navegacion dentro de nosotros -->
-
-            <nav id="contenido">
-
-                <h2 class="titulo">Indice de contenidos</h2>
-
-                <ul>
-                    <li><a href="#SOBRE-NOSOTROS">Nosotros</a></li>
-                    <li><a href="#NUESTROS-VALORES">Valores</a></li>
-                    <li><a href="#NUESTRO-EQUIPO">Equipo</a></li>
-                    <li><a href="#DATOS-INSTITUCIONALES">Institución</a></li>
-                </ul>
-            </nav>
+    <main class="container-fluid">
+        <!-- Navegación lateral -->
+        <aside id="contenido">
+            <h2 class="titulo">Indice de contenidos</h2>
+            <ul class="">
+                <li><a href="#SOBRE-NOSOTROS">Nosotros</a></li>
+                <li><a href="#NUESTROS-VALORES">Valores</a></li>
+                <li><a href="#NUESTRO-EQUIPO">Equipo</a></li>
+                <li><a href="#DATOS-INSTITUCIONALES">Institución</a></li>
+            </ul>
         </aside>
-    
+        </div>
+
 
         <section id="SOBRE-NOSOTROS" class="seccion">
             <div class="seccion-fondo">
                 <article class="articulo">
-                        <h3> Resumen en video</h3>
+                    <h3> Resumen en video</h3>
 
-                        <div class="video-detalles">
-                            <video src="video/ReTecno__De_Basura_a_Oportunidad.mp4" controls autoplay muted loop></video>
+                    <div class="video-detalles">
+                        <video src="video/ReTecno__De_Basura_a_Oportunidad.mp4" controls autoplay muted loop></video>
 
-                            <aside class="video-info">
-                                <table>
-                                    <tbody>
-                                        <caption>📌 Detalles principales del video</caption>
-                                        <tr>
-                                            <th>Título:</th>
-                                            <td>trabajo práctico</td>
+                        <aside class="video-info">
+                            <table>
+                                <tbody>
+                                    <caption>📌 Detalles principales del video</caption>
+                                    <tr>
+                                        <th>Título:</th>
+                                        <td>trabajo práctico</td>
 
-                                        </tr>
+                                    </tr>
 
-                                        <tr>
-                                            <th>canal:</th>
-                                            <td>Leonardo Alfonso Simbron</td>
-                                        </tr>
+                                    <tr>
+                                        <th>canal:</th>
+                                        <td>Leonardo Alfonso Simbron</td>
+                                    </tr>
 
-                                        <tr>
-                                            <th>Fecha de publicación:</th>
-                                            <td>23 de abril de 2026</td>
-                                        </tr>
+                                    <tr>
+                                        <th>Fecha de publicación:</th>
+                                        <td>23 de abril de 2026</td>
+                                    </tr>
 
-                                        <tr>
-                                            <th>Duración:</th>
-                                            <td>4:39 minutos</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </aside>
-                        </div>
+                                    <tr>
+                                        <th>Duración:</th>
+                                        <td>4:39 minutos</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </aside>
+                    </div>
                 </article>
             </div>
-        </section>  
+        </section>
 
         <br>
 
@@ -109,65 +121,71 @@
                 <h2>Historia</h2>
 
                 <article class="articulo">
-                        <div class="articulo-contenido">
-                            <h3>Orígenes (2026)</h3>
+                    <div class="articulo-contenido">
+                        <h3>Orígenes (2026)</h3>
 
-                            <p><strong>ReTecno Argentina</strong> nació en 2020 como respuesta al creciente problema de la
-                                basura</p>
-                            <p> electrónica. Un grupo de técnicos y ambientalistas comenzó recolectando equipos en desuso para
-                                evitar</p>
-                            <p> que terminaran en basurales. Al principio eran pocos, recorriendo barrios con camionetas
-                                prestadas y
-                            <p>talleres improvisados, pero su compromiso con el ambiente los impulsó a seguir adelante.</p>
-                            <br>
-                            <p><strong>ReTecno Argentina</strong> nació en 2020 como respuesta al creciente problema de la
-                                basura electrónica. Un grupo de técnicos y ambientalistas comenzó recolectando equipos en desuso para
-                                evitar que terminaran en basurales. Al principio eran pocos, recorriendo barrios con camionetas
-                                prestadas y talleres improvisados, pero su compromiso con el ambiente los impulsó a seguir adelante.</p>
-                        </div>
+                        <p><strong>ReTecno Argentina</strong> nació en 2020 como respuesta al creciente problema de la
+                            basura</p>
+                        <p> electrónica. Un grupo de técnicos y ambientalistas comenzó recolectando equipos en desuso
+                            para
+                            evitar</p>
+                        <p> que terminaran en basurales. Al principio eran pocos, recorriendo barrios con camionetas
+                            prestadas y
+                        <p>talleres improvisados, pero su compromiso con el ambiente los impulsó a seguir adelante.</p>
+                        <br>
+                        <p><strong>ReTecno Argentina</strong> nació en 2020 como respuesta al creciente problema de la
+                            basura electrónica. Un grupo de técnicos y ambientalistas comenzó recolectando equipos en
+                            desuso para
+                            evitar que terminaran en basurales. Al principio eran pocos, recorriendo barrios con
+                            camionetas
+                            prestadas y talleres improvisados, pero su compromiso con el ambiente los impulsó a seguir
+                            adelante.</p>
+                    </div>
 
                 </article>
                 <br>
 
                 <article class="articulo">
-                        <div class="articulo-contenido">
-                            <h3>Crecimiento y programas</h3>
+                    <div class="articulo-contenido">
+                        <h3>Crecimiento y programas</h3>
 
-                            <p>Con el tiempo, la iniciativa creció y hoy trabaja junto a comunidades, empresas y escuelas.
-                                Organizan</p>
-                            <p> campañas de concientización, talleres de reparación y programas de donación de equipos
-                                reacondicionados</p>
-                            <p> para estudiantes y organizaciones sociales.</p>
-                            <p>Cada computadora recuperada significa menos residuos y más oportunidades de acceso a la
-                                tecnología.</p>
-                        </div>
+                        <p>Con el tiempo, la iniciativa creció y hoy trabaja junto a comunidades, empresas y escuelas.
+                            Organizan</p>
+                        <p> campañas de concientización, talleres de reparación y programas de donación de equipos
+                            reacondicionados</p>
+                        <p> para estudiantes y organizaciones sociales.</p>
+                        <p>Cada computadora recuperada significa menos residuos y más oportunidades de acceso a la
+                            tecnología.</p>
+                    </div>
                 </article>
                 <br>
 
                 <article class="articulo">
-                        <div class="articulo-contenido">
-                            <h3>Formación y educación</h3>
+                    <div class="articulo-contenido">
+                        <h3>Formación y educación</h3>
 
-                            <p><strong>La ONG</strong> también se convirtió en un espacio de formación: jóvenes aprenden a
-                                desarmar,</p>
-                            <p> clasificar y reparar dispositivos, adquiriendo habilidades técnicas que les abren puertas
-                                laborales.</p>
-                            <p> locales colaboran aportando equipos, mientras que las escuelas participan en proyectos</p>
-                            <p>educativos sobre reciclaje y sustentabilidad.</p>
-                        </div>
+                        <p><strong>La ONG</strong> también se convirtió en un espacio de formación: jóvenes aprenden a
+                            desarmar,</p>
+                        <p> clasificar y reparar dispositivos, adquiriendo habilidades técnicas que les abren puertas
+                            laborales.</p>
+                        <p> locales colaboran aportando equipos, mientras que las escuelas participan en proyectos</p>
+                        <p>educativos sobre reciclaje y sustentabilidad.</p>
+                    </div>
                 </article>
                 <br>
-                
-                <article class="articulo">
-                        <div class="articulo-contenido">
-                            <h3>Red de inclusión</h3>
 
-                            <p><strong>ReTecno Argentina</strong> ya no es solo un grupo de voluntarios: es una red que conecta
-                            </p>
-                            <p> personas, instituciones y conocimientos, demostrando que la tecnología puede ser una herramienta
-                                para la</p>
-                            <p>inclusión y el cuidado del planeta.</p>
-                        </div>
+                <article class="articulo">
+                    <div class="articulo-contenido">
+                        <h3>Red de inclusión</h3>
+
+                        <p><strong>ReTecno Argentina</strong> ya no es solo un grupo de voluntarios: es una red que
+                            conecta
+                        </p>
+                        <p> personas, instituciones y conocimientos, demostrando que la tecnología puede ser una
+                            herramienta
+                            para la</p>
+                        <p>inclusión y el cuidado del planeta.</p>
+                    </div>
                 </article>
             </div>
         </section>
@@ -177,75 +195,80 @@
         <section id="NUESTROS-VALORES" class="seccion">
             <div class="seccion-fondo">
                 <article class="articulo">
-                            <h2>Nuestros Valores</h2>
-                            <ul>
-                                <li><strong>Sostenibilidad:</strong> Compromiso con el medio ambiente y el uso responsable de
-                                    los
-                                    resources.</li>
-                                <li><strong>Transparencia:</strong> Actuar con honestidad y claridad en todas nuestras acciones.
-                                </li>
-                                <li><strong>Colaboración:</strong> Trabajar en conjunto con la comunidad para lograr objetivos
-                                    comunes.
-                                </li>
-                                <li><strong>Solidaridad:</strong> compartimos conocimientos y recursos para que más personas
-                                    accedan
-                                    a
-                                    la tecnología.</li>
-                                <li><strong>Transparencia:</strong> cada equipo recuperado se registra y se destina a proyectos
-                                    educativos o sociales.</li>
-                                <li><strong>Sustentabilidad: </strong> buscamos reducir residuos electrónicos y fomentar el
-                                    reciclaje
-                                    responsable.</li>
-                                <li><strong>Innovación:</strong> aplicamos creatividad y técnica para dar nuevas funciones a
-                                    dispositivos descartados.</li>
-                            </ul>
-                </article>                
+                    <h2>Nuestros Valores</h2>
+                    <ul>
+                        <li><strong>Sostenibilidad:</strong> Compromiso con el medio ambiente y el uso responsable de
+                            los
+                            resources.</li>
+                        <li><strong>Transparencia:</strong> Actuar con honestidad y claridad en todas nuestras acciones.
+                        </li>
+                        <li><strong>Colaboración:</strong> Trabajar en conjunto con la comunidad para lograr objetivos
+                            comunes.
+                        </li>
+                        <li><strong>Solidaridad:</strong> compartimos conocimientos y recursos para que más personas
+                            accedan
+                            a
+                            la tecnología.</li>
+                        <li><strong>Transparencia:</strong> cada equipo recuperado se registra y se destina a proyectos
+                            educativos o sociales.</li>
+                        <li><strong>Sustentabilidad: </strong> buscamos reducir residuos electrónicos y fomentar el
+                            reciclaje
+                            responsable.</li>
+                        <li><strong>Innovación:</strong> aplicamos creatividad y técnica para dar nuevas funciones a
+                            dispositivos descartados.</li>
+                    </ul>
+                </article>
             </div>
         </section>
         <br>
 
-        <section id="NUESTRO-EQUIPO" class="seccion">
-            <div class="seccion-fondo">
-                <h2>Nuestro Equipo</h2>
+        <section id="NUESTRO-EQUIPO" class="seccion my-5">
+  <div class="container">
+    <h2 class="mb-4 text-center">Nuestro Equipo</h2>
 
-                <figure style="float:left; margin-right:15px;">
-                    <img src="img/img13.png" alt="Equipo de trabajo colaborando" width="400">
-                    <figcaption>Figura 1: Nuestro equipo en acción.</figcaption>
-                </figure>
+    <div class="row align-items-center">
+      <!-- Imagen -->
+      <div class="col-md-5 text-center">
+        <figure>
+          <img src="img/img13.png" alt="Equipo de trabajo colaborando" class="img-fluid rounded shadow">
+          <figcaption class="mt-2 text-muted">Figura 1: Nuestro equipo en acción.</figcaption>
+        </figure>
+      </div>
 
-                <p class="intro">
-                    Somos un grupo comprometido con la innovación, el trabajo colaborativo y la búsqueda constante de
-                    soluciones sostenibles.
-                    Creemos que la tecnología, cuando se gestiona de manera responsable, puede convertirse en
-                    una herramienta poderosa para transformar la sociedad y proteger el medio ambiente.</p>
+      <!-- Texto -->
+      <div class="col-md-7">
+        <p class="intro">
+          Somos un grupo comprometido con la innovación, el trabajo colaborativo y la búsqueda constante de
+          soluciones sostenibles. Creemos que la tecnología, cuando se gestiona de manera responsable, puede convertirse en
+          una herramienta poderosa para transformar la sociedad y proteger el medio ambiente.
+        </p>
 
-                <p class="intro">
-                    <strong>ReTecno Argentina</strong> reúne profesionales de distintas disciplinas que aportan su
-                    experiencia
-                    en gestión de residuos electrónicos, logística, investigación y educación ambiental. Nuestro
-                    objetivo es
-                    promover prácticas que reduzcan el impacto de la basura tecnológica, fomentando la reutilización, el
-                    reciclaje
-                    y la conciencia ciudadana sobre el valor de los recursos digitales.
-                </p>
+        <p class="intro">
+          <strong>ReTecno Argentina</strong> reúne profesionales de distintas disciplinas que aportan su experiencia
+          en gestión de residuos electrónicos, logística, investigación y educación ambiental. Nuestro objetivo es
+          promover prácticas que reduzcan el impacto de la basura tecnológica, fomentando la reutilización, el reciclaje
+          y la conciencia ciudadana sobre el valor de los recursos digitales.
+        </p>
 
-                <p class="intro">
-                    Cada integrante de nuestro equipo comparte la convicción de que el futuro depende de la capacidad de
-                    transformar los desafíos en oportunidades. Por eso trabajamos en proyectos que combinan innovación
-                    técnica,
-                    compromiso social y una visión ecológica, generando un puente entre la cultura digital y la
-                    responsabilidad
-                    ambiental.</p>
-            </div>
-        </section>
-    
+        <p class="intro">
+          Cada integrante de nuestro equipo comparte la convicción de que el futuro depende de la capacidad de
+          transformar los desafíos en oportunidades. Por eso trabajamos en proyectos que combinan innovación técnica,
+          compromiso social y una visión ecológica, generando un puente entre la cultura digital y la responsabilidad
+          ambiental.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <section class="seccion">
+
+
+        <section class="seccion b-6">
             <div class="seccion-fondo">
                 <h2>Organigrama</h2>
 
                 <article>
-                
+
                     <h3>Daniel</h3>
                     <p>Director General</p>
                 </article>
@@ -262,7 +285,7 @@
             </div>
         </section>
         <br>
-        
+
         <section id="DATOS-INSTITUCIONALES" class="seccion">
             <div class="seccion-fondo">
                 <h2 class="titulo">Datos Institucionales</h2>
