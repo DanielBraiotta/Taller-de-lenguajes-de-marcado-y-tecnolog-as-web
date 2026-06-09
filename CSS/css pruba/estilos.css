@@ -1,0 +1,309 @@
+/* Estilos generales */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #0c34d5;
+  color: #222;
+  margin: 10;
+  padding: 0;
+  border: #0b3d91 solid 1px;
+}
+
+body {
+  background:  url('img/img14.png') left top repeat-y,url('img/img14.png') right top repeat-y; /* imagenes, derecha y izquierda*/
+  line-height: 1.6;/* pedido en el tp */
+  background-color: #fff; /* centro blanco para el contenido */
+  background-size: 300px auto; /* ancho del lateral */
+  margin: 0;
+  padding: 1;
+}
+
+/* Encabezado */
+header {
+  background-color: #0b3d91;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+}
+
+header img {
+  border-radius: 8px;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  margin: 0 10px;
+  font-weight: bold;
+  transition-duration: 0.3s;
+  border-radius: 15px;
+  padding:auto;
+  
+}
+
+/* Resaltar botones con cursor , pedido en el tp */
+header nav a:hover {
+  text-decoration: none;
+  color:#1b5e20;
+  background-color: #c8e6c9;
+  margin: auto;
+  border-radius: 15px;
+  padding: 5px 10px;
+}
+
+/* Contenido principal */
+main {
+  padding: 20px;
+  background-color: #0b3d91;
+  max-width: 1000px;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+aside nav a {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  
+}
+aside nav a:hover{
+  border-radius: 5rem;
+  color:white;
+  background-color: #3510da;
+  margin: row;
+
+}
+ p {
+  text-align: justify;
+  margin-left: 30px;
+  margin-right: 20px;;
+  line-height: 1.6;
+}
+
+/* efecto de aparición */
+@keyframes aparecer {
+  from { opacity: 0; } /* opacidad inicial */
+  to { opacity: 1; } /* opacidad final */
+}
+
+/* efecto de aparición en h1 */
+h1 {
+  text-align: left;
+  text-overflow: unset;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  color: #f4f4f4;
+  animation: aparecer 2s ease-in-out forwards;
+}
+
+h2.detalle {
+  color: red !important;
+  animation: aparecer 2s ease-in-out forwards;
+text-align: center;
+}
+
+section {
+  border: 2px solid #0b3d91;   /* borde azul institucional */
+  background-color: #f9f9f9;   /* fondo gris claro */
+  border-radius: 8px;          /* esquinas redondeadas */
+  padding: 20px;               /* espacio interno */
+  margin-bottom: 25px;         /* separación entre secciones */
+}
+
+/* Índice lateral */
+aside { 
+  background-color: #e8e8e8;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+aside h2 {
+  color: #0b3d91;
+  
+}
+
+/* Secciones */
+h2, h3 {
+  color: #0b3d91;
+}
+
+/* Footer */
+footer {
+  background-color: #0b3d91;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}
+
+footer a {
+  color: #ffd700;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  text-decoration: none;
+  border-radius: 15px;
+  color: #c8e6c9;
+  margin: auto;
+}
+/* Datos institucionales */
+dl {
+  display: grid;                /* Usamos grid */
+  grid-template-columns: 200px auto; /* Columna fija para dt y flexible para dd */
+  gap: 10px;                    /* Espacio entre columnas */
+  background: #f4f4f4;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+dt {
+  font-weight: bold;
+  color: #2e7d32; /* Verde institucional */
+}
+
+dd {
+  margin: 0; /* Quitamos margen por defecto */
+  color: #37474f; /* Gris tecnológico */
+}
+/* Menú desplegable */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: #2e7d32; /* Verde reciclaje */
+  color: white;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover {
+  background-color: #1b5e20;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #37474f;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #c8e6c9;
+}
+
+/* Mostrar menú al pasar el mouse */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* proporción 16:9 */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  background: #000; /* opcional */
+  border-radius: 8px; /* opcional */
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none; /* elimina el borde */
+}
+
+#NUESTRO-EQUIPO {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+#NUESTRO-EQUIPO h2 {
+  text-align: center;
+  color: #0b3d91;
+  margin-bottom: 20px;
+}
+
+#NUESTRO-EQUIPO .intro {
+  text-align: justify;
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.miembros {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.miembros article {
+  flex: 1;
+  background-color: #f4f4f4;
+  padding: 15px;
+  border-radius: 6px;
+  text-align: center;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+}
+
+#DATOS-INSTITUCIONALES {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+#DATOS-INSTITUCIONALES h2 {
+  text-align: center;
+  color: #0b3d91;
+  margin-bottom: 20px;
+}
+
+#DATOS-INSTITUCIONALES .intro {
+  text-align: justify;
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.ficha {
+  display: grid;
+  grid-template-columns: 200px 1fr; /* primera columna fija, segunda flexible */
+  gap: 10px 20px;
+}
+
+.ficha dt {
+  font-weight: bold;
+  color: #0b3d91;
+}
+
+.ficha dd {
+  margin: 0;
+  font-weight: bold;
+  color:black;
+}
+

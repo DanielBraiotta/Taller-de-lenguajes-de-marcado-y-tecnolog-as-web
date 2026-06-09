@@ -1,0 +1,601 @@
+
+/*--------------------------------------------------------------------------------------Variables--*/
+    /*Colores*/
+    /* Variables globales para colores y fuente usados en todo el sitio */
+    :root{
+        --color-primario: #0077ff;
+        --color-secundario: #55c513c7;
+
+        --color-fondo-primario: #ffffff;/*-nuevos colores*/
+        --color-fondo-secundario: #f1f1f1;/*-nuevos colores*/
+
+        --color-fondo: #cacaca;
+        --color-acento: #E8611A;
+        --color-texto: #1A1A1A;
+        --fuente: "Share Tech Mono", monospace;
+
+
+    }
+
+/*---------------------------------------------------------------------------------------Reset--*/
+/* Reset básico: elimina márgenes y relleno por defecto y usa box-sizing border-box */
+* { box-sizing: border-box;
+    margin: 0; 
+    padding: 0; 
+}
+
+/*--------------------------------------------------------------------------------------Tipografia--*/
+    /*H1*/
+    /* Estilo del título principal del header */
+    header h1{
+        font-size: clamp(1.2rem, 4vw, 3rem);/*tamaño adaptativo*/
+        color: var(--color-fondo-secundario);
+        text-shadow: #1100ff 4px 4px 5px;/*sombra al titulo*/
+        flex: 1;
+        text-align: center;
+    }
+    /*H2*/
+    /* Estilo global para títulos h2 en la página */
+    h2{
+        font-size: 3rem;
+        color: var(--color-primario);
+    }
+    /*H3*/
+    /* Estilo global para subtítulos h3 */
+    h3{
+        font-size: 2rem;
+        color: var(--color-secundario);
+    }
+
+
+/*---------------------------------------------------------------------------------------Body--*/
+/* Configuración base del cuerpo de la página */
+    body{
+        font-family:var(--fuente);  /*aplicacion de tipografica*/
+        font-size: 1rem;
+        line-height: 1.5;
+
+        background-color: var(--color-fondo-secundario);
+        color: var(--color-texto);
+        
+    }
+
+    /*-----------------------------------------------------------------------------------Header-*/
+/* Estilo del header fijo superior con degradado y layout de grid */
+    header{
+        background: -webkit-linear-gradient(top, var(--color-primario), #ffffff, var(--color-secundario)); /*--------------bradiente en header*/
+        position: fixed;/*Fija el header en la pantalla aunque hagas scroll.*/
+        top: 0;/*Lo pega arriba de todo.*/
+        left: 0;/*Lo alinea al borde izquierdo.*/
+        width: 100%;/*Hace que ocupe todo el ancho de la ventana.*/
+        
+        padding: 0.2rem 3rem;/*Agrega espacio interno: arriba y abajo → 1rem / izquierda y derecha → 2rem / crea espacio alrededor del contenido*/ 
+        z-index: 100;/*Hace que el header quede por encima de otros elementos.*/
+        
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+
+        align-items: center;/*Centra verticalmente los elementos dentro del header sin importar el tamaño.*/    
+        border-bottom: 3px solid black;
+    
+    }
+
+    /* Cuando la pantalla sea chica (ej: menos de 768px) */
+    /* Ajustes responsivos para el header en pantallas pequeñas */
+    @media (max-width: 768px) {
+        header {
+            display: flex;              /* Cambia de grid a flex */
+            flex-direction: column;     /* Todo en columna */
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+        }
+    }
+
+    /* Estilo del logo dentro del header */
+    header img{/*sombras en imagen logo*/
+        border-radius: 50%;
+        border: 3px solid var(--color-fondo);
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);/*--sombra a la imagen*/
+    }
+
+    /* Estilo del contenedor de enlaces principales del header */
+    nav.navegador {/*hace que el navegador este del lado derecho*/
+        display: flex;
+        justify-content: flex-end;
+        gap: 20px;
+    }
+
+    /* Estilo de los enlaces del header */
+    .navegador a{
+        text-decoration: none;
+        font-weight: bold;
+        padding: 5px 10px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    /* Estilo hover de enlaces del header */
+    .navegador a:hover{
+        color: #ffffff;
+        background-color: var(--color-primario);
+    }
+
+    /*-------------------------------------------------------------------------------------Main-*/
+    /* Contenedor principal de la página, centrado y con sombra ligera */
+        main{
+            background-color: var(--color-fondo-primario);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            /*border: 1px solid var(--color-texto);*/
+            max-width: 1300px; /*centra el contenido de la pagina*/
+            margin: 0 auto;
+            margin-top: 90px;
+            
+        }    
+
+/*----------------------------------------------------------------------------------------Navegacion--*/
+    /*Nav*/
+    nav.contenido a {
+        padding: 10px 20px 20px 10px;
+        border-radius: 10px;
+        border-color: #1A1A1A;
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        text-decoration: none;
+        color: var(--color-texto);
+
+    }
+
+    /* Hover para los enlaces del índice interno */
+    nav.contenido a:hover{
+        background-color: var(--color-primario);
+        color: var(--color-fondo);
+        border-radius: 5px;
+    }
+
+    /* Ajuste específico del elemento h2 dentro de .contenido */
+    .contenido .h2{
+        text-size-adjust: 1%;
+    }
+        /*ul*/
+            /*li*/
+            /* Espaciado de listas globales dentro del contenido */
+            ul{
+                padding: 1px 50px;
+            }
+
+                /*a*/
+    
+    /*----------------------------------------------------------------------------------------------contenido de index*/
+    /* Estilo de la lista de índices laterales en la sección de contenido */
+    #contenido ul{
+        list-style: none;/*Quita los puntos o viñetas de la lista.*/
+        display: flex;
+        gap: 4rem;/*agrega espacio ENTRE elementos hijos dentro de un contenedor flex o grid.*/
+    }
+
+    /* Estilo de los enlaces del índice de contenido */
+    #contenido a{
+        color: var(--color-acento);
+        text-decoration: none;/*Quita el subrayado de los enlaces.*/
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+    /* Hover de los enlaces del índice de contenido */
+    #contenido a:hover{
+        color: var(--color-secundario);
+    }
+
+    /* Estilo base para secciones con borde animado */
+    .seccion{
+        display: flex;
+        flex-direction: column;
+        /*padding: 10px 20px 20px 10px;
+        border-radius: 10px;
+        border-color: #1A1A1A;
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        gap: 20px;*/
+
+        position: relative;/*base que toma absolute para posicionarse*/
+        background: #1A1A1A;
+        padding: 2px;/*grosor de las luces*/
+        border-radius: 10px;
+        scroll-margin-top: 80px;
+        z-index: 1;
+    }  
+
+    /* Contenedor para artículos con imagenes y texto lado a lado */
+    .articulo-con-imgs{
+        display: grid;
+        grid-template-columns: 1fr 2fr;/*1 columna de: 1 fraccion y 2 fracciones*/
+        gap: 2rem;
+        align-items: center;/*Centra verticalmente los elementos dentro del header sin importar el tamaño.*/
+        margin-bottom: 3rem;
+    }
+
+    /*------------------------------------------------------------------------------------Footer-*/
+    /* Estilo del pie de página con fondo y separación interna */
+    footer{
+        display: flex;
+    
+        background: var(--color-secundario);
+        padding: 2rem;
+        text-align:  center;
+        border-top: 2px solid var(--color-acento);
+        gap: 5px;/*esta es la linea de color que se ve arriva del footer*/
+    }
+    /* Texto dentro del footer */
+    footer p{
+        margin-bottom: 0.5rem;
+    }
+    /* Enlaces del footer */
+    footer a{
+        color: var(--color-texto);
+        text-decoration: none;
+        font-weight: bold;
+        margin:0 50px;
+        display: inline-block;
+        align-items: center;
+    }
+
+    /* Hover para enlaces del footer */
+    footer a:hover{
+        background-color: var(--color-primario);
+        border-radius: 5px;
+        padding: 5px 10px;
+    }
+
+/*-----------------------------------------------------------------------------------------------Tablas*/
+    /* Estilo global que limpia los bordes de las tablas */
+    table, th, td {
+        border: none;
+    }
+    /* Espaciado interno de celdas de tabla */
+    th, td {
+        padding: 10px;
+    }
+    /* Estilo de cabecera de tabla con color de acento */
+    thead {
+        background-color: var(--color-acento);
+        color: white;
+    }
+    /* Fondo alterno para filas impares de tablas */
+    tbody tr:nth-child(odd) {/*intercala colores de forma impar---- (odd)*/
+        background-color: green;
+    }
+    /* Enlaces dentro de celdas de encabezado */
+    th a{ 
+        text-decoration: none;
+    }
+    /* Hover para enlaces en encabezados de tabla */
+    th a:hover{
+        color: var(--color-primario);
+    }
+
+/*---------------------------------------------------------------------------------------------Transiciones*/
+/*----imagenes----*/
+    /* Transición de hover para imágenes dentro de artículos */
+    .articulo-contenido img{
+        border-radius: 10px;
+
+        transition:
+            transform 0.5s ease,
+            box-shadow 0.5s ease;
+
+    }
+
+    .articulo-contenido img:hover { 
+            transform: scale(1.02); 
+            box-shadow: 0 0 10px rgb(0, 119, 30);
+
+        }
+
+/*----contenido----*/
+    /* Estilo base para párrafos y listas dentro de artículos */
+    .articulo-contenido p,
+    .articulo-contenido li{
+        font-size: 1.2rem;
+        transition: text-shadow 0.5s ease;
+    }
+
+    /* Hover de texto dentro de los artículos para añadir brillo ligero */
+    .articulo-contenido p:hover,
+    .articulo-contenido li:hover{
+        text-shadow: #277c00 2px 2px 3px;
+    }
+
+
+/*----color----*/
+/* Transición suave de color para todos los h2 de la página */
+h2{
+    transition: color 0.5s ease;
+}
+
+h2:hover{
+    color: red;
+}
+
+
+/*-----------------------------------------------------------------------------------------VARIABLE ANIMABLE*/
+/* Propiedad personalizada usada por la animación del borde de sección */
+@property --deg{
+    syntax: '<angle>';
+    inherits: true;
+    initial-value: 0deg;
+}
+
+/*--------------------------------------------------------------------------------------------ARTICLE*/
+
+/* Estilo general de cada artículo dentro del main */
+.articulo{
+    position: relative;/*base que toma absolute para posicionarse*/
+    background: #ffffff;
+
+    scroll-margin-top: 80px;
+    z-index: 1;
+
+    padding: 20px 20px;
+    border-radius: 10px;
+    border-color: #797979;
+    box-shadow: 0 0 10px rgba(102, 102, 102, 0.5);
+}
+
+/* Contenedor flexible que posiciona el video y la tabla de detalles lado a lado */
+.video-detalles {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.video-detalles video {
+    display: block;
+    width: min(100%, 720px);
+    max-width: 720px;
+    border-radius: 10px;
+    flex: 1 1 420px;
+}
+
+/* Estilo del contenedor derecho que agrupa la tabla de detalles del video */
+.video-info {
+    flex: 1 1 240px;
+    min-width: 240px;
+    background: transparent;
+    padding: 0;
+}
+
+/* Formato interior de la tabla de detalles del video */
+.video-info table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 1rem;
+    background: transparent;
+}
+
+.video-info tbody {
+    display: grid;
+    gap: 1rem;
+}
+
+/* Cada fila de detalle usa el mismo estilo de tarjeta que la tabla institucional */
+.video-info tr {
+    display: grid;
+    grid-template-columns: 1fr 1.8fr;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.1rem 1.25rem;
+    background: rgba(242, 250, 255, 0.95);
+    border-radius: 18px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.video-info tr:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 34px rgba(0, 0, 0, 0.12);
+    background: rgba(255, 255, 255, 1);
+}
+
+/* Evita que la regla global de filas impares cambie la tabla de detalles del video */
+.video-info tbody tr:nth-child(odd) {
+    background: rgba(242, 250, 255, 0.95);
+}
+
+/* Estilos compartidos para celdas del detalle del video */
+.video-info th,
+.video-info td {
+    padding: 0;
+    border: none;
+}
+
+.video-info th {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.6rem;
+    color: var(--color-primario);
+    font-size: 0.95rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.video-info th::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--color-primario), var(--color-secundario));
+}
+
+.video-info td {
+    color: #2d2d2d;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+/* Título interno de la tabla de detalles del video */
+.video-info caption {
+    caption-side: top;
+    text-align: left;
+    font-size: 1.15rem;
+    font-weight: 800;
+    padding-bottom: 0.75rem;
+    color: var(--color-primario);
+}
+
+/* Estilo especial de la sección de datos institucionales */
+#DATOS-INSTITUCIONALES .seccion-fondo {
+    background: linear-gradient(160deg, rgba(235, 245, 255, 0.96), rgba(247, 255, 238, 0.96));
+    border: 1px solid rgba(0, 119, 255, 0.12);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.6), 0 16px 40px rgba(0, 0, 0, 0.07);
+}
+
+#DATOS-INSTITUCIONALES .intro {
+    max-width: 900px;
+    margin: 0 auto 1.5rem;
+    font-size: 1.05rem;
+    color: #2a2a2a;
+    line-height: 1.8;
+}
+
+/* Formato de la tabla de datos institucionales */
+#DATOS-INSTITUCIONALES table {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 0 1rem;
+    background: transparent;
+}
+
+#DATOS-INSTITUCIONALES tbody {
+    display: grid;
+    gap: 1rem;
+}
+
+/* Cada fila de la tabla institucional se renderiza como tarjeta */
+#DATOS-INSTITUCIONALES tr {
+    display: grid;
+    grid-template-columns: 1fr 1.8fr;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.1rem 1.25rem;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 18px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+#DATOS-INSTITUCIONALES tr:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 34px rgba(0, 0, 0, 0.12);
+    background: rgba(255, 255, 255, 1);
+}
+
+/* Estilos compartidos para celdas de la tabla institucional */
+#DATOS-INSTITUCIONALES th,
+#DATOS-INSTITUCIONALES td {
+    padding: 0;
+    border: none;
+}
+
+#DATOS-INSTITUCIONALES th {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.6rem;
+    color: var(--color-primario);
+    font-size: 0.95rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+#DATOS-INSTITUCIONALES th::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--color-primario), var(--color-secundario));
+}
+
+#DATOS-INSTITUCIONALES td {
+    color: #2d2d2d;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+/* Cabecera de la tabla de datos institucionales */
+#DATOS-INSTITUCIONALES caption {
+    caption-side: top;
+    text-align: left;
+    font-size: 1.15rem;
+    font-weight: 800;
+    padding-bottom: 0.75rem;
+    color: var(--color-primario);
+}
+
+#DATOS-INSTITUCIONALES tr:nth-child(odd) {
+    background: rgba(242, 250, 255, 0.95);
+}
+
+
+/*----------------------------------------------------------------------------------------CONTENIDO SOBRE EL EFECTO*/
+
+/* Ajusta el posicionamiento de todos los hijos directos dentro de secciones */
+.seccion > * {      /*para todos los hijos de article*/
+    position: relative;
+    z-index: 2;
+}
+
+/*-------------------------------------------------------------------------------------------BORDE ANIMADO*/
+
+/* Pseudo elementos para el borde animado alrededor de cada sección */
+.seccion::before,
+.seccion::after{
+    content: "";
+    position: absolute; /*elemento flotante*/
+    inset: 0;/*la mascara se pega en las 4 puntas para cubrir todo el article*/
+    padding: 3px;
+    border-radius: inherit;
+    background: conic-gradient(
+        from var(--deg) at center,
+        #ff0000,
+        #ff5900,
+        #eeff00,
+        #00ee0c,
+        #005a05,
+        #3700ff,
+        #ff00f2,
+        #ff0000
+    );
+    z-index: -2;/*se posisiona atras de article*/
+    animation: autoRotate 2s linear infinite;
+}
+
+/* Glow borroso que acompaña al borde animado */
+/*---------------------------------------------------------------------------------------------GLOW*/
+
+.seccion::after{
+    filter: blur(5px);
+}
+
+/*--------------------------------------------------------------------------------------------ANIMACION*/
+
+/* Animación continua que rota el degradado del borde */
+@keyframes autoRotate{
+    to{
+        --deg: 360deg;
+    }
+}
+
+/* Fondo interno de cada sección con padding y borde redondeado */
+.seccion-fondo{
+    position: relative;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    z-index: 1;/**/
+}

@@ -1,0 +1,574 @@
+html {
+    font-size: 16px;
+}
+
+/* =========================================
+   REGISTRO DE PROPIEDAD ANIMABLE
+   Necesario para que @keyframes pueda
+   interpolar --deg (variable CSS numérica).
+   ========================================= */
+@property --deg {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 0deg;
+}
+
+/* =========================================
+   VARIABLES
+   (unificadas de estilos.css y estilos-contacto.css)
+   ========================================= */
+:root {
+    --color-primario:          #0077ff;
+    --color-secundario:        #008d18;
+    --color-fondo:             #cacaca;
+    --color-acento:            #E8611A;
+    --color-texto:             #1A1A1A;
+    --fuente:                  "Share Tech Mono", monospace;
+
+    /* Colores extra */
+    --color-primario-oscuro:   #005fcc;
+    --color-secundario-oscuro: #006b12;
+    --color-blanco:            #ffffff;
+    --color-gris-claro:        #f0f0f0;
+    --color-gris-medio:        #999;
+    --color-fondo-primario:    #ffffff;
+    --color-fondo-secundario:  #f1f1f1;
+
+    /* Misc */
+    --radio:   6px;
+    --sombra:  0 4px 12px rgba(0,0,0,0.15);
+
+    /* Para la animación del borde */
+    --deg: 0deg;
+}
+
+
+/* =========================================
+   RESET
+   ========================================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* =========================================
+   TIPOGRAFÍA
+   ========================================= */
+h1 {
+    font-size: clamp(1.2rem, 4vw, 2.8rem);
+    color: var(--color-blanco);
+    letter-spacing: 0.05em;
+    text-shadow: #1100ff 4px 4px 5px;
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--color-primario);
+    margin-bottom: 0.5rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: var(--color-secundario);
+}
+
+/* =========================================
+   BODY
+   ========================================= */
+body {
+    font-family: var(--fuente);
+    font-size: 1rem;
+    line-height: 1.6;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* =========================================
+   IMÁGENES
+   ========================================= */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* =========================================
+   POSICIONAMIENTO
+   — El header/navbar usa position:sticky
+     para quedarse visible al hacer scroll.
+   — El badge "ONG" usa position:absolute
+     dentro de .logo-wrapper (position:relative).
+   ========================================= */
+
+/* Navbar sticky */
+.navbar-retecno {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Contenedor del logo — relative para el badge */
+.logo-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+}
+
+/* Badge "ONG" posicionado con absolute sobre la imagen */
+.logo-badge {
+    position: absolute;
+    bottom: -4px;
+    right: -6px;
+    background: var(--color-acento);
+    color: var(--color-blanco);
+    font-size: 0.55rem;
+    font-family: var(--fuente);
+    padding: 1px 4px;
+    border-radius: 4px;
+    letter-spacing: 0.05em;
+    line-height: 1.4;
+    z-index: 2;
+}
+
+.logo-img {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--color-fondo);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+/* =========================================
+   BOOTSTRAP — PERSONALIZACIONES
+   (van después del CDN para sobreescribir)
+   ========================================= */
+
+/* Navbar: fondo con color primario de la ONG */
+.navbar-retecno {
+    background-color: var(--color-primario) !important;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+/* Nombre de la ONG en la navbar */
+.brand-nombre {
+    font-family: var(--fuente);
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--color-blanco);
+    letter-spacing: 0.04em;
+}
+
+/* Links de la navbar */
+.navbar-retecno .nav-link {
+    font-family: var(--fuente);
+    color: rgba(255,255,255,0.85) !important;
+    padding: 0.4rem 1rem;
+    border: 2px solid transparent;
+    border-radius: var(--radio);
+    transition: background 0.25s, border-color 0.25s;
+}
+
+.navbar-retecno .nav-link:hover {
+    background: rgba(255,255,255,0.15);
+    border-color: rgba(255,255,255,0.4);
+    color: var(--color-blanco) !important;
+}
+
+/* Link activo (página actual) */
+.navbar-retecno .nav-activo {
+    background: var(--color-blanco) !important;
+    color: var(--color-primario) !important;
+    font-weight: bold;
+    border-color: var(--color-blanco);
+}
+
+/* Botón hamburguesa personalizado */
+.navbar-retecno .navbar-toggler {
+    border-color: rgba(255,255,255,0.6);
+}
+
+.navbar-retecno .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255,255,255,0.9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Cards: personalización sobre Bootstrap */
+.card-contacto {
+    font-family: var(--fuente);
+    border: none;
+    border-top: 4px solid var(--color-primario);
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+    background: var(--color-blanco);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-contacto:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+}
+
+.card-contacto .card-title {
+    font-size: 0.95rem;
+    color: var(--color-primario);
+    margin-bottom: 0.3rem;
+}
+
+.card-contacto .card-text a {
+    color: var(--color-primario);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.card-contacto .card-text a:hover {
+    color: var(--color-acento);
+    text-decoration: underline;
+}
+
+/* Alert personalizado */
+.alert-retecno {
+    font-family: var(--fuente);
+    background-color: #e6f3ff;
+    border-left: 5px solid var(--color-primario);
+    color: var(--color-texto);
+    border-radius: var(--radio);
+    font-size: 0.93rem;
+}
+
+/* Badges de redes sociales */
+.badge-red {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.82rem;
+    font-family: var(--fuente);
+    text-decoration: none;
+    font-weight: bold;
+    transition: opacity 0.2s;
+}
+
+.badge-red:hover {
+    opacity: 0.82;
+    text-decoration: none;
+}
+
+.badge-instagram {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366);
+    color: var(--color-blanco);
+}
+
+.badge-facebook {
+    background: #1877f2;
+    color: var(--color-blanco);
+}
+
+/* =========================================
+   FLEXBOX
+   — main-contenido en columna con gap.
+   — Icono en card con flex.
+   — form-grupo en columna con flex.
+   — form-acciones en fila con flex + gap.
+   — cards con flex:1 1 auto para responsividad.
+   ========================================= */
+
+/* main en columna con gap */
+.main-contenido {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding-bottom: 2rem;
+}
+
+/* Icono en card */
+.icono-card {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* Sección blanca con borde animado heredado de estilos.css */
+.seccion {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: #1A1A1A;
+    padding: 2px;
+    border-radius: 10px;
+    scroll-margin-top: 80px;
+    z-index: 1;
+}
+
+/* Hijos de .seccion por encima del borde */
+.seccion > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Borde animado — pseudo elementos */
+.seccion::before,
+.seccion::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 3px;
+    border-radius: inherit;
+    background: conic-gradient(
+        from var(--deg) at center,
+        #ff0000, #ff5900, #eeff00,
+        #00ee0c, #005a05, #3700ff,
+        #ff00f2, #ff0000
+    );
+    z-index: -2;
+    animation: autoRotate 2s linear infinite;
+}
+
+/* Glow borroso */
+.seccion::after {
+    filter: blur(5px);
+}
+
+/* Animación del borde */
+@keyframes autoRotate {
+    to { --deg: 360deg; }
+}
+
+/* Fondo interno de cada sección */
+.seccion-fondo {
+    position: relative;
+    background: var(--color-blanco);
+    border-radius: var(--radio);
+    padding: 2rem;
+    box-shadow: var(--sombra);
+    border-left: 5px solid var(--color-secundario);
+    z-index: 1;
+}
+
+.bajada {
+    color: #444;
+    margin-bottom: 1rem;
+    font-size: 0.98rem;
+}
+
+/* =========================================
+   FORMULARIO
+   ========================================= */
+
+.formulario {
+    margin-top: 1.2rem;
+}
+
+/* Grupo de campo — flex columna */
+.form-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.form-grupo label {
+    font-size: 0.92rem;
+    font-weight: bold;
+    color: var(--color-texto);
+}
+
+.requerido {
+    color: var(--color-acento);
+}
+
+/* Inputs, selects, textareas */
+.form-grupo input[type="text"],
+.form-grupo input[type="email"],
+.form-grupo input[type="tel"],
+.form-grupo select,
+.form-grupo textarea {
+    font-family: var(--fuente);
+    font-size: 0.95rem;
+    padding: 0.6rem 0.85rem;
+    border: 2px solid #ccc;
+    border-radius: var(--radio);
+    background: var(--color-gris-claro);
+    color: var(--color-texto);
+    transition: border-color 0.25s, box-shadow 0.25s;
+    outline: none;
+    width: 100%;
+    /* flex: 1 1 auto — responsividad nativa en columna */
+    flex: 1 1 auto;
+}
+
+.form-grupo input:focus,
+.form-grupo select:focus,
+.form-grupo textarea:focus {
+    border-color: var(--color-primario);
+    box-shadow: 0 0 0 3px rgba(0,119,255,0.15);
+    background: var(--color-blanco);
+}
+
+.form-grupo textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Checkbox — flex fila */
+.form-grupo--check {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0.6rem;
+}
+
+.form-grupo--check input[type="checkbox"] {
+    width: 1.1rem;
+    height: 1.1rem;
+    margin-top: 0.2rem;
+    accent-color: var(--color-primario);
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.form-grupo--check label {
+    font-weight: normal;
+    font-size: 0.88rem;
+    color: #555;
+    cursor: pointer;
+}
+
+/* Botones del formulario — flex con gap */
+.form-acciones {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    margin-top: 1.2rem;
+}
+
+.btn {
+    font-family: var(--fuente);
+    font-size: 0.95rem;
+    padding: 0.65rem 1.8rem;
+    border: 2px solid transparent;
+    border-radius: var(--radio);
+    cursor: pointer;
+    transition: background 0.25s, color 0.25s, transform 0.15s;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.btn:active {
+    transform: scale(0.97);
+}
+
+.btn--primario {
+    background: var(--color-primario);
+    color: var(--color-blanco);
+    border-color: var(--color-primario);
+}
+
+.btn--primario:hover {
+    background: var(--color-primario-oscuro);
+    border-color: var(--color-primario-oscuro);
+}
+
+.btn--secundario {
+    background: transparent;
+    color: var(--color-texto);
+    border-color: var(--color-gris-medio);
+}
+
+.btn--secundario:hover {
+    background: var(--color-gris-claro);
+    border-color: #888;
+}
+
+/* =========================================
+   TABLAS (de estilos.css)
+   ========================================= */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+table, th, td {
+    border: 1px solid #aaa;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+thead {
+    background-color: var(--color-acento);
+    color: white;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f8f9fa;
+}
+
+tbody tr:hover {
+    background-color: #e6f0ff;
+}
+
+th a {
+    text-decoration: none;
+}
+
+th a:hover {
+    color: var(--color-primario);
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+footer {
+    background: var(--color-secundario);
+    color: var(--color-blanco);
+    text-align: center;
+    padding: 1.2rem 2rem;
+    font-size: 0.88rem;
+    letter-spacing: 0.03em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border-top: 2px solid var(--color-acento);
+}
+
+footer p {
+    margin-bottom: 0;
+    color: var(--color-blanco);
+}
+
+footer a {
+    color: var(--color-blanco);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    background-color: var(--color-primario-oscuro);
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+/* =========================================
+   RESPONSIVE — mobile
+   ========================================= */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .form-acciones {
+        justify-content: stretch;
+    }
+
+    .form-acciones .btn {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+}
