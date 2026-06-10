@@ -9,82 +9,88 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="icono/favicon.png">
 
+    <!-- Fuente -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-   
-    <!-- Bootstrap CSS — antes del CSS propio -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    rel="stylesheet">
-   
-    <!--<link rel="stylesheet" href="estilos.css">-->
-    <link rel="stylesheet" href="./CSS/estilos.css"> 
 
-    <!-- Bootstrap JS — antes del </body> -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-    </script>
+    <!-- Bootstrap CSS — antes del CSS propio -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS propio del sitio -->
+    <link rel="stylesheet" href="./CSS/estilos-contacto.css">
 </head>
 
 <body>
+
+    <!-- ===== HEADER / NAVBAR BOOTSTRAP =====
+         Usa el componente navbar de Bootstrap con navbar-expand-lg
+         para que en mobile colapse en un botón hamburguesa.
+         position:sticky aplicado en el CSS propio (.navbar-retecno).
+    -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container-fluid">
-                <div class="row w-100 align-items-center">
-                    
-                    <!-- Columna 1: Logo---------------------- -->
-                    <div class="col-4">
-                        <img src="img/ong3.jpg"
-                            alt="Logo de ReTecno Argentina"
-                            width="80">
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-retecno">
+            <div class="container-fluid px-4">
+
+                <!-- Logo + nombre (navbar-brand) -->
+                <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                    <!-- position:relative en .logo-wrapper permite el badge absolute -->
+                    <div class="logo-wrapper">
+                        <img src="img/ong3.jpg" alt="Logo ReTecno Argentina" width="48" height="48"
+                            class="rounded-circle logo-img">
+                        <!-- Badge "ONG" con position:absolute sobre la imagen -->
+                        <span class="logo-badge">ONG</span>
                     </div>
+                    <span class="brand-nombre">ReTecno Argentina</span>
+                </a>
 
-                    <!-- Columna 2: Título--------------------- -->
-                    <div class="col-4 text-center">
-                        <a class="navbar-brand fw-bold m-0" href="index.html">
-                            <h1 class="m-0">ReTecno Argentina</h1>
-                        </a>
-                    </div>
+                <!-- Botón hamburguesa para mobile (Bootstrap navbar-toggler) -->
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menuPrincipal"
+                    aria-controls="menuPrincipal"
+                    aria-expanded="false"
+                    aria-label="Abrir menú">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-                    <!-- Columna 3: Menú------------------------ -->
-                    <div class="col-4 text-end position-relative" >
-
-                        <button class="navbar-toggler"
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#navMenu">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-
-                        <div class="collapse navbar-collapse justify-content-end" id="navMenu">
-
-                            <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="index.html">Index</a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a class="nav-link" href="nosotros.html">Nosotros</a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a class="nav-link" href="programas.html">Programas</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                <!-- Links del menú: colapsa en mobile gracias a Bootstrap collapse -->
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+                    <ul class="navbar-nav ms-auto gap-1">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="programas.html">Programas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-activo" href="contacto.html" aria-current="page">Contacto</a>
+                        </li>
+                    </ul>
                 </div>
+
             </div>
         </nav>
     </header>
+    <!-- ===== FIN HEADER ===== -->
 
-    <main>
-        <!-- Información de contacto -->
-        <section class="seccion"><!-- class="seccion-contacto-info" -->
+    <main class="main-contenido">
+
+        <!-- ===== GRILLA BOOTSTRAP: info de contacto en cards =====
+             Usa container > row > col-* con comportamiento responsivo.
+             col-12 (mobile) → col-md-6 (tablet) → col-lg-3 (desktop)
+             g-3 como sistema de gutter (sin márgenes manuales).
+        -->
+        <section class="seccion py-4">
             <div class="seccion-fondo">
-                <h2>Contacto</h2>
-                <p class="bajada">Si deseas ponerte en contacto con nosotros, puedes hacerlo a través de los siguientes medios:</p>
-                    
-                <!-- row + col-* responsivos con gutter g-3 -->
+                <div class="container">
+                    <h2 class="mb-1">Contacto</h2>
+                    <p class="bajada">Si deseas ponerte en contacto con nosotros, podés hacerlo a través de los siguientes medios:</p>
+
+                    <!-- row + col-* responsivos con gutter g-3 -->
                     <div class="row g-3 mt-2">
 
                         <!-- Card 1 — Correo -->
@@ -139,21 +145,30 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-        </section>
 
+                    </div><!-- fin row -->
+                </div><!-- fin container -->
+            </div><!-- fin seccion-fondo -->
+        </section>
+        <!-- ===== FIN GRILLA ===== -->
+
+        <!-- ===== ALERT BOOTSTRAP =====
+             Componente Alert de Bootstrap personalizado con .alert-retecno
+        -->
         <div class="container mt-3">
             <div class="alert alert-retecno d-flex align-items-center gap-2" role="alert">
                 <span>📬</span>
                 <span>Respondemos todos los mensajes en un plazo de <strong>48 horas hábiles</strong>.</span>
             </div>
         </div>
+        <!-- ===== FIN ALERT ===== -->
 
-        <!-- Formulario de contacto -->
-        <section class="seccion"><!-- class="seccion-formulario" -->
+        <!-- ===== FORMULARIO DE CONTACTO ===== -->
+        <section class="seccion py-2 pb-5 mt-3">
             <div class="seccion-fondo">
-                <h2>Envianos un mensaje</h2>
-                <p class="bajada">Completá el formulario y nos comunicaremos a la brevedad.</p>
+                <div class="container">
+                    <h2>Envianos un mensaje</h2>
+                    <p class="bajada">Completá el formulario y nos comunicaremos a la brevedad.</p>
 
                     <form class="formulario" action="#" method="post">
 
@@ -222,31 +237,19 @@
                         </div>
 
                     </form>
-            </div>
+                </div><!-- fin container -->
+            </div><!-- fin seccion-fondo -->
         </section>
+        <!-- ===== FIN FORMULARIO ===== -->
 
     </main>
 
-    <footer class=" text-black py-4 mt-5">
-        <div class="container text-center">
-            <p class="mb-1">
-                &copy; 2020 ReTecno Argentina. Todos los derechos reservados
-
-            </p>
-            <a href="nosotros.html">Volver al inicio</a>
-
-            <br>
-
-            <a href="https://x.com/?lang=es" target="_blank" rel="noopener noreferrer">
-                <img src="icono/x.png" alt="Twitter" width="30" height="30"></a>
-
-            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-                <img src="icono/facebook.png" alt="Facebook" width="30" height="30"></a>
-
-            <a href="https://web.whatsapp.com" target="_blank" rel="noopener noreferrer">
-                <img src="icono/whatsapp.png" alt="WhatsApp" width="35" height="35"> </a>
-        </div>
+    <footer>
+        <p>&copy; 2020 ReTecno Argentina. Todos los derechos reservados.</p>
     </footer>
-</body>
 
+    <!-- Bootstrap JS — antes del </body> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
 </html>
