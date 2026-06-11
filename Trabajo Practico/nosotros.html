@@ -17,11 +17,10 @@
 
 
     <!-- Bootstrap CSS — antes del CSS propio -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    rel="stylesheet">
-   
-    <!--<link rel="stylesheet" href="estilos.css">-->
-    <link rel="stylesheet" href="./CSS/estilos.css"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!--Css propio para ir pisando bootstrap con stylos-->
+    <link rel="stylesheet" href="./CSS/estilos.css">
 
     <!-- Bootstrap JS — antes del </body> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
@@ -32,59 +31,30 @@
 <body>
 
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <div class="row w-100 align-items-center">
-                    
-                    <!-- Columna 1: Logo---------------------- -->
-                    <div class="col-4">
-                        <img src="img/ong3.jpg"
-                            alt="Logo de ReTecno Argentina"
-                            width="80">
-                    </div>
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img src="img/ong3.jpg" alt="Logo" width="80" class="me-2">
+                    <h1 class="my-0 h3">ReTecno Argentina</h1>
+                </a>
 
-                    <!-- Columna 2: Título--------------------- -->
-                    <div class="col-4 text-center">
-                        <a class="navbar-brand fw-bold m-0" href="index.html">
-                            <h1 class="m-0">ReTecno Argentina</h1>
-                        </a>
-                    </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-                    <!-- Columna 3: Menú------------------------ -->
-                    <div class="col-4 text-end position-relative" >
-
-                        <button class="navbar-toggler"
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#navMenu">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-
-                        <div class="collapse navbar-collapse justify-content-end" id="navMenu">
-
-                            <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="index.html">Index</a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a class="nav-link" href="programas.html">Programas</a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a class="nav-link" href="contacto.html">Contactos</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="programas.html">Programas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contacto.html">Contactos</a></li>
+                    </ul>
                 </div>
             </div>
         </nav>
     </header>
-
-  <!--Contenedor Principal -->
+    <!--Contenedor Principal -->
     <main class="container-fluid mt-5 pt-5 px-4">
-        
+
         <!-- Índice lineal con Bootstrap -->
         <div class="w-100 mb-4">
             <nav class="card shadow-sm">
@@ -101,23 +71,29 @@
                     <li class="nav-item">
                         <a href="#DATOS-INSTITUCIONALES" class="nav-link rounded-0">Institución</a>
                     </li>
+                    <li class="nav-item border-start">
+                        <a href="#ORGANIGRAMA" class="nav-link rounded-0">Organigrama</a>
+                    </li>
                 </ul>
             </nav>
         </div>
 
 
         <section id="SOBRE-NOSOTROS" class="seccion">
+            
             <div class="seccion-fondo">
                 <article class="articulo">
-                    <h3> Resumen en video</h3>
+                    <h2 class="text-center fw-bold text-dark">Resumen en video</h2>
+
 
                     <div class="video-detalles">
                         <video src="video/ReTecno__De_Basura_a_Oportunidad.mp4" controls autoplay muted loop></video>
 
                         <aside class="video-info">
                             <table>
+                                <caption>📌 Detalles principales del video</caption>
                                 <tbody>
-                                    <caption>📌 Detalles principales del video</caption>
+
                                     <tr>
                                         <th>Título:</th>
                                         <td>trabajo práctico</td>
@@ -150,84 +126,73 @@
 
         <section class="seccion">
             <div class="seccion-fondo">
-                <h2>Historia</h2>
+                <h2 class="text-center fw-bold text-dark">Historia</h2>
 
                 <article class="articulo">
                     <div class="articulo-contenido">
                         <h3>Orígenes (2026)</h3>
 
-                        <p><strong>ReTecno Argentina</strong> nació en 2020 como respuesta al creciente problema de la
-                            basura</p>
-                        <p> electrónica. Un grupo de técnicos y ambientalistas comenzó recolectando equipos en desuso
-                            para
-                            evitar</p>
-                        <p> que terminaran en basurales. Al principio eran pocos, recorriendo barrios con camionetas
-                            prestadas y
-                        <p>talleres improvisados, pero su compromiso con el ambiente los impulsó a seguir adelante.</p>
-                        <br>
-                        <p><strong>ReTecno Argentina</strong> nació en 2020 como respuesta al creciente problema de la
+                        <p>
+                            <strong>ReTecno Argentina</strong> nació en 2026 como respuesta al creciente problema de la
                             basura electrónica. Un grupo de técnicos y ambientalistas comenzó recolectando equipos en
-                            desuso para
-                            evitar que terminaran en basurales. Al principio eran pocos, recorriendo barrios con
-                            camionetas
-                            prestadas y talleres improvisados, pero su compromiso con el ambiente los impulsó a seguir
-                            adelante.</p>
+                            desuso para evitar que terminaran en basurales. Al principio eran pocos, recorriendo barrios
+                            con camionetas prestadas y talleres improvisados, pero su compromiso con el ambiente los
+                            impulsó a seguir adelante.
+                        </p>
+
                     </div>
 
                 </article>
-                <br>
 
                 <article class="articulo">
                     <div class="articulo-contenido">
                         <h3>Crecimiento y programas</h3>
 
                         <p>Con el tiempo, la iniciativa creció y hoy trabaja junto a comunidades, empresas y escuelas.
-                            Organizan</p>
-                        <p> campañas de concientización, talleres de reparación y programas de donación de equipos
-                            reacondicionados</p>
-                        <p> para estudiantes y organizaciones sociales.</p>
-                        <p>Cada computadora recuperada significa menos residuos y más oportunidades de acceso a la
-                            tecnología.</p>
+                            Organizan campañas de concientización, talleres de reparación y programas de donación de
+                            equipos
+                            reacondicionados para estudiantes y organizaciones sociales.Cada computadora recuperada
+                            significa
+                            menos residuos y más oportunidades de acceso a la tecnología.
+                        </p>
                     </div>
                 </article>
-                <br>
+
 
                 <article class="articulo">
                     <div class="articulo-contenido">
                         <h3>Formación y educación</h3>
 
                         <p><strong>La ONG</strong> también se convirtió en un espacio de formación: jóvenes aprenden a
-                            desarmar,</p>
-                        <p> clasificar y reparar dispositivos, adquiriendo habilidades técnicas que les abren puertas
-                            laborales.</p>
-                        <p> locales colaboran aportando equipos, mientras que las escuelas participan en proyectos</p>
-                        <p>educativos sobre reciclaje y sustentabilidad.</p>
+                            desarmar, clasificar y reparar dispositivos, adquiriendo habilidades técnicas que les abren
+                            puertas
+                            laborales.locales colaboran aportando equipos, mientras que las escuelas participan en
+                            proyectos
+                            educativos sobre reciclaje y sustentabilidad.
+                        </p>
                     </div>
                 </article>
-                <br>
 
                 <article class="articulo">
                     <div class="articulo-contenido">
                         <h3>Red de inclusión</h3>
 
                         <p><strong>ReTecno Argentina</strong> ya no es solo un grupo de voluntarios: es una red que
-                            conecta
-                        </p>
-                        <p> personas, instituciones y conocimientos, demostrando que la tecnología puede ser una
+                            conecta personas, instituciones y conocimientos, demostrando que la tecnología puede ser una
                             herramienta
-                            para la</p>
-                        <p>inclusión y el cuidado del planeta.</p>
+                            para la nclusión y el cuidado del planeta.
+                        </p>
                     </div>
                 </article>
             </div>
         </section>
 
-        <br>
 
         <section id="NUESTROS-VALORES" class="seccion">
+            <h2 class="text-center fw-bold text-dark">Nuestros Valores</h2>
             <div class="seccion-fondo">
                 <article class="articulo">
-                    <h2>Nuestros Valores</h2>
+
                     <ul>
                         <li><strong>Sostenibilidad:</strong> Compromiso con el medio ambiente y el uso responsable de
                             los
@@ -252,77 +217,143 @@
                 </article>
             </div>
         </section>
-        <br>
-
-        <section id="NUESTRO-EQUIPO" class="seccion my-5">
-  <div class="container">
-    <h2 class="mb-4 text-center">Nuestro Equipo</h2>
-
-    <div class="row align-items-center">
-      <!-- Imagen -->
-      <div class="col-md-5 text-center">
-        <figure>
-          <img src="img/img13.png" alt="Equipo de trabajo colaborando" class="img-fluid rounded shadow">
-          <figcaption class="mt-2 text-muted">Figura 1: Nuestro equipo en acción.</figcaption>
-        </figure>
-      </div>
-
-      <!-- Texto -->
-      <div class="col-md-7">
-        <p class="intro">
-          Somos un grupo comprometido con la innovación, el trabajo colaborativo y la búsqueda constante de
-          soluciones sostenibles. Creemos que la tecnología, cuando se gestiona de manera responsable, puede convertirse en
-          una herramienta poderosa para transformar la sociedad y proteger el medio ambiente.
-        </p>
-
-        <p class="intro">
-          <strong>ReTecno Argentina</strong> reúne profesionales de distintas disciplinas que aportan su experiencia
-          en gestión de residuos electrónicos, logística, investigación y educación ambiental. Nuestro objetivo es
-          promover prácticas que reduzcan el impacto de la basura tecnológica, fomentando la reutilización, el reciclaje
-          y la conciencia ciudadana sobre el valor de los recursos digitales.
-        </p>
-
-        <p class="intro">
-          Cada integrante de nuestro equipo comparte la convicción de que el futuro depende de la capacidad de
-          transformar los desafíos en oportunidades. Por eso trabajamos en proyectos que combinan innovación técnica,
-          compromiso social y una visión ecológica, generando un puente entre la cultura digital y la responsabilidad
-          ambiental.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
 
 
+        <section id="NUESTRO-EQUIPO" class="seccion my-2 ">
+            <div class="container">
+                <h2 class="text-center fw-bold text-dark">Nuestro Equipo</h2>
 
-        <section class="seccion b-6">
-            <div class="seccion-fondo">
-                <h2>Organigrama</h2>
+                <div class="row align-items-center">
+                    <!-- Imagen -->
+                    <div class="col-md-5 text-center">
+                        <figure>
+                            <img src="img/img13.png" alt="Equipo de trabajo colaborando"
+                                class="img-fluid rounded shadow">
+                            <figcaption class="mt-2 text-muted">Figura 1: Nuestro equipo en acción.</figcaption>
+                        </figure>
+                    </div>
 
-                <article>
+                    <!-- Texto -->
+                    <div class="col-md-7">
+                        <p class="intro">
+                            Somos un grupo comprometido con la innovación, el trabajo colaborativo y la búsqueda
+                            constante de soluciones sostenibles. Creemos que la tecnología, cuando se gestiona de
+                            manera responsable, puede convertirse en una herramienta poderosa para transformar la
+                            sociedad y proteger el medio ambiente.
+                        </p>
 
-                    <h3>Daniel</h3>
-                    <p>Director General</p>
-                </article>
+                        <p class="intro">
+                            <strong>ReTecno Argentina</strong> reúne profesionales de distintas disciplinas que aportan
+                            su experiencia en gestión de residuos electrónicos, logística, investigación y educación
+                            ambiental. Nuestro
+                            objetivo es promover prácticas que reduzcan el impacto de la basura tecnológica, fomentando
+                            la
+                            reutilización, el reciclaje y la conciencia ciudadana sobre el valor de los recursos
+                            digitales.
+                        </p>
 
-                <article>
-                    <h3>Leonardo</h3>
-                    <p>Coordinador de Operaciones</p>
-                </article>
-
-                <article>
-                    <h3>Luca</h3>
-                    <p>Especialista en Logística</p>
-                </article>
+                        <p class="intro">
+                            Cada integrante de nuestro equipo comparte la convicción de que el futuro depende de la
+                            capacidad de transformar los desafíos en oportunidades. Por eso trabajamos en proyectos que
+                            combinan
+                            innovación técnica, compromiso social y una visión ecológica, generando un puente entre la
+                            cultura digital y la
+                            responsabilidad ambiental.
+                        </p>
+                    </div>
+                </div>
             </div>
         </section>
-        <br>
 
-        <section id="DATOS-INSTITUCIONALES" class="seccion">
+
+
+        <section id="ORGANIGRAMA" class="seccion my-5">
+            <div class="container">
+
+                <!-- Título de la Sección Centrado -->
+                <div class="row mb-5">
+                    <div class="col-12 text-center">
+                        <h2 class="text-center fw-bold text-dark">Organigrama</h2>
+                        <div class="mx-auto bg-success rounded" style="width: 60px; height: 4px;"></div>
+                    </div>
+                </div>
+
+                <!-- Grilla de Roles -->
+                <div class="row g-4 justify-content-center">
+
+                    <!-- Daniel - Director General -->
+                    <div class="col-sm-6 col-md-4">
+                        <div class="card h-100 border-0 shadow-sm text-center">
+                            <div class="p-4">
+                                <div class="bg-success text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3 shadow"
+                                    style="width: 80px; height: 80px;">
+                                    <span class="h3 mb-0 fw-bold">D</span>
+                                </div>
+                                <h3 class="card-title mb-1 fw-bold">Daniel</h3>
+                                <p class="text-success small mb-3 fw-semibold text-uppercase tracking-wider">Director
+                                    General</p>
+                                <p class="card-text text-muted small">
+                                    Responsable de definir la visión estratégica de la organización, coordinar las
+                                    alianzas institucionales y liderar la transición hacia un modelo sostenible en la
+                                    gestión de residuos electrónicos.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Leonardo - Coordinador de Operaciones -->
+                    <div class="col-sm-6 col-md-4">
+                        <div class="card h-100 border-0 shadow-sm text-center">
+                            <div class="p-4">
+                                <div class="bg-success text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3 shadow"
+                                    style="width: 80px; height: 80px;">
+                                    <span class="h3 mb-0 fw-bold">L</span>
+                                </div>
+                                <h3 class="card-title mb-1 fw-bold">Leonardo</h3>
+                                <p class="text-success small mb-3 fw-semibold text-uppercase tracking-wider">Coordinador
+                                    de Operaciones</p>
+                                <p class="card-text text-muted small">
+                                    Encargado de supervisar los procesos de clasificación, desmontaje y reciclaje
+                                    técnico. Asegura que los protocolos de seguridad ambiental y normativas locales se
+                                    cumplan estrictamente en la planta.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Luca - Especialista en Logística -->
+                    <div class="col-sm-6 col-md-4">
+                        <div class="card h-100 border-0 shadow-sm text-center">
+                            <div class="p-4">
+                                <div class="bg-success text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3 shadow"
+                                    style="width: 80px; height: 80px;">
+                                    <span class="h3 mb-0 fw-bold">L</span>
+                                </div>
+                                <h3 class="card-title mb-1 fw-bold">Luca</h3>
+                                <p class="text-success small mb-3 fw-semibold text-uppercase tracking-wider">
+                                    Especialista en Logística</p>
+                                <p class="card-text text-muted small">
+                                    Gestiona la cadena de suministro verde, desde la recolección programada de basura
+                                    tecnológica con empresas y ciudadanos, hasta el transporte eficiente y seguro de los
+                                    materiales recuperados.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section id="DATOS-INSTITUCIONALES" class="seccion mb-4">
+            
+            <h2 class="text-center fw-bold px-3 text-dark">Datos Institucionales</h2>
+
             <div class="seccion-fondo">
-                <h2 class="titulo">Datos Institucionales</h2>
+                <div>
 
-                <p class="intro">
+                <p class="intro text-center d-block">
                     Como organización sin fines de lucro, <strong>ReTecno Argentina</strong> nació con el propósito de
                     impulsar
                     la gestión responsable de los residuos electrónicos y promover una cultura tecnológica sostenible.
@@ -354,12 +385,13 @@
                         </tr>
                     </tbody>
                 </table>
+                </div>
             </div>
         </section>
 
     </main>
 
-   
+
     <footer class=" text-black py-4 mt-5">
         <div class="container text-center">
             <p class="mb-1">
@@ -381,8 +413,12 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+        crossorigin="anonymous"></script>
 
 </body>
 
