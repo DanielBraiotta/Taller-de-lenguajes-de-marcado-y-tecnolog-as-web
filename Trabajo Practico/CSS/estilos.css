@@ -31,14 +31,16 @@ header h1 {
   text-shadow: #1100ff 4px 4px 5px; /*sombra al titulo*/
   flex: 1;
   text-align: center;
-  
 }
+
 /*H2*/
 /* Estilo global para títulos h2 en la página */
 h2 {
   font-size: 3rem;
   color: var(--color-primario);
+  transition: color 0.5s ease; /* Transición suave de color para todos los h2 de la página */
 }
+
 /*H3*/
 /* Estilo global para subtítulos h3 */
 h3 {
@@ -88,19 +90,10 @@ header img {
   transition: background-color 0.3s ease;
 }
 
-/* Estilo del contenedor de enlaces principales del header */
-nav.navegador {
-  /*hace que el navegador este del lado derecho*/
-  display: flex;
-  justify-content: flex-end;
-  gap: 20px;
-}
-
 /* Estilo de los enlaces del header */
 .navegador a {
   text-decoration: none;
   font-weight: bold;
-  padding: 5px 10px;
   border-radius: 5px;
   transition: background-color 0.3s ease;
 }
@@ -110,7 +103,7 @@ nav.navegador {
   color: #ffffff;
   background-color: var(--color-primario);
 }
-
+/*
 .nav-item:hover .nav-link {
   background-color: #e9ecef;
   border: 0.2rem solid var(--color-primario);
@@ -118,7 +111,7 @@ nav.navegador {
   color: #0d6efd;
   display: block;
   width: 100%;
-}
+}*/
 
 /*-------------------------------------------------------------------------------------Main-*/
 /* Contenedor principal de la página, centrado y con sombra ligera */
@@ -134,7 +127,7 @@ main {
 }
 
 /*----------------------------------------------------------------------------------------Navegacion--*/
-/*Nav*/
+/*Nav de nosotros. se dejo de usar. se paso a bootstrap
 nav.contenido a {
   padding: 10px 20px 20px 10px;
   border-radius: 10px;
@@ -144,23 +137,23 @@ nav.contenido a {
   color: var(--color-texto);
 }
 
-/* Hover para los enlaces del índice interno */
+/* Hover para los enlaces del índice interno 
 nav.contenido a:hover {
   background-color: var(--color-primario);
   color: var(--color-fondo);
   border-radius: 5px;
 }
 
-/* Ajuste específico del elemento h2 dentro de .contenido */
+/* Ajuste específico del elemento h2 dentro de .contenido 
 .contenido .h2 {
   text-size-adjust: 1%;
 }
 /*ul*/
 /*li*/
-/* Espaciado de listas globales dentro del contenido */
+/* Espaciado de listas globales dentro del contenido 
 ul {
   padding: 1px 50px;
-}
+}*/
 
 /*a*/
 
@@ -218,10 +211,7 @@ footer {
   border-top: 2px solid var(--color-acento);
   gap: 5px; /*esta es la linea de color que se ve arriva del footer*/
 }
-/* Texto dentro del footer */
-footer p {
-  margin-bottom: 0.5rem;
-}
+
 /* Enlaces del footer */
 footer a {
   color: var(--color-texto);
@@ -229,7 +219,6 @@ footer a {
   font-weight: bold;
   margin: 0 50px;
   display: inline-block;
-  align-items: center;
 }
 
 /* Hover para enlaces del footer */
@@ -301,12 +290,6 @@ th a:hover {
 }
 
 /*----color----*/
-/* Transición suave de color para todos los h2 de la página */
-h2 {
-  transition: color 0.5s ease;
-  
-}
-
 h2:hover {
   color: red;
 }
@@ -557,7 +540,6 @@ h2:hover {
 }
 
 /*----------------------------------------------------------------------------------------CONTENIDO SOBRE EL EFECTO*/
-
 /* Ajusta el posicionamiento de todos los hijos directos dentro de secciones */
 .seccion > * {
   /*para todos los hijos de article*/
@@ -566,7 +548,6 @@ h2:hover {
 }
 
 /*-------------------------------------------------------------------------------------------BORDE ANIMADO*/
-
 /* Pseudo elementos para el borde animado alrededor de cada sección */
 .seccion::before,
 .seccion::after {
@@ -592,13 +573,11 @@ h2:hover {
 
 /* Glow borroso que acompaña al borde animado */
 /*---------------------------------------------------------------------------------------------GLOW*/
-
 .seccion::after {
   filter: blur(5px);
 }
 
 /*--------------------------------------------------------------------------------------------ANIMACION*/
-
 /* Animación continua que rota el degradado del borde */
 @keyframes autoRotate {
   to {
@@ -614,6 +593,7 @@ h2:hover {
   padding: 20px;
   z-index: 1; /**/
 }
+
 /*--------------------------------------------------------------------------------boton de menu desplegable*/
 @media (max-width: 991px) {
   .navbar-collapse {
@@ -621,11 +601,12 @@ h2:hover {
     top: 100%;
     right: 0;
     width: 100px;
-    background: rgb(221, 251, 255);
+    background: rgb(255, 255, 255);
     z-index: 1000;
     padding: 10px;
     border-radius: 8px;
     text-align: center;
+    border: 0.1rem solid var(--color-primario);
   }
 
   .navbar-nav {
@@ -636,6 +617,8 @@ h2:hover {
     padding: 10px 0;
   }
 }
+
+/*--------------------------------------------------------------------------------------???----*/
 h1.my-0.h3 {
   margin: 3rem;
   font-weight: 1000;
@@ -657,3 +640,12 @@ h1.my-0.h3 {
   box-shadow: 0 0 10px rgba(0, 119, 255, 0.5);
   
 }
+
+/*--esto es solo para testing--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+.col-4, .col-6, .col-3{
+    border: 1px solid red;
+}
+
+.navbar-collapse {
+    border: 1px solid blue;
+}*/
