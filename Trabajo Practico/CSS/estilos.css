@@ -636,3 +636,24 @@ h2:hover {
     padding: 10px 0;
   }
 }
+h1.my-0.h3 {
+  margin: 3rem;
+  font-weight: 1000;
+  color: #2ecc71; /* verde sostenible */
+  letter-spacing: 1px;
+  font-size: 2.5rem; /* título grande */
+}
+.rounded-circle {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  border-radius: 50%;
+  background-color: var(--color-primario);
+  color: var(--color-fondo);
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 119, 255, 0.5);
+  
+}
