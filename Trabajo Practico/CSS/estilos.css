@@ -39,6 +39,9 @@ h2 {
   font-size: 3rem;
   color: var(--color-primario);
   transition: color 0.5s ease; /* Transición suave de color para todos los h2 de la página */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 1rem;
 }
 
 /*H3*/
@@ -638,7 +641,6 @@ h1.my-0.h3 {
   font-weight: bold;
   text-align: center;
   box-shadow: 0 0 10px rgba(0, 119, 255, 0.5);
-  
 }
 
 /*--esto es solo para testing--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -649,3 +651,53 @@ h1.my-0.h3 {
 .navbar-collapse {
     border: 1px solid blue;
 }*/
+
+button {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1001;
+  background-color: var(--color-primario);
+  color: var(--color-fondo);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/*-- @media screen and (max-width: 500px) {
+  
+button {
+    display: block;
+  }
+}*/
+
+/* Estilo para los círculos de iniciales (Avatar) */
+.circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-primario);
+  color: white;
+}
+
+p {
+  
+  color: var(--color-primario);
+  transition: color 0.5s ease; /* Transición suave de color para todos los h2 de la página */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.col-12  {
+color: var(--color-primario);
+  transition: color 0.5s ease; /* Transición suave de color para todos los h2 de la página */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 1rem;
+  }

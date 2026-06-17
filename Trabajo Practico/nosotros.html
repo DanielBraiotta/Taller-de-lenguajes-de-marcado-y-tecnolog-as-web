@@ -22,35 +22,61 @@
     <!--Css propio para ir pisando bootstrap con stylos-->
     <link rel="stylesheet" href="./CSS/estilos.css">
 
-    <!-- Bootstrap JS — antes del </body> -->
+    <!-- Bootstrap JS — antes del body -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
     </script>
 
 </head>
 
-<body>
+<body class="m-5 fluid">
 
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand d-flex align-items-center" href="index.html">
-                    <img src="img/ong3.jpg" alt="Logo" width="80" class="me-2">
-                    <h1 class="my-0 h3">ReTecno Argentina</h1>
-                </a>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid px-0">
+                <div class="row w-100 align-items-center">
 
-                <div class="collapse navbar-collapse justify-content-end" id="navMenu">
-                    <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="programas.html">Programas</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contacto.html">Contactos</a></li>
-                    </ul>
+                    <!-- Columna 1: Logo  ///////////////////////////////////////// -->
+                    <div class="col-3">
+                        <img src="img/ong3.jpg" alt="Logo de ReTecno Argentina" width="80">
+                    </div>
+
+                    <!-- Columna 2: Título////////////////////////////////////////// -->
+                    <div class="col-6 text-center">
+                        <a class="navbar-brand fw-bold m-0" href="index.html">
+                            <h1 class="m-0">ReTecno Argentina</h1>
+                        </a>
+                    </div>
+
+                    <!-- Columna 3: Menú ////////////////////////////////////////// -->
+                    <div class="col-3 text-end position-relative">
+
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navMenu">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="navegador collapse navbar-collapse justify-content-end" id="navMenu">
+
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.html">Inicio</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="programas.html">Programas</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="contacto.html">Contactos</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>
+
     </header>
     <!--Contenedor Principal -->
     <main class="container-fluid mt-5 pt-5 px-4">
@@ -58,9 +84,9 @@
         <!-- Índice lineal con Bootstrap -->
         <div class="w-100 mb-4">
             <nav class="card shadow-sm">
-                <ul class="nav nav-pills nav-fill">
+                <ul class="nav nav-pills nav-fill ">
                     <li class="nav-item border-end">
-                        <a href="#SOBRE-NOSOTROS" class="nav-link rounded-0">Nosotros</a>
+                        <a href="#SOBRE-NOSOTROS" class="nav-link rounded-0 ">Nosotros</a>
                     </li>
                     <li class="nav-item border-end">
                         <a href="#NUESTROS-VALORES" class="nav-link rounded-0">Valores</a>
@@ -80,9 +106,9 @@
 
 
         <section id="SOBRE-NOSOTROS" class="seccion">
-            
             <div class="seccion-fondo">
                 <h2 class="text-center fw-bold text-dark">Resumen en video</h2>
+
                 <article class="articulo">
 
                     <span class="d-block text-start fw-bold text-dark">Video ilustrativo</span>
@@ -223,10 +249,12 @@
 
         <section id="NUESTRO-EQUIPO" class="seccion mt-4">
             <div class="seccion-fondo">
-                <h2 class="text-center fw-bold text-dark">Nuestro Equipo</h2>
+                <div class="rectangulo ">
+                    <h2 class="text-center fw-bold text-dark">Nuestro Equipo</h2>
+                </div>
+
+
                 <div class="container">
-
-
                     <div class="row align-items-center">
                         <!-- Imagen -->
                         <div class="col-md-5 text-center">
@@ -280,133 +308,125 @@
             <div class="seccion-fondo">
                 <div class="container">
                     <!-- Título de la Sección Centrado -->
+
+
                     <div class="row mb-5">
-                        <div class="col-12 text-center">
-                            <h2 class="text-center fw-bold text-dark">Organigrama</h2>
-                            <div class="mx-auto bg-success rounded" style="width: 60px; height: 4px;"></div>
+
+                        <h2 class="text-center fw-bold text-dark">Organigrama</h2>
+
+                    </div>
+                </div>
+
+
+                <!-- Grilla de Roles -->
+                <div class="row g-4 justify-content-center">
+
+                    <!-- Daniel -->
+                    <div class="col-12 col-md-4">
+                        <div class="card h-100 border-0 text-center">
+                            <div class="p-4 align-items-center">
+
+                                <div class="circle bg-success text-white mb-3 shadow">
+                                    <span class="h3 mb-0 fw-bold">D</span>
+                                </div>
+                                <h3 class="card-title mb-1 fw-bold">Daniel</h3>
+                                <p class="role text-success small mb-3 fw-semibold text-uppercase">Director General
+                                </p>
+                                <p class="card-text text-muted small">
+                                    Responsable de definir la visión estratégica de la organización, coordinar las
+                                    alianzas institucionales y liderar la transición hacia un modelo sostenible en
+                                    la gestión de residuos electrónicos.
+                                </p>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Grilla de Roles -->
-                    <div class="row g-4 justify-content-center">
-
-                        <!-- Daniel - Director General -->
-                        <div class="col-sm-6 col-md-4">
-                            <div class="card h-100 border-0 shadow-sm text-center">
-                                <div class="p-4 ">
-                                    <div class="bg-success text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3 shadow">
-                                    </div>
-                                        <span class="h3 mb-0 fw-bold">
-                                            D
-                                        </span>
-                                    <h3 class="card-title mb-1 fw-bold">Daniel</h3>
-                                    <p class="text-success small mb-3 fw-semibold text-uppercase tracking-wider">
-                                        Director
-                                        General</p>
-                                    <p class="card-text text-muted small">
-                                        Responsable de definir la visión estratégica de la organización, coordinar las
-                                        alianzas institucionales y liderar la transición hacia un modelo sostenible en
-                                        la
-                                        gestión de residuos electrónicos.
-                                    </p>
+                    <!-- Leonardo -->
+                    <div class="col-12 col-md-4">
+                        <div class="card h-100 border-0 text-center">
+                            <div class="p-4">
+                                <div class="circle bg-success text-white mb-3 shadow">
+                                    <span class="h3 mb-0 fw-bold">L</span>
                                 </div>
+                                <h3 class="card-title mb-1 fw-bold">Leonardo</h3>
+                                <p class="role text-success small mb-3 fw-semibold text-uppercase">Coordinador de
+                                    Operaciones</p>
+                                <p class="card-text text-muted small">
+                                    Encargado de supervisar los procesos de clasificación, desmontaje y reciclaje
+                                    técnico. Asegura que los protocolos de seguridad ambiental y normativas locales
+                                    se cumplan estrictamente en la planta.
+                                </p>
                             </div>
                         </div>
-
-                        <!-- Leonardo - Coordinador de Operaciones -->
-                        <div class="col-sm-6 col-md-4 ">
-                            <div class="card h-100 border-0 shadow-sm text-center">
-                                <div class="p-4">
-                                    <div class="bg-success text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3 shadow">
-                                    </div>
-                                        <span class="h3 mb-0 fw-bold">L</span>
-                                    <h3 class="card-title mb-1 fw-bold">Leonardo</h3>
-                                    <p class="text-success small mb-3 fw-semibold text-uppercase tracking-wider">
-                                        Coordinador
-                                        de Operaciones</p>
-                                    <p class="card-text text-muted small">
-                                        Encargado de supervisar los procesos de clasificación, desmontaje y reciclaje
-                                        técnico. Asegura que los protocolos de seguridad ambiental y normativas locales
-                                        se
-                                        cumplan estrictamente en la planta.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Luca - Especialista en Logística -->
-                        <div class="col-sm-6 col-md-4">
-                            <div class="card h-100 border-0 shadow-sm text-center">
-                                <div class="p-4">
-                                    <div class="bg-success text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3 shadow">
-                                    </div>
-                                        <span class="h3 mb-0 fw-bold">L</span>
-                                    <h3 class="card-title mb-1 fw-bold">Luca</h3>
-                                    <p class="text-success small mb-3 fw-semibold text-uppercase tracking-wider">
-                                        Especialista en Logística.
-                                    </p>
-                                    <p class="card-text text-muted small">
-                                        Gestiona la cadena de suministro verde, desde la recolección programada de
-                                        basura
-                                        tecnológica con empresas y ciudadanos, hasta el transporte eficiente y seguro de
-                                        los
-                                        materiales recuperados.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
-                
+
+                    <!-- Luca -->
+
+                    <div class="col-12 col-md-4">
+                        <div class="card h-100 border-0 text-center">
+                            <div class="p-4">
+                                <div class="circle bg-success text-white mb-3 shadow">
+                                    <span class="h3 mb-0 fw-bold">L</span>
+                                </div>
+                                <h3 class="card-title mb-1 fw-bold">Luca</h3>
+                                <p class="role text-success small mb-3 fw-semibold text-uppercase">Especialista en
+                                    Logística</p>
+                                <p class="card-text text-muted small">
+                                    Gestiona la cadena de suministro verde, desde la recolección programada de
+                                    basura tecnológica con empresas y ciudadanos, hasta el transporte eficiente y
+                                    seguro de los materiales recuperados.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-
         <section id="DATOS-INSTITUCIONALES" class="seccion mt-4">
             <div class="seccion-fondo">
+                <div class="container">
+                    <h2 class="text-center fw-bold text-dark">Datos Institucionales</h2>
 
-                <h2 class="text-center fw-bold px-3 text-dark">Datos Institucionales</h2>
+                    <p class="intro text-center mx-0 ">
+                        Como organización sin fines de lucro, <strong>ReTecno Argentina</strong> nació con el
+                        propósito
+                        de impulsar la gestión responsable de los residuos electrónicos y promover una cultura
+                        tecnológica
+                        sostenible. Desde nuestra fundación en 2026, trabajamos en proyectos que integran
+                        innovación,
+                        educación y compromiso social.
+                    </p>
 
-
-                <div>
-
-                    <p class="intro text-center d-block">
-                        Como organización sin fines de lucro, <strong>ReTecno Argentina</strong> nació con el propósito
-                        de
-                        impulsar
-                        la gestión responsable de los residuos electrónicos y promover una cultura tecnológica
-                        sostenible.
-                        Desde nuestra fundación en 2026, trabajamos en proyectos que integran innovación, educación y
-                        compromiso
-                        social.</p>
-
-                    <table>
-                        <tbody>
-                            <tr>
-                                <th>Nombre legal</th>
-                                <td>ReTecno Argentina</td>
-                            </tr>
-                            <tr>
-                                <th>Año de fundación</th>
-                                <td>2026</td>
-                            </tr>
-                            <tr>
-                                <th>Tipo de organización</th>
-                                <td>ONG (sin fines de lucro)</td>
-                            </tr>
-                            <tr>
-                                <th>Área de acción</th>
-                                <td>Reciclaje electrónico y tecnología sostenible</td>
-                            </tr>
-                            <tr>
-                                <th>Sede principal</th>
-                                <td>Buenos Aires, Argentina</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <tbody class="rounder">
+                                <tr>
+                                    <th>Nombre legal</th>
+                                    <td>ReTecno Argentina</td>
+                                </tr>
+                                <tr>
+                                    <th>Año de fundación</th>
+                                    <td>2026</td>
+                                </tr>
+                                <tr>
+                                    <th>Tipo de organización</th>
+                                    <td>ONG (sin fines de lucro)</td>
+                                </tr>
+                                <tr>
+                                    <th>Área de acción</th>
+                                    <td>Reciclaje electrónico y tecnología sostenible</td>
+                                </tr>
+                                <tr>
+                                    <th>Sede principal</th>
+                                    <td>Buenos Aires, Argentina</td>
+                                </tr>
+                            </tbody>
+                        </table> <!--cierre tabla-->
+                    </div> <!-- cierre div tabla -->
                 </div>
             </div>
+
         </section>
 
     </main>
