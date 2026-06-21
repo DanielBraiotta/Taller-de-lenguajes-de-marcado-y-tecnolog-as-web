@@ -830,3 +830,312 @@ body.dark-mode tbody tr:nth-child(odd){
   transition: background-color 0.5s ease, color 0.5s ease;
   color: white;
 }
+
+/*======================================================================
+   SECCIÓN CONTACTO — agregado por Luca
+======================================================================*/
+
+/*--Cards de datos de contacto--*/
+.card-contacto{
+    border: none;
+    border-top: 4px solid var(--color-primario);
+    border-radius: 10px;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    background: #ffffff;
+}
+
+.card-contacto:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 0.8rem 1.5rem rgba(0,0,0,0.15);
+}
+
+.card-contacto .icono-card{
+    font-size: 1.8rem;
+    display: block;
+    margin-bottom: 0.4rem;
+}
+
+.card-contacto .card-title{
+    font-size: 1.05rem;
+    color: var(--color-primario);
+    margin-bottom: 0.3rem;
+}
+
+.card-contacto .card-text a{
+    color: var(--color-primario);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.card-contacto .card-text a:hover{
+    color: var(--color-acento);
+    text-decoration: underline;
+}
+
+/*--Badges de redes sociales--*/
+.card-contacto .card-text a.badge-red{
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.82rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    color: #ffffff;
+}
+
+.card-contacto .card-text a.badge-red:hover{
+    opacity: 0.88;
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+.card-contacto .card-text a.badge-instagram{
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366);
+    color: #ffffff;
+}
+
+.card-contacto .card-text a.badge-facebook{
+    background: #1877f2;
+    color: #ffffff;
+}
+
+.card-contacto .card-text a.badge-twitter{
+    background: #000000;
+    color: #ffffff;
+}
+
+.card-contacto .card-text a.badge-whatsapp{
+    background: #25d366;
+    color: #ffffff;
+}
+
+/*--Alert de aviso de respuesta--*/
+.alert-retecno{
+    background-color: #e6f3ff;
+    border-left: 5px solid var(--color-primario);
+    color: var(--color-texto);
+    border-radius: 8px;
+    font-size: 0.95rem;
+}
+
+/*--Bajada de texto en secciones--*/
+.bajada{
+    color: #444;
+    margin-bottom: 1rem;
+}
+
+/*--Formulario de contacto--*/
+.formulario{
+    margin-top: 1rem;
+}
+
+.form-grupo{
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.form-grupo label{
+    font-size: 0.92rem;
+    font-weight: bold;
+    color: var(--color-texto);
+}
+
+.requerido{
+    color: var(--color-acento);
+}
+
+.form-grupo input[type="text"],
+.form-grupo input[type="email"],
+.form-grupo input[type="tel"],
+.form-grupo select,
+.form-grupo textarea{
+    font-family: var(--fuente);
+    font-size: 0.95rem;
+    padding: 0.6rem 0.85rem;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    background: var(--color-fondo-secundario);
+    color: var(--color-texto);
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    outline: none;
+    width: 100%;
+}
+
+.form-grupo input:focus,
+.form-grupo select:focus,
+.form-grupo textarea:focus{
+    border-color: var(--color-primario);
+    box-shadow: 0 0 0 3px rgba(0,119,255,0.15);
+    background: var(--color-fondo-primario);
+}
+
+.form-grupo textarea{
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Estado de error en campos */
+.form-grupo input.campo-invalido,
+.form-grupo select.campo-invalido,
+.form-grupo textarea.campo-invalido{
+    border-color: #d32f2f;
+    box-shadow: 0 0 0 3px rgba(211,47,47,0.12);
+}
+
+.form-error{
+    color: #d32f2f;
+    font-size: 0.8rem;
+    min-height: 1rem;
+    display: block;
+}
+
+.form-contador{
+    color: #777;
+    font-size: 0.78rem;
+    display: block;
+    text-align: right;
+}
+
+/* Checkbox de términos */
+.form-grupo--check{
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0.6rem;
+}
+
+.form-grupo--check input[type="checkbox"]{
+    width: 1.1rem;
+    height: 1.1rem;
+    margin-top: 0.2rem;
+    accent-color: var(--color-primario);
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.form-grupo--check label{
+    font-weight: normal;
+    font-size: 0.88rem;
+    color: #555;
+    cursor: pointer;
+}
+
+/* Mensaje de confirmación tras enviar */
+.form-confirmacion{
+    margin-top: 1rem;
+    padding: 0.7rem 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    display: none;
+}
+
+.form-confirmacion.visible{
+    display: block;
+    background-color: #e3f7e6;
+    color: #1f6b2e;
+    border-left: 4px solid #2ecc71;
+}
+
+/* Botones de acción del formulario */
+.form-acciones{
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    margin-top: 1.2rem;
+}
+
+.btn--primario{
+    background: var(--color-primario);
+    color: #ffffff;
+    border: 2px solid var(--color-primario);
+}
+
+.btn--primario:hover{
+    background: #005fcc;
+    border-color: #005fcc;
+}
+
+.btn--secundario{
+    background: transparent;
+    color: var(--color-texto);
+    border: 2px solid #999;
+}
+
+.btn--secundario:hover{
+    background: var(--color-fondo-secundario);
+    border-color: #777;
+}
+
+/*--Responsive contacto--*/
+@media (max-width: 576px){
+    .form-acciones{
+        justify-content: stretch;
+    }
+    .form-acciones .btn{
+        flex: 1 1 100%;
+    }
+}
+
+/*======================================================================
+   SECCIÓN CONTACTO — MODO OSCURO
+======================================================================*/
+
+body.dark-mode .card-contacto{
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+body.dark-mode .card-contacto .card-title{
+    color: #6fb6ff;
+}
+
+body.dark-mode .alert-retecno{
+    background-color: rgba(0, 119, 255, 0.15);
+    color: white;
+}
+
+body.dark-mode .bajada{
+    color: #cfcfcf;
+}
+
+body.dark-mode .form-grupo label{
+    color: white;
+}
+
+body.dark-mode .form-grupo input[type="text"],
+body.dark-mode .form-grupo input[type="email"],
+body.dark-mode .form-grupo input[type="tel"],
+body.dark-mode .form-grupo select,
+body.dark-mode .form-grupo textarea{
+    background: rgba(255,255,255,0.08);
+    color: white;
+    border-color: #555;
+}
+
+body.dark-mode .form-grupo input:focus,
+body.dark-mode .form-grupo select:focus,
+body.dark-mode .form-grupo textarea:focus{
+    background: rgba(255,255,255,0.12);
+}
+
+body.dark-mode .form-grupo--check label{
+    color: #ddd;
+}
+
+body.dark-mode .form-confirmacion.visible{
+    background-color: rgba(46, 204, 113, 0.15);
+    color: #7ee29b;
+}
+
+body.dark-mode .btn--secundario{
+    color: white;
+    border-color: #777;
+}
+
+body.dark-mode .btn--secundario:hover{
+    background: rgba(255,255,255,0.08);
+}
