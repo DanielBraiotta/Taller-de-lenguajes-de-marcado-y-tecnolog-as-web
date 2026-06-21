@@ -31,22 +31,24 @@
             <div class="container-fluid">
                 <div class="row w-100 align-items-center">
                     
-                    <!-- Columna 1: Logo---------------------- -->
-                    <div class="col-4">
+                    <!-- Columna 1: Logo  ///////////////////////////////////////// -->
+                    <div class="col-3">
                         <img src="img/ong3.jpg"
                             alt="Logo de ReTecno Argentina"
                             width="80">
                     </div>
 
-                    <!-- Columna 2: Título--------------------- -->
-                    <div class="col-4 text-center">
+                    <!-- Columna 2: Título////////////////////////////////////////// -->
+                    <div class="col-6 text-center">
                         <a class="navbar-brand fw-bold m-0" href="index.html">
                             <h1 class="m-0">ReTecno Argentina</h1>
                         </a>
                     </div>
 
-                    <!-- Columna 3: Menú------------------------ -->
-                    <div class="col-4 text-end position-relative" >
+                    <!-- Columna 3: Menú ////////////////////////////////////////// -->
+                    <div class="col-3 d-flex justify-content-end align-items-center" >
+                    
+                    <button id="btnModoOscuro"class="btn btn-outline-secondary btn-sm me-2">🌙</button>
 
                         <button class="navbar-toggler"
                                 type="button"
@@ -227,7 +229,7 @@
 
     </main>
 
-    <footer class=" text-black py-4 mt-5">
+    <footer class="py-4 mt-5">
         <div class="container text-center">
             <p class="mb-1">
                 &copy; 2020 ReTecno Argentina. Todos los derechos reservados
@@ -247,6 +249,10 @@
                 <img src="icono/whatsapp.png" alt="WhatsApp" width="35" height="35"> </a>
         </div>
     </footer>
+    <div id="estrellas"></div>
+        
+    <!--AL FINAL DEL BODY PONEMOS EL LINK A JS-->    
+    <script src="./JS/main.js"></script>
 </body>
 
 </html>

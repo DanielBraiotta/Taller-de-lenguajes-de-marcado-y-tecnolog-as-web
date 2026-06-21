@@ -604,7 +604,7 @@ h2:hover {
     top: 100%;
     right: 0;
     width: 100px;
-    background: rgb(255, 255, 255);
+    background: rgba(255, 255, 255, 0);
     z-index: 1000;
     padding: 10px;
     border-radius: 8px;
@@ -652,12 +652,13 @@ h1.my-0.h3 {
     border: 1px solid blue;
 }*/
 
+
 button {
-  display: none;
+  /*display: none;
   position: absolute;
   top: 10px;
   right: 10px;
-  z-index: 1001;
+  z-index: 1001;*/
   background-color: var(--color-primario);
   color: var(--color-fondo);
   border: none;
@@ -686,8 +687,7 @@ button {
 }
 
 p {
-  
-  color: var(--color-primario);
+  /*color: var(--color-primario);*/
   transition: color 0.5s ease; /* Transición suave de color para todos los h2 de la página */
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   border-radius: 10px;
@@ -695,9 +695,138 @@ p {
 }
 
 .col-12  {
-color: var(--color-primario);
+  color: var(--color-primario);
   transition: color 0.5s ease; /* Transición suave de color para todos los h2 de la página */
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   padding: 1rem;
-  }
+}
+
+
+/*------------------------------------------------------------------------------------------------------------------MODO OSCURO--*/
+body.dark-mode{
+    background-color: #111;
+    color: white;
+}
+
+#estrellas{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 999;
+}
+
+/* Estrellas normales */
+.estrella{
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    animation: brillar 3s forwards;
+}
+
+@keyframes brillar{
+    0%{
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    50%{
+        opacity: 1;
+        transform: scale(1.5);
+        box-shadow: 0 0 10px white;
+    }
+
+    100%{
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+/* Estrella fugaz */
+.estrella-fugaz{
+    position: absolute;
+    width: 120px;
+    height: 2px;
+
+    background: linear-gradient(
+        to right,
+        white,
+        rgba(255,255,255,0)
+    );
+
+    transform: rotate(-35deg);
+    animation: fugaz 2s linear forwards;
+}
+
+@keyframes fugaz{
+    0%{
+        opacity: 1;
+        transform: translate(0,0) rotate(-35deg);
+    }
+
+    100%{
+        opacity: 0;
+        transform: translate(-600px,600px) rotate(-35deg);
+    }
+}
+
+body.dark-mode main{
+    background-color: #222;
+    color: white;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+body.dark-mode section{
+    background-color: #2a2a2a;
+    color: white;
+    transition: background-color 1s ease, color 1s ease;
+}
+
+body.dark-mode article{
+    background-color: #2a2a2a;
+    color: white;
+    transition: background-color 1.5s ease, color 1.5s ease;
+}
+
+body.dark-mode .seccion-fondo{
+    background-color: #2a2a2a;
+    color: white;
+    transition: background-color 1.5s ease, color 1.5s ease;
+}
+
+body.dark-mode .navbar{
+  background: linear-gradient(to bottom, var(--color-primario), #000000);
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+body.dark-mode .nav-link{
+  color: white;
+  
+}
+
+body.dark-mode footer{
+  background: -webkit-linear-gradient(top, #000000, var(--color-secundario));
+  color: white;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+body.dark-mode .navbar-toggler{
+  background: rgba(255, 255, 255, 0.26);
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+body.dark-mode .card{
+  background: rgba(255, 255, 255, 0.26);
+  transition: background-color 0.5s ease, color 0.5s ease;
+  color: white;
+}
+ 
+body.dark-mode tbody tr:nth-child(odd){
+  background: rgba(255, 255, 255, 0.26);
+  transition: background-color 0.5s ease, color 0.5s ease;
+  color: white;
+}
