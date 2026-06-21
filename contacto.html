@@ -9,247 +9,260 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="icono/favicon.png">
 
-    <!-- Fuente -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
 
     <!-- Bootstrap CSS — antes del CSS propio -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet">
 
-    <!-- CSS propio del sitio -->
-    <link rel="stylesheet" href="./CSS/estilos-contacto.css">
+    <!--<link rel="stylesheet" href="estilos.css">-->
+    <link rel="stylesheet" href="./CSS/estilos.css">
+
+    <!-- Bootstrap JS — antes del </body> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
 </head>
 
 <body>
-
-    <!-- ===== HEADER / NAVBAR BOOTSTRAP =====
-         Usa el componente navbar de Bootstrap con navbar-expand-lg
-         para que en mobile colapse en un botón hamburguesa.
-         position:sticky aplicado en el CSS propio (.navbar-retecno).
-    -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark navbar-retecno">
-            <div class="container-fluid px-4">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <div class="row w-100 align-items-center">
 
-                <!-- Logo + nombre (navbar-brand) -->
-                <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-                    <!-- position:relative en .logo-wrapper permite el badge absolute -->
-                    <div class="logo-wrapper">
-                        <img src="img/ong3.jpg" alt="Logo ReTecno Argentina" width="48" height="48"
-                            class="rounded-circle logo-img">
-                        <!-- Badge "ONG" con position:absolute sobre la imagen -->
-                        <span class="logo-badge">ONG</span>
+                    <!-- Columna 1: Logo  ///////////////////////////////////////// -->
+                    <div class="col-3">
+                        <img src="img/ong3.jpg"
+                            alt="Logo de ReTecno Argentina"
+                            width="80">
                     </div>
-                    <span class="brand-nombre">ReTecno Argentina</span>
-                </a>
 
-                <!-- Botón hamburguesa para mobile (Bootstrap navbar-toggler) -->
-                <button class="navbar-toggler" type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#menuPrincipal"
-                    aria-controls="menuPrincipal"
-                    aria-expanded="false"
-                    aria-label="Abrir menú">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                    <!-- Columna 2: Título////////////////////////////////////////// -->
+                    <div class="col-6 text-center">
+                        <a class="navbar-brand fw-bold m-0" href="index.html">
+                            <h1 class="m-0">ReTecno Argentina</h1>
+                        </a>
+                    </div>
 
-                <!-- Links del menú: colapsa en mobile gracias a Bootstrap collapse -->
-                <div class="collapse navbar-collapse" id="menuPrincipal">
-                    <ul class="navbar-nav ms-auto gap-1">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="nosotros.html">Nosotros</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="programas.html">Programas</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link nav-activo" href="contacto.html" aria-current="page">Contacto</a>
-                        </li>
-                    </ul>
+                    <!-- Columna 3: Menú ////////////////////////////////////////// -->
+                    <div class="col-3 d-flex justify-content-end align-items-center" >
+
+                    <button id="btnModoOscuro"class="btn btn-outline-secondary btn-sm me-2">🌙</button>
+
+                        <button class="navbar-toggler"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#navMenu">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="navegador collapse navbar-collapse justify-content-end" id="navMenu">
+
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.html">Inicio</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="nosotros.html">Nosotros</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="programas.html">Programas</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-
             </div>
         </nav>
     </header>
-    <!-- ===== FIN HEADER ===== -->
 
-    <main class="main-contenido">
-
-        <!-- ===== GRILLA BOOTSTRAP: info de contacto en cards =====
-             Usa container > row > col-* con comportamiento responsivo.
-             col-12 (mobile) → col-md-6 (tablet) → col-lg-3 (desktop)
-             g-3 como sistema de gutter (sin márgenes manuales).
-        -->
-        <section class="seccion py-4">
+    <main>
+        <!-- Información de contacto -->
+        <section class="seccion">
             <div class="seccion-fondo">
-                <div class="container">
-                    <h2 class="mb-1">Contacto</h2>
-                    <p class="bajada">Si deseas ponerte en contacto con nosotros, podés hacerlo a través de los siguientes medios:</p>
+                <h2>Contacto</h2>
+                <p class="bajada">Si deseas ponerte en contacto con nosotros, puedes hacerlo a través de los siguientes medios:</p>
 
-                    <!-- row + col-* responsivos con gutter g-3 -->
-                    <div class="row g-3 mt-2">
+                <!-- row + col-* responsivos con gutter g-3 -->
+                <div class="row g-3 mt-2">
 
-                        <!-- Card 1 — Correo -->
-                        <div class="col-12 col-md-6 col-lg-3">
-                            <div class="card h-100 card-contacto">
-                                <div class="card-body">
-                                    <span class="icono-card">✉</span>
-                                    <h5 class="card-title">Correo electrónico</h5>
-                                    <p class="card-text">
-                                        <a href="mailto:retecoarg@gmail.com">retecoarg@gmail.com</a>
-                                    </p>
-                                </div>
+                    <!-- Card 1 — Correo -->
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card h-100 card-contacto">
+                            <div class="card-body">
+                                <span class="icono-card">✉</span>
+                                <h5 class="card-title">Correo electrónico</h5>
+                                <p class="card-text">
+                                    <a href="mailto:retecoarg@gmail.com">retecoarg@gmail.com</a>
+                                </p>
                             </div>
                         </div>
+                    </div>
 
-                        <!-- Card 2 — Teléfono -->
-                        <div class="col-12 col-md-6 col-lg-3">
-                            <div class="card h-100 card-contacto">
-                                <div class="card-body">
-                                    <span class="icono-card">☎</span>
-                                    <h5 class="card-title">Teléfono</h5>
-                                    <p class="card-text">
-                                        <a href="tel:+541112345678">+54 11 1234-5678</a>
-                                    </p>
-                                </div>
+                    <!-- Card 2 — Teléfono -->
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card h-100 card-contacto">
+                            <div class="card-body">
+                                <span class="icono-card">☎</span>
+                                <h5 class="card-title">Teléfono</h5>
+                                <p class="card-text">
+                                    <a href="tel:+541112345678">+54 11 1234-5678</a>
+                                </p>
                             </div>
                         </div>
+                    </div>
 
-                        <!-- Card 3 — Dirección -->
-                        <div class="col-12 col-md-6 col-lg-3">
-                            <div class="card h-100 card-contacto">
-                                <div class="card-body">
-                                    <span class="icono-card">📍</span>
-                                    <h5 class="card-title">Dirección</h5>
-                                    <p class="card-text">Av. Sarmiento 123, Buenos Aires, Argentina</p>
-                                </div>
+                    <!-- Card 3 — Dirección -->
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card h-100 card-contacto">
+                            <div class="card-body">
+                                <span class="icono-card">📍</span>
+                                <h5 class="card-title">Dirección</h5>
+                                <p class="card-text">Av. Sarmiento 123, Buenos Aires, Argentina</p>
                             </div>
                         </div>
+                    </div>
 
-                        <!-- Card 4 — Redes sociales -->
-                        <div class="col-12 col-md-6 col-lg-3">
-                            <div class="card h-100 card-contacto">
-                                <div class="card-body">
-                                    <span class="icono-card">🌐</span>
-                                    <h5 class="card-title">Redes sociales</h5>
-                                    <p class="card-text d-flex flex-column gap-1">
-                                        <a href="https://www.instagram.com/retecoarg/" target="_blank"
-                                            class="badge-red badge-instagram">Instagram</a>
-                                        <a href="https://www.facebook.com/retecoarg/" target="_blank"
-                                            class="badge-red badge-facebook">Facebook</a>
-                                    </p>
-                                </div>
+                    <!-- Card 4 — Redes sociales -->
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card h-100 card-contacto">
+                            <div class="card-body">
+                                <span class="icono-card">🌐</span>
+                                <h5 class="card-title">Redes sociales</h5>
+                                <p class="card-text d-flex flex-column gap-1">
+                                    <a href="https://www.instagram.com/retecoarg/" target="_blank"
+                                        class="badge-red badge-instagram">Instagram</a>
+                                    <a href="https://www.facebook.com/retecoarg/" target="_blank"
+                                        class="badge-red badge-facebook">Facebook</a>
+                                </p>
                             </div>
                         </div>
-
-                    </div><!-- fin row -->
-                </div><!-- fin container -->
-            </div><!-- fin seccion-fondo -->
+                    </div>
+                </div>
+            </div>
         </section>
-        <!-- ===== FIN GRILLA ===== -->
 
-        <!-- ===== ALERT BOOTSTRAP =====
-             Componente Alert de Bootstrap personalizado con .alert-retecno
-        -->
         <div class="container mt-3">
             <div class="alert alert-retecno d-flex align-items-center gap-2" role="alert">
                 <span>📬</span>
                 <span>Respondemos todos los mensajes en un plazo de <strong>48 horas hábiles</strong>.</span>
             </div>
         </div>
-        <!-- ===== FIN ALERT ===== -->
 
-        <!-- ===== FORMULARIO DE CONTACTO ===== -->
-        <section class="seccion py-2 pb-5 mt-3">
+        <!-- Formulario de contacto -->
+        <section class="seccion mt-4">
             <div class="seccion-fondo">
-                <div class="container">
-                    <h2>Envianos un mensaje</h2>
-                    <p class="bajada">Completá el formulario y nos comunicaremos a la brevedad.</p>
+                <h2>Envianos un mensaje</h2>
+                <p class="bajada">Completá el formulario y nos comunicaremos a la brevedad.</p>
 
-                    <form class="formulario" action="#" method="post">
+                <form class="formulario" id="formContacto" action="#" method="post" novalidate>
 
-                        <!-- Grilla Bootstrap: dos columnas en pantallas medianas -->
-                        <div class="row g-3">
+                    <!-- Grilla Bootstrap: dos columnas en pantallas medianas -->
+                    <div class="row g-3">
 
-                            <div class="col-12 col-md-6">
-                                <div class="form-grupo">
-                                    <label for="nombre">Nombre completo <span class="requerido">*</span></label>
-                                    <input type="text" id="nombre" name="nombre"
-                                        placeholder="Ej: María González" required>
-                                </div>
+                        <div class="col-12 col-md-6">
+                            <div class="form-grupo">
+                                <label for="nombre">Nombre completo <span class="requerido">*</span></label>
+                                <input type="text" id="nombre" name="nombre"
+                                    placeholder="Ej: María González" required minlength="3">
+                                <small class="form-error" id="error-nombre"></small>
                             </div>
-
-                            <div class="col-12 col-md-6">
-                                <div class="form-grupo">
-                                    <label for="email">Correo electrónico <span class="requerido">*</span></label>
-                                    <input type="email" id="email" name="email"
-                                        placeholder="tucorreo@ejemplo.com" required>
-                                </div>
-                            </div>
-
-                            <div class="col-12 col-md-6">
-                                <div class="form-grupo">
-                                    <label for="telefono">Teléfono (opcional)</label>
-                                    <input type="tel" id="telefono" name="telefono"
-                                        placeholder="+54 11 0000-0000">
-                                </div>
-                            </div>
-
-                            <div class="col-12 col-md-6">
-                                <div class="form-grupo">
-                                    <label for="asunto">Asunto <span class="requerido">*</span></label>
-                                    <select id="asunto" name="asunto" required>
-                                        <option value="" disabled selected>Seleccioná un tema</option>
-                                        <option value="donacion">Quiero donar un dispositivo</option>
-                                        <option value="voluntariado">Voluntariado</option>
-                                        <option value="programa">Información sobre programas</option>
-                                        <option value="prensa">Prensa / Medios</option>
-                                        <option value="otro">Otro</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="col-12">
-                                <div class="form-grupo">
-                                    <label for="mensaje">Mensaje <span class="requerido">*</span></label>
-                                    <textarea id="mensaje" name="mensaje" rows="5"
-                                        placeholder="Escribí tu mensaje acá..." required></textarea>
-                                </div>
-                            </div>
-
-                            <div class="col-12">
-                                <div class="form-grupo form-grupo--check">
-                                    <input type="checkbox" id="terminos" name="terminos" required>
-                                    <label for="terminos">Acepto que mis datos sean utilizados para responder mi consulta.</label>
-                                </div>
-                            </div>
-
-                        </div><!-- fin row del form -->
-
-                        <!-- form-acciones usa flex + gap (CSS propio) -->
-                        <div class="form-acciones">
-                            <button type="reset" class="btn btn--secundario">Limpiar</button>
-                            <button type="submit" class="btn btn--primario">Enviar mensaje</button>
                         </div>
 
-                    </form>
-                </div><!-- fin container -->
-            </div><!-- fin seccion-fondo -->
+                        <div class="col-12 col-md-6">
+                            <div class="form-grupo">
+                                <label for="email">Correo electrónico <span class="requerido">*</span></label>
+                                <input type="email" id="email" name="email"
+                                    placeholder="tucorreo@ejemplo.com" required>
+                                <small class="form-error" id="error-email"></small>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6">
+                            <div class="form-grupo">
+                                <label for="telefono">Teléfono (opcional)</label>
+                                <input type="tel" id="telefono" name="telefono"
+                                    placeholder="+54 11 0000-0000">
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6">
+                            <div class="form-grupo">
+                                <label for="asunto">Asunto <span class="requerido">*</span></label>
+                                <select id="asunto" name="asunto" required>
+                                    <option value="" disabled selected>Seleccioná un tema</option>
+                                    <option value="donacion">Quiero donar un dispositivo</option>
+                                    <option value="voluntariado">Voluntariado</option>
+                                    <option value="programa">Información sobre programas</option>
+                                    <option value="prensa">Prensa / Medios</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                                <small class="form-error" id="error-asunto"></small>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="form-grupo">
+                                <label for="mensaje">Mensaje <span class="requerido">*</span></label>
+                                <textarea id="mensaje" name="mensaje" rows="5"
+                                    placeholder="Escribí tu mensaje acá..." required minlength="10"></textarea>
+                                <small class="form-error" id="error-mensaje"></small>
+                                <small class="form-contador" id="contador-mensaje">0 caracteres</small>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="form-grupo form-grupo--check">
+                                <input type="checkbox" id="terminos" name="terminos" required>
+                                <label for="terminos">Acepto que mis datos sean utilizados para responder mi consulta.</label>
+                            </div>
+                            <small class="form-error" id="error-terminos"></small>
+                        </div>
+
+                    </div><!-- fin row del form -->
+
+                    <!-- Mensaje de confirmación de envío -->
+                    <p class="form-confirmacion" id="formConfirmacion" role="status" aria-live="polite"></p>
+
+                    <!-- form-acciones usa flex + gap (CSS propio) -->
+                    <div class="form-acciones">
+                        <button type="reset" class="btn btn--secundario" id="btnLimpiar">Limpiar</button>
+                        <button type="submit" class="btn btn--primario">Enviar mensaje</button>
+                    </div>
+
+                </form>
+            </div>
         </section>
-        <!-- ===== FIN FORMULARIO ===== -->
 
     </main>
 
-    <footer>
-        <p>&copy; 2020 ReTecno Argentina. Todos los derechos reservados.</p>
+    <footer class="py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-1">
+                &copy; 2020 ReTecno Argentina. Todos los derechos reservados
+
+            </p>
+            <a href="nosotros.html">Volver al inicio</a>
+
+            <br>
+
+            <a href="https://x.com/?lang=es" target="_blank" rel="noopener noreferrer">
+                <img src="icono/x.png" alt="Twitter" width="30" height="30"></a>
+
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                <img src="icono/facebook.png" alt="Facebook" width="30" height="30"></a>
+
+            <a href="https://web.whatsapp.com" target="_blank" rel="noopener noreferrer">
+                <img src="icono/whatsapp.png" alt="WhatsApp" width="35" height="35"> </a>
+        </div>
     </footer>
+    <div id="estrellas"></div>
 
-    <!-- Bootstrap JS — antes del </body> -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
+    <!--AL FINAL DEL BODY PONEMOS EL LINK A JS-->
+    <script src="./JS/main.js"></script>
 </body>
+
 </html>
