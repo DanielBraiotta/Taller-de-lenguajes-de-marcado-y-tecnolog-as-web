@@ -39,8 +39,8 @@ h2 {
   font-size: 3rem;
   color: var(--color-primario);
   transition: color 0.5s ease; /* Transición suave de color para todos los h2 de la página */
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+  /*box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 10px;*/
   padding: 1rem;
 }
 
@@ -195,14 +195,14 @@ ul {
   z-index: 1;
 }
 
-/* Contenedor para artículos con imagenes y texto lado a lado */
+/* Contenedor para artículos con imagenes y texto lado a lado 
 .articulo-con-imgs {
   display: grid;
-  grid-template-columns: 1fr 2fr; /*1 columna de: 1 fraccion y 2 fracciones*/
+  grid-template-columns: 1fr 2fr; /*1 columna de: 1 fraccion y 2 fracciones
   gap: 2rem;
-  align-items: center; /*Centra verticalmente los elementos dentro del header sin importar el tamaño.*/
+  align-items: center; /*Centra verticalmente los elementos dentro del header sin importar el tamaño.
   margin-bottom: 2rem;
-}
+}*/
 
 /*------------------------------------------------------------------------------------Footer-*/
 /* Estilo del pie de página con fondo y separación interna */
@@ -321,7 +321,7 @@ h2:hover {
   box-shadow: 0 0 10px rgba(102, 102, 102, 0.5);
   flex: 1 1 300px;
 }
-
+/*------------------------------------------------------------------------------------------------------------------------ video */
 /* Contenedor flexible que posiciona el video y la tabla de detalles lado a lado */
 .video-detalles {
   display: flex;
@@ -689,26 +689,27 @@ button {
 p {
   /*color: var(--color-primario);*/
   transition: color 0.5s ease; /* Transición suave de color para todos los h2 de la página */
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+  /*box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 10px;*/
   padding: 1rem;
 }
 
 .col-12  {
-  color: var(--color-primario);
+  /*color: var(--color-primario);*/
   transition: color 0.5s ease; /* Transición suave de color para todos los h2 de la página */
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+  /*box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 10px;*/
   padding: 1rem;
 }
 
 
-/*------------------------------------------------------------------------------------------------------------------MODO OSCURO--*/
+/*------------------------------------------------------------------------------------------------------------------MODO OSCURO Animaciones--*/
 body.dark-mode{
     background-color: #111;
     color: white;
 }
-
+/*------------------------------------------------------------------Estrellas normales */
+/*cubre toda la pantalla*/
 #estrellas{
     position: fixed;
     top: 0;
@@ -720,7 +721,6 @@ body.dark-mode{
     z-index: 999;
 }
 
-/* Estrellas normales */
 .estrella{
     position: absolute;
     background: white;
@@ -728,6 +728,7 @@ body.dark-mode{
     animation: brillar 3s forwards;
 }
 
+/*animacion de brillo*/
 @keyframes brillar{
     0%{
         opacity: 0;
@@ -746,7 +747,7 @@ body.dark-mode{
     }
 }
 
-/* Estrella fugaz */
+/*----------------------------------------------------------------Estrella fugaz--*/
 .estrella-fugaz{
     position: absolute;
     width: 120px;
@@ -761,7 +762,7 @@ body.dark-mode{
     transform: rotate(-35deg);
     animation: fugaz 2s linear forwards;
 }
-
+/*animacion fugaz*/
 @keyframes fugaz{
     0%{
         opacity: 1;
@@ -773,7 +774,7 @@ body.dark-mode{
         transform: translate(-600px,600px) rotate(-35deg);
     }
 }
-
+/*------------------------------------------------------------------------------------------------------------------MODO OSCURO Fondos--*/
 body.dark-mode main{
     background-color: #222;
     color: white;
@@ -805,7 +806,6 @@ body.dark-mode .navbar{
 
 body.dark-mode .nav-link{
   color: white;
-  
 }
 
 body.dark-mode footer{
