@@ -22,19 +22,18 @@
     <!--Css propio para ir pisando bootstrap con stylos-->
     <link rel="stylesheet" href="./CSS/estilos.css">
 
-    <!-- Bootstrap JS — antes del body -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-    </script>
+    <!-- Bootstrap JS (Cargado una sola vez con defer para asegurar funcionamiento) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
 
 </head>
 
-<body class="m-5 fluid">
+<body class="container-fluid p-0">
 
     <header>
 
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid px-0">
-                <div class="row w-100 align-items-center">
+                <div class="row w-100 align-items-center ">
 
                     <!-- Columna 1: Logo  ///////////////////////////////////////// -->
                     <div class="col-3">
@@ -49,10 +48,11 @@
                     </div>
 
                     <!-- Columna 3: Menú ////////////////////////////////////////// -->
-                    <div class="col-3 text-end position-relative">
+                    <div class="col-3 text-end position-relative ">
 
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navMenu">
+                        <!-- Botón de Menú Corregido (Accesibilidad resuelta) -->
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+                            aria-controls="navMenu" aria-expanded="false" aria-label="Abrir menú de navegación">
                             <span class="navbar-toggler-icon"></span>
                         </button>
 
@@ -78,6 +78,7 @@
         </nav>
 
     </header>
+
     <!--Contenedor Principal -->
     <main class="container-fluid mt-5 pt-5 px-4">
 
@@ -110,7 +111,7 @@
                 <h2 class="text-center fw-bold text-dark">Resumen en video</h2>
 
                 <article class="articulo">
-
+                    <h3 class="video-info">video mas info </h3>
                     <span class="d-block text-start fw-bold text-dark">Video ilustrativo</span>
 
                     <div class="video-detalles">
@@ -128,7 +129,7 @@
                                     </tr>
 
                                     <tr>
-                                        <th>integrandes:</th>
+                                        <th>integrantes:</th>
                                         <td>Leonardo, Daniel, Lucas</td>
                                     </tr>
 
@@ -249,9 +250,9 @@
 
         <section id="NUESTRO-EQUIPO" class="seccion mt-4">
             <div class="seccion-fondo">
-                <div class="rectangulo ">
-                    <h2 class="text-center fw-bold text-dark">Nuestro Equipo</h2>
-                </div>
+
+                <h2 class="text-center fw-bold text-dark">Nuestro Equipo</h2>
+
 
 
                 <div class="container">
@@ -306,76 +307,83 @@
 
         <section id="ORGANIGRAMA" class="seccion mt-4">
             <div class="seccion-fondo">
+
+                <h2 class="text-center fw-bold text-dark">Organigrama</h2>
+
+                <!-- Título de la Sección Centrado -->
+
                 <div class="container">
-                    <!-- Título de la Sección Centrado -->
+                    <div class="row align-items-center">
 
+                        <!-- Grilla de Roles -->
+                        <div class="row g-4 justify-content-center">
 
-                    <div class="row mb-5">
+                            <!-- Daniel -->
+                            <div class="col-12 col-md-4">
+                                <div class="card h-100 border-0 text-center">
+                                    <div class="p-4 align-items-center">
 
-                        <h2 class="text-center fw-bold text-dark">Organigrama</h2>
-
-                    </div>
-                </div>
-
-
-                <!-- Grilla de Roles -->
-                <div class="row g-4 justify-content-center">
-
-                    <!-- Daniel -->
-                    <div class="col-12 col-md-4">
-                        <div class="card h-100 border-0 text-center">
-                            <div class="p-4 align-items-center">
-
-                                <div class="circle bg-success text-white mb-3 shadow">
-                                    <span class="h3 mb-0 fw-bold">D</span>
+                                        <div class="circle bg-success text-white mb-3 shadow">
+                                            <span class="h3 mb-0 fw-bold">D</span>
+                                        </div>
+                                        <h3 class="card-title mb-1 fw-bold">Daniel</h3>
+                                        <p class="role text-success small mb-3 fw-semibold text-uppercase">Director
+                                            General
+                                        </p>
+                                        <p class="card-text text-muted small">
+                                            Responsable de definir la visión estratégica de la organización,
+                                            coordinar las
+                                            alianzas institucionales y liderar la transición hacia un modelo
+                                            sostenible en
+                                            la gestión de residuos electrónicos.
+                                        </p>
+                                    </div>
                                 </div>
-                                <h3 class="card-title mb-1 fw-bold">Daniel</h3>
-                                <p class="role text-success small mb-3 fw-semibold text-uppercase">Director General
-                                </p>
-                                <p class="card-text text-muted small">
-                                    Responsable de definir la visión estratégica de la organización, coordinar las
-                                    alianzas institucionales y liderar la transición hacia un modelo sostenible en
-                                    la gestión de residuos electrónicos.
-                                </p>
                             </div>
-                        </div>
-                    </div>
 
-                    <!-- Leonardo -->
-                    <div class="col-12 col-md-4">
-                        <div class="card h-100 border-0 text-center">
-                            <div class="p-4">
-                                <div class="circle bg-success text-white mb-3 shadow">
-                                    <span class="h3 mb-0 fw-bold">L</span>
+                            <!-- Leonardo -->
+                            <div class="col-12 col-md-4">
+                                <div class="card h-100 border-0 text-center">
+                                    <div class="p-4">
+                                        <div class="circle bg-success text-white mb-3 shadow">
+                                            <span class="h3 mb-0 fw-bold">L</span>
+                                        </div>
+                                        <h3 class="card-title mb-1 fw-bold">Leonardo</h3>
+                                        <p class="role text-success small mb-3 fw-semibold text-uppercase">
+                                            Coordinador de
+                                            Operaciones</p>
+                                        <p class="card-text text-muted small">
+                                            Encargado de supervisar los procesos de clasificación, desmontaje y
+                                            reciclaje
+                                            técnico. Asegura que los protocolos de seguridad ambiental y normativas
+                                            locales
+                                            se cumplan estrictamente en la planta.
+                                        </p>
+                                    </div>
                                 </div>
-                                <h3 class="card-title mb-1 fw-bold">Leonardo</h3>
-                                <p class="role text-success small mb-3 fw-semibold text-uppercase">Coordinador de
-                                    Operaciones</p>
-                                <p class="card-text text-muted small">
-                                    Encargado de supervisar los procesos de clasificación, desmontaje y reciclaje
-                                    técnico. Asegura que los protocolos de seguridad ambiental y normativas locales
-                                    se cumplan estrictamente en la planta.
-                                </p>
                             </div>
-                        </div>
-                    </div>
 
-                    <!-- Luca -->
+                            <!-- Luca -->
 
-                    <div class="col-12 col-md-4">
-                        <div class="card h-100 border-0 text-center">
-                            <div class="p-4">
-                                <div class="circle bg-success text-white mb-3 shadow">
-                                    <span class="h3 mb-0 fw-bold">L</span>
+                            <div class="col-12 col-md-4">
+                                <div class="card h-100 border-0 text-center">
+                                    <div class="p-4">
+                                        <div class="circle bg-success text-white mb-3 shadow">
+                                            <span class="h3 mb-0 fw-bold">L</span>
+                                        </div>
+                                        <h3 class="card-title mb-1 fw-bold">Luca</h3>
+                                        <p class="role text-success small mb-3 fw-semibold text-uppercase">
+                                            Especialista en
+                                            Logística</p>
+                                        <p class="card-text text-muted small">
+                                            Gestiona la cadena de suministro verde, desde la recolección programada
+                                            de
+                                            basura tecnológica con empresas y ciudadanos, hasta el transporte
+                                            eficiente y
+                                            seguro de los materiales recuperados.
+                                        </p>
+                                    </div>
                                 </div>
-                                <h3 class="card-title mb-1 fw-bold">Luca</h3>
-                                <p class="role text-success small mb-3 fw-semibold text-uppercase">Especialista en
-                                    Logística</p>
-                                <p class="card-text text-muted small">
-                                    Gestiona la cadena de suministro verde, desde la recolección programada de
-                                    basura tecnológica con empresas y ciudadanos, hasta el transporte eficiente y
-                                    seguro de los materiales recuperados.
-                                </p>
                             </div>
                         </div>
                     </div>
@@ -453,12 +461,7 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
-        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
-        crossorigin="anonymous"></script>
+
 
 </body>
 
