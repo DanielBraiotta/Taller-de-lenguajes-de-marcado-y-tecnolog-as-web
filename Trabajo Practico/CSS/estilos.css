@@ -726,3 +726,9 @@ p {
    .video-info{
     text-align: center;
    }
+
+   .rectangulo{ 
+    background-color: #00ee0c;
+    border-radius: 1rem;
+
+     }
