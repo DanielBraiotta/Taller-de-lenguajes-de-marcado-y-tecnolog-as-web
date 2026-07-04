@@ -28,7 +28,7 @@
 
 </head>
 
-<body class="m-5 fluid">
+<body>
 
     <header>
 
@@ -38,7 +38,7 @@
 
                     <!-- Columna 1: Logo  ///////////////////////////////////////// -->
                     <div class="col-3">
-                        <img src="img/ong3.jpg"
+                        <img class="img-fluid" src="img/ong3.jpg"
                             alt="Logo de ReTecno Argentina"
                             width="80">
                     </div>
@@ -113,39 +113,38 @@
             <div class="seccion-fondo">
                 <h2 class="text-center fw-bold ">Resumen en video</h2>
 
-                <article class="articulo">
+                <span class="d-block text-start fw-bold">Video ilustrativo</span>
 
-                    <span class="d-block text-start fw-bold text-dark">Video ilustrativo</span>
+                <div class="row g-4 align-items-start"> <div class="col-12 col-lg-7">
+                        <video src="video/ReTecno__De_Basura_a_Oportunidad.mp4" controls autoplay muted loop class="w-100 rounded" style="max-width: 720px;"></video>
+                    </div>
 
-                    <div class="video-detalles">
-                        <video src="video/ReTecno__De_Basura_a_Oportunidad.mp4" controls autoplay muted loop></video>
-
-                        <aside class="video-info">
-                            <table>
-                                <caption>📌 Detalles principales del video</caption>
+                    <aside class="col-12 col-lg-5">
+                        <h3>📌 Detalles del video</h3>
+                        <div class="table-responsive">
+                            <table class="mb-0">
                                 <tbody>
                                     <tr>
                                         <th>Título:</th>
                                         <td>trabajo práctico</td>
                                     </tr>
                                     <tr>
-                                        <th>integrandes:</th>
+                                        <th>integrantes:</th>
                                         <td>Leonardo, Daniel, Lucas</td>
                                     </tr>
                                     <tr>
                                         <th>Fecha de publicación:</th>
                                         <td>23 de abril de 2026</td>
                                     </tr>
-
                                     <tr>
                                         <th>Duración:</th>
                                         <td>4:38 minutos</td>
                                     </tr>
                                 </tbody>
-                            </table>
-                        </aside>
-                    </div>
-                </article>
+                            </table>                        
+                        </div>
+                    </aside>
+                </div>
             </div>
         </section>
 
@@ -328,9 +327,10 @@
                                     <span class="h3 mb-0 fw-bold">D</span>
                                 </div>
                                 <h3 class="card-title mb-1 fw-bold">Daniel</h3>
-                                <p class="role text-success small mb-3 fw-semibold text-uppercase">Director General
+                                <p class="role text-success small mb-3 fw-semibold text-uppercase">
+                                    Director General
                                 </p>
-                                <p class="card-text text-muted small">
+                                <p class="card-text small">
                                     Responsable de definir la visión estratégica de la organización, coordinar las
                                     alianzas institucionales y liderar la transición hacia un modelo sostenible en
                                     la gestión de residuos electrónicos.
@@ -349,7 +349,7 @@
                                 <h3 class="card-title mb-1 fw-bold">Leonardo</h3>
                                 <p class="role text-success small mb-3 fw-semibold text-uppercase">Coordinador de
                                     Operaciones</p>
-                                <p class="card-text text-muted small">
+                                <p class="card-text small">
                                     Encargado de supervisar los procesos de clasificación, desmontaje y reciclaje
                                     técnico. Asegura que los protocolos de seguridad ambiental y normativas locales
                                     se cumplan estrictamente en la planta.
@@ -369,7 +369,7 @@
                                 <h3 class="card-title mb-1 fw-bold">Luca</h3>
                                 <p class="role text-success small mb-3 fw-semibold text-uppercase">Especialista en
                                     Logística</p>
-                                <p class="card-text text-muted small">
+                                <p class="card-text small">
                                     Gestiona la cadena de suministro verde, desde la recolección programada de
                                     basura tecnológica con empresas y ciudadanos, hasta el transporte eficiente y
                                     seguro de los materiales recuperados.
@@ -383,21 +383,16 @@
 
         <section id="DATOS-INSTITUCIONALES" class="seccion mt-4">
             <div class="seccion-fondo">
-                <div class="container">
+            
                     <h2 class="text-center fw-bold">Datos Institucionales</h2>
 
-                    <p class="intro text-center mx-0 ">
-                        Como organización sin fines de lucro, <strong>ReTecno Argentina</strong> nació con el
-                        propósito
-                        de impulsar la gestión responsable de los residuos electrónicos y promover una cultura
-                        tecnológica
-                        sostenible. Desde nuestra fundación en 2026, trabajamos en proyectos que integran
-                        innovación,
-                        educación y compromiso social.
+                    <p class="intro text-center mx-auto mb-4" style="max-width: 900px;">
+                        Como organización sin fines de lucro, <strong>ReTecno Argentina</strong> nació con el propósito de impulsar la gestión responsable de los residuos electrónicos y promover una cultura
+                        tecnológica sostenible. Desde nuestra fundación en 2026, trabajamos en proyectos que integran innovación, educación y compromiso social.
                     </p>
 
                     <div class="table-responsive">
-                        <table class="table">
+                        <table>
                             <tbody class="rounder">
                                 <tr>
                                     <th>Nombre legal</th>
@@ -422,11 +417,8 @@
                             </tbody>
                         </table> <!--cierre tabla-->
                     </div> <!-- cierre div tabla -->
-                </div>
             </div>
-
         </section>
-
     </main>
 
 

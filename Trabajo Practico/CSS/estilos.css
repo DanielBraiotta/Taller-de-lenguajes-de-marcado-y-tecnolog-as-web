@@ -26,7 +26,7 @@
 /*H1*/
 /* Estilo del título principal del header */
 header h1 {
-  font-size: clamp(1.2rem, 4vw, 3rem); /*tamaño adaptativo*/
+  font-size: clamp(0.9rem, 3vw, 2.5rem); /*tamaño adaptativo*/
   color: var(--color-fondo-secundario);
   text-shadow: #1100ff 4px 4px 5px; /*sombra al titulo*/
   flex: 1;
@@ -36,7 +36,7 @@ header h1 {
 /*H2*/
 /* Estilo global para títulos h2 en la página */
 h2 {
-  font-size: 3rem;
+  font-size: clamp(1.5rem, 4vw, 3rem);
   color: var(--color-primario);
   transition: color 0.5s ease; /* Transición suave de color para todos los h2 de la página */
   /*box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
@@ -44,10 +44,11 @@ h2 {
   padding: 1rem;
 }
 
+
 /*H3*/
 /* Estilo global para subtítulos h3 */
 h3 {
-  font-size: 2rem;
+  font-size: clamp(1.2rem, 3vw, 2rem);
   color: var(--color-secundario);
 }
 
@@ -161,19 +162,19 @@ ul {
 /*a*/
 
 /*----------------------------------------------------------------------------------------------contenido de index*/
-/* Estilo de la lista de índices laterales en la sección de contenido */
+/* Estilo de la lista de índices laterales en la sección de contenido 
 #contenido ul {
-  list-style: none; /*Quita los puntos o viñetas de la lista.*/
+  list-style: none; /*Quita los puntos o viñetas de la lista.
   display: flex;
-  gap: 4rem; /*agrega espacio ENTRE elementos hijos dentro de un contenedor flex o grid.*/
-}
+  gap: 4rem; /*agrega espacio ENTRE elementos hijos dentro de un contenedor flex o grid.
+}*/
 
 /* Estilo de los enlaces del índice de contenido */
 #contenido a {
   color: var(--color-acento);
   text-decoration: none; /*Quita el subrayado de los enlaces.*/
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: clamp(1rem,2vw,1.5rem);
 }
 /* Hover de los enlaces del índice de contenido */
 #contenido a:hover {
@@ -262,6 +263,14 @@ th a:hover {
   color: var(--color-primario);
 }
 
+@media (max-width: 576px) {
+
+    .table-responsive table {
+        font-size: 0.6rem;
+    }
+
+}
+
 /*---------------------------------------------------------------------------------------------Transiciones*/
 /*----imagenes----*/
 /* Transición de hover para imágenes dentro de artículos */
@@ -282,7 +291,7 @@ th a:hover {
 /* Estilo base para párrafos y listas dentro de artículos */
 .articulo-contenido p,
 .articulo-contenido li {
-  font-size: 1.2rem;
+  font-size: clamp(0.95rem, 1vw + 0.6rem, 1.2rem);
   transition: text-shadow 0.5s ease;
 }
 
@@ -322,21 +331,6 @@ h2:hover {
   flex: 1 1 300px;
 }
 /*------------------------------------------------------------------------------------------------------------------------ video */
-/* Contenedor flexible que posiciona el video y la tabla de detalles lado a lado */
-.video-detalles {
-  display: flex;
-  gap: 2rem;
-  align-items: flex-start;
-  flex-wrap: wrap;
-}
-
-.video-detalles video {
-  display: block;
-  width: min(100%, 720px);
-  max-width: 720px;
-  border-radius: 10px;
-  flex: 1 1 420px;
-}
 
 /* Estilo del contenedor derecho que agrupa la tabla de detalles del video */
 .video-info {
@@ -366,7 +360,7 @@ h2:hover {
   align-items: center;
   gap: 1rem;
   padding: 1.1rem 1.25rem;
-  background: rgba(242, 250, 255, 0.95);
+  /*background: rgba(242, 250, 255, 0.95);*/
   border-radius: 18px;
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
   transition:
@@ -378,7 +372,7 @@ h2:hover {
 .video-info tr:hover {
   transform: translateY(-3px);
   box-shadow: 0 18px 34px rgba(0, 0, 0, 0.12);
-  background: rgba(255, 255, 255, 1);
+  /*background: rgba(255, 255, 255, 1);*/
 }
 
 /* Evita que la regla global de filas impares cambie la tabla de detalles del video */
@@ -433,7 +427,8 @@ h2:hover {
   color: var(--color-primario);
 }
 
-/* Estilo especial de la sección de datos institucionales */
+/*---------------------------------------------------------------- Estilo especial de la sección de datos institucionales */
+/*
 #DATOS-INSTITUCIONALES .seccion-fondo {
   background: linear-gradient(
     160deg,
@@ -452,7 +447,7 @@ h2:hover {
   font-size: 1.05rem;
   color: #2a2a2a;
   line-height: 1.8;
-}
+}*/
 
 /* Formato de la tabla de datos institucionales */
 #DATOS-INSTITUCIONALES table {
@@ -476,7 +471,7 @@ h2:hover {
   align-items: center;
   gap: 1rem;
   padding: 1.1rem 1.25rem;
-  background: rgba(255, 255, 255, 0.95);
+  /*background: rgba(255, 255, 255, 0.95);*/
   border-radius: 18px;
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
   transition:
@@ -487,8 +482,8 @@ h2:hover {
 
 #DATOS-INSTITUCIONALES tr:hover {
   transform: translateY(-3px);
-  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.12);
-  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 18px 34px rgba(133, 133, 133, 0.12);
+  /*background: rgba(255, 255, 255, 1);*/
 }
 
 /* Estilos compartidos para celdas de la tabla institucional */
@@ -523,7 +518,7 @@ h2:hover {
 }
 
 #DATOS-INSTITUCIONALES td {
-  color: #2d2d2d;
+  /*color: #2d2d2d;*/
   font-weight: 600;
   line-height: 1.6;
 }
@@ -537,10 +532,10 @@ h2:hover {
   padding-bottom: 0.75rem;
   color: var(--color-primario);
 }
-
+/*
 #DATOS-INSTITUCIONALES tr:nth-child(odd) {
   background: rgba(242, 250, 255, 0.95);
-}
+}*/
 
 /*----------------------------------------------------------------------------------------CONTENIDO SOBRE EL EFECTO*/
 /* Ajusta el posicionamiento de todos los hijos directos dentro de secciones */
@@ -829,6 +824,11 @@ body.dark-mode tbody tr:nth-child(odd){
   background: rgba(255, 255, 255, 0.26);
   transition: background-color 0.5s ease, color 0.5s ease;
   color: white;
+}
+
+body.dark-mode a{
+
+  color: rgb(229, 255, 0);
 }
 
 /*======================================================================
