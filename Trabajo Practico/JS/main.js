@@ -47,30 +47,42 @@ function crearEstrellaFugaz(){
     }, 2000);
 }
 
-btnModoOscuro.addEventListener("click", () => {
+document.addEventListener("DOMContentLoaded", function() {
+  const btnModoOscuro = document.getElementById("btnModoOscuro");
 
-    document.body.classList.toggle("dark-mode");
+  // Al cargar la página, aplicamos el modo guardado
+  if (localStorage.getItem("modoOscuro") === "true") {
+    document.body.classList.add("dark-mode");
+    iniciarEstrellas(); // función que arranca tus intervalos
+  }
 
-    if(document.body.classList.contains("dark-mode")){
+  if (btnModoOscuro) {
+    btnModoOscuro.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
 
-        intervaloEstrellas = setInterval(
-            crearEstrella,
-            150
-        );
+      if (document.body.classList.contains("dark-mode")) {
+        localStorage.setItem("modoOscuro", "true");
+        iniciarEstrellas();
+      } else {
+        localStorage.setItem("modoOscuro", "false");
+        detenerEstrellas();
+      }
+    });
+  }
 
-        intervaloFugaces = setInterval(
-            crearEstrellaFugaz,
-            5000
-        );
+  // Funciones auxiliares
+  function iniciarEstrellas() {
+    intervaloEstrellas = setInterval(crearEstrella, 150);
+    intervaloFugaces = setInterval(crearEstrellaFugaz, 5000);
+  }
 
-    }else{
-
-        clearInterval(intervaloEstrellas);
-        clearInterval(intervaloFugaces);
-
-        contenedor.innerHTML = "";
-    }
+  function detenerEstrellas() {
+    clearInterval(intervaloEstrellas);
+    clearInterval(intervaloFugaces);
+    contenedor.innerHTML = "";
+  }
 });
+
 
 /*===========================================================
     FORMULARIO DE CONTACTO — validación 
