@@ -1,4 +1,3 @@
-const btnModoOscuro = document.getElementById("btnModoOscuro");
 const contenedor = document.getElementById("estrellas");
 
 let intervaloEstrellas = null;
@@ -49,37 +48,34 @@ function crearEstrellaFugaz(){
 
 document.addEventListener("DOMContentLoaded", function() {
   const btnModoOscuro = document.getElementById("btnModoOscuro");
+  const btnModoClaro = document.getElementById("btnModoClaro");
 
-  // Al cargar la página, aplicamos el modo guardado
-  if (localStorage.getItem("modoOscuro") === "true") {
-    document.body.classList.add("dark-mode");
-    iniciarEstrellas(); // función que arranca tus intervalos
+  function aplicarModo(modo) {
+    const modoOscuro = modo === "oscuro";
+
+    document.body.classList.toggle("dark-mode", modoOscuro);
+    document.body.classList.toggle("light-mode", !modoOscuro);
+
+    if (btnModoOscuro) {
+      btnModoOscuro.classList.toggle("hidden", modoOscuro);
+    }
+
+    if (btnModoClaro) {
+      btnModoClaro.classList.toggle("hidden", !modoOscuro);
+    }
+
+    localStorage.setItem("modo", modo);
   }
+
+  const modoGuardado = localStorage.getItem("modo");
+  aplicarModo(modoGuardado === "oscuro" ? "oscuro" : "claro");
 
   if (btnModoOscuro) {
-    btnModoOscuro.addEventListener("click", () => {
-      document.body.classList.toggle("dark-mode");
-
-      if (document.body.classList.contains("dark-mode")) {
-        localStorage.setItem("modoOscuro", "true");
-        iniciarEstrellas();
-      } else {
-        localStorage.setItem("modoOscuro", "false");
-        detenerEstrellas();
-      }
-    });
+    btnModoOscuro.addEventListener("click", () => aplicarModo("oscuro"));
   }
 
-  // Funciones auxiliares
-  function iniciarEstrellas() {
-    intervaloEstrellas = setInterval(crearEstrella, 150);
-    intervaloFugaces = setInterval(crearEstrellaFugaz, 5000);
-  }
-
-  function detenerEstrellas() {
-    clearInterval(intervaloEstrellas);
-    clearInterval(intervaloFugaces);
-    contenedor.innerHTML = "";
+  if (btnModoClaro) {
+    btnModoClaro.addEventListener("click", () => aplicarModo("claro"));
   }
 });
 

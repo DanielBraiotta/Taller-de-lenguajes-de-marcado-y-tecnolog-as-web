@@ -33,9 +33,7 @@
 
                     <!-- Columna 1: Logo  ///////////////////////////////////////// -->
                     <div class="col-3">
-                        <img class="img-fluid" src="img/ong3.jpg"
-                            alt="Logo de ReTecno Argentina"
-                            width="80">
+                        <img class="img-fluid" src="img/ong3.jpg" alt="Logo de ReTecno Argentina" width="80">
                     </div>
 
                     <!-- Columna 2: Título////////////////////////////////////////// -->
@@ -46,12 +44,14 @@
                     </div>
 
                     <!-- Columna 3: Menú ////////////////////////////////////////// -->
-                    <div class="col-3 d-flex justify-content-end align-items-center" >
-
-                    <button id="btnModoOscuro"class="btn btn-outline-secondary btn-sm me-2">🌙</button>
+                    <div class="col-3 d-flex justify-content-end align-items-center">
+                        <div class="theme-toggle">
+                            <button id="btnModoOscuro" class="btn btn-outline-secondary btn-sm theme-toggle__btn" type="button" aria-label="Activar modo oscuro">🌙</button>
+                            <button id="btnModoClaro" class="btn btn-outline-primary btn-sm theme-toggle__btn" type="button" aria-label="Activar modo claro">☀️</button>
+                        </div>
 
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navMenu">
+                            data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Abrir menú de navegación">
                             <span class="navbar-toggler-icon"></span>
                         </button>
 
@@ -65,10 +65,13 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="nosotros.html">Nosotros</a>
                                 </li>
-
                                 <li class="nav-item">
                                     <a class="nav-link" href="programas.html">Programas</a>
                                 </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="contacto.html">Contacto</a>
+                                </li>
+                                
                             </ul>
                         </div>
                     </div>
@@ -175,7 +178,7 @@
                 &copy; 2020 ReTecno Argentina. Todos los derechos reservados
 
             </p>
-            <a href="nosotros.html">Volver al inicio</a>
+            <a href="index.html">Volver al inicio</a>
 
             <br>
 

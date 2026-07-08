@@ -30,15 +30,13 @@
 <body class="container-fluid p-0">
 
     <header>
-
         <nav class="navbar navbar-expand-lg navbar-light">
-
-            <div class="container-fluid">
+            <div class="container-fluid px-0">
                 <div class="row w-100 align-items-center">
 
                     <!-- Columna 1: Logo  ///////////////////////////////////////// -->
                     <div class="col-3">
-                        <img src="img/ong3.jpg" alt="Logo de ReTecno Argentina" width="80">
+                        <img class="img-fluid" src="img/ong3.jpg" alt="Logo de ReTecno Argentina" width="80">
                     </div>
 
                     <!-- Columna 2: Título////////////////////////////////////////// -->
@@ -49,42 +47,36 @@
                     </div>
 
                     <!-- Columna 3: Menú ////////////////////////////////////////// -->
-                    <div class="col-3 text-end position-relative">
-                        <div class="col-3 d-flex align-items-center justify-content-end">
-                            <div class="theme-toggle">
+                    <div class="col-3 d-flex justify-content-end align-items-center">
+                        <div class="theme-toggle">
                             <button id="btnModoOscuro" class="btn btn-outline-secondary btn-sm theme-toggle__btn" type="button" aria-label="Activar modo oscuro">🌙</button>
-<button id="btnModoClaro" class="btn btn-outline-primary btn-sm theme-toggle__btn" type="button" aria-label="Activar modo claro">☀️</button>
-                            </div>
+                            <button id="btnModoClaro" class="btn btn-outline-primary btn-sm theme-toggle__btn" type="button" aria-label="Activar modo claro">☀️</button>
+                        </div>
 
-                            <!-- Botón de Menú Corregido (Accesibilidad resuelta) -->
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false"
-                                aria-label="Abrir menú de navegación">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Abrir menú de navegación">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
 
-                            <div class="navegador collapse navbar-collapse justify-content-end" id="navMenu">
+                        <div class="navegador collapse navbar-collapse justify-content-end" id="navMenu">
 
-                                <ul class="navbar-nav">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="index.html">Inicio</a>
-                                    </li>
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.html">Inicio</a>
+                                </li>
 
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="programas.html">Programas</a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="contacto.html">Contactos</a>
-                                    </li>
-                                </ul>
-                            </div>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="programas.html">Programas</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="contacto.html">Contacto</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </nav>
-
     </header>
 
     <!--Contenedor Principal -->
@@ -103,11 +95,11 @@
                     <li class="nav-item border-end">
                         <a href="#NUESTRO-EQUIPO" class="nav-link rounded-0">Equipo</a>
                     </li>
+                    <li class="nav-item border-end">
+                        <a href="#ORGANIGRAMA" class="nav-link rounded-0">Organigrama</a>
+                    </li>
                     <li class="nav-item">
                         <a href="#DATOS-INSTITUCIONALES" class="nav-link rounded-0">Institución</a>
-                    </li>
-                    <li class="nav-item border-start">
-                        <a href="#ORGANIGRAMA" class="nav-link rounded-0">Organigrama</a>
                     </li>
                 </ul>
             </nav>
@@ -409,6 +401,7 @@
 
                             <div class="rectangulo">
 
+
                                 <p class="intro text-center ">
                                     Como organización sin fines de lucro, <strong>ReTecno Argentina</strong> nació con
                                     el
@@ -423,9 +416,6 @@
                             </div>
 
                             <div class="rectangulo">
-
-
-
                                 <div class="table-responsive col-md-6 col-sm-12">
                                     <table class="table">
                                         <tbody class="rounder col-12">
