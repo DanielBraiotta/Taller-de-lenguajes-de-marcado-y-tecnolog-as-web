@@ -504,6 +504,18 @@ h2:hover {
   background: transparent;
 }
 
+/* ============================
+   DATOS INSTITUCIONALES — TEXTO AZUL EN MODO OSCURO
+============================ */
+body.dark-mode #DATOS-INSTITUCIONALES,
+body.dark-mode #DATOS-INSTITUCIONALES h2,
+body.dark-mode #DATOS-INSTITUCIONALES p,
+body.dark-mode #DATOS-INSTITUCIONALES th,
+body.dark-mode #DATOS-INSTITUCIONALES td {
+  color: #0077ff !important; /* azul institucional */
+}
+
+
 #DATOS-INSTITUCIONALES tbody {
   display: grid;
   gap: 1rem;
@@ -1162,3 +1174,59 @@ body.dark-mode .btn--secundario{
 body.dark-mode .btn--secundario:hover{
     background: rgba(255,255,255,0.08);
 }
+
+
+/* ============================
+   ORGANIGRAMA — TEXTO AZUL EN MODO OSCURO
+============================ */
+body.dark-mode #ORGANIGRAMA,
+body.dark-mode #ORGANIGRAMA h2,
+body.dark-mode #ORGANIGRAMA h3,
+body.dark-mode #ORGANIGRAMA p,
+body.dark-mode #ORGANIGRAMA li,
+body.dark-mode #ORGANIGRAMA th,
+body.dark-mode #ORGANIGRAMA td {
+  color: #0077ff !important; /* azul institucional */
+}
+
+
+/* ============================
+   DATOS INSTITUCIONALES — MODO OSCURO
+============================ */
+body.dark-mode #DATOS-INSTITUCIONALES {
+  background-color: #111;   /* fondo oscuro */
+  color: #0077ff;           /* 🔹 texto azul institucional */
+}
+
+/* ============================
+   DATOS INSTITUCIONALES — MODO OSCURO
+============================ */
+body.dark-mode #DATOS-INSTITUCIONALES {
+  background-color: #111 !important;
+  color: #0077ff !important;
+}
+
+body.dark-mode #DATOS-INSTITUCIONALES .seccion-fondo,
+body.dark-mode #DATOS-INSTITUCIONALES .rectangulo {
+  background-color: #111 !important;
+  color: #0077ff !important;
+  border: 1px solid #0077ff !important;
+}
+
+body.dark-mode #DATOS-INSTITUCIONALES h2,
+body.dark-mode #DATOS-INSTITUCIONALES p,
+body.dark-mode #DATOS-INSTITUCIONALES strong,
+body.dark-mode #DATOS-INSTITUCIONALES th,
+body.dark-mode #DATOS-INSTITUCIONALES td {
+  color: #0077ff !important;
+}
+
+body.dark-mode #DATOS-INSTITUCIONALES table {
+  background: transparent !important;
+  border-color: #0077ff !important;
+}
+
+body.dark-mode #DATOS-INSTITUCIONALES tr {
+  background: rgba(0, 119, 255, 0.1) !important; /* contraste azul suave */
+}
+
